@@ -6,7 +6,6 @@ import styled from 'styled-components';
 // components
 import { PageHeader, SectionHeader } from '../components/HeaderStyles';
 import { ParaText } from '../components/TextStyles';
-import { ColumnContainer } from '../components/ContainerStyles';
 import { Image } from '../components/ImageStyles';
 
 const WhyPSE = () => {

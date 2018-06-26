@@ -6,18 +6,37 @@ import PropTypes from 'prop-types';
 
 const MediaLink = props => {
   return (
-    <Anchor href={props.href} target="_blank" rel="noopener noreferrer">
-      <i className={ICON_MAP[props.iconKey]} aria-hidden="true" />
+    <Anchor
+      href={`${ICON_MAP[props.iconKey].href}${props.href}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className={ICON_MAP[props.iconKey].class} aria-hidden="true" />
     </Anchor>
   );
 };
 
 const ICON_MAP = {
-  linkedin: 'fab fa-linkedin-in',
-  github: 'fab fa-github',
-  medium: 'fab fa-medium-m',
-  website: 'fas fa-link',
-  twitter: 'fab fa-twitter'
+  linkedin: {
+    href: 'https://linkedin.com/in/',
+    class: 'fab fa-linkedin-in'
+  },
+  github: {
+    href: 'https://github.com/',
+    class: 'fab fa-github'
+  },
+  medium: {
+    href: 'https://medium.com/@',
+    class: 'fab fa-medium-m'
+  },
+  website: {
+    href: '',
+    class: 'fas fa-link'
+  },
+  twitter: {
+    href: 'https://twitter.com/',
+    class: 'fab fa-twitter'
+  }
 };
 
 export default MediaLink;
