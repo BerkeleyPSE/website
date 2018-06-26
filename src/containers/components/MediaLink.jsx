@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 const MediaLink = props => {
   return (
     <Anchor
+      className="my-0 mx-0h"
       href={`${ICON_MAP[props.iconKey].href}${props.href}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -52,7 +53,6 @@ const Anchor = styled.a`
   font-size: 1.5rem;
   height: 30px;
   width: 30px;
-  margin: 0 0.5rem;
   padding: 0.3125rem;
   text-decoration: none;
   transition: all 0.25s ease;

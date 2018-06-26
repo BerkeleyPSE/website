@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
 // node modules
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 // components
-import { ColumnContainer } from "../components/ContainerStyles";
+import { ColumnContainer } from '../components/ContainerStyles';
 
 const HoverCard = props => {
   return (
-    <HoverCardContainer to={props.link}>
-      <Header>{props.header}</Header>
-      <HR />
-      <Description>{props.description}</Description>
+    <HoverCardContainer className="m-1q" to={props.link}>
+      <Header className="m-0">{props.header}</Header>
+      <HR className="m-0 p-0" />
+      <Description className="m-0">{props.description}</Description>
     </HoverCardContainer>
   );
 };
@@ -23,7 +23,6 @@ export default HoverCard;
 const HoverCardContainer = ColumnContainer.withComponent(Link).extend`
   border: 3px solid #333;
   color: #333;
-  margin: 1.25rem;
   padding: 0.625rem;
   text-align: center;
   text-decoration: none;
@@ -41,21 +40,17 @@ const HoverCardContainer = ColumnContainer.withComponent(Link).extend`
 const Header = styled.h1`
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 0;
   padding: 0.625rem 0;
 `;
 
 const HR = styled.hr`
   border: 2px solid #895fad;
-  margin: 0;
-  padding: 0;
   width: 90%;
 `;
 
 const Description = styled.p`
   font-size: 1rem;
   font-weight: 400;
-  margin: 0;
   padding: 0.625rem 0;
   text-transform: uppercase;
 `;

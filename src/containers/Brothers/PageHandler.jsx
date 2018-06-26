@@ -14,13 +14,13 @@ import { RowContainer } from '../components/ContainerStyles';
 const PageHandler = ({ path, prevBro, nextBro }) => (
   <Container className="mx-1h my-0h" jc="space-between">
     {!iE(prevBro) && (
-      <Link to={`${path}/${prevBro.key}`}>
+      <Link className="my-0 mx-1" to={`${path}/${prevBro.key}`}>
         <LeftIcon className="fas fa-chevron-left" aria-hidden="true" />
         {prevBro.name}
       </Link>
     )}
     {!iE(nextBro) && (
-      <Link to={`${path}/${nextBro.key}`}>
+      <Link className="my-0 mx-1" to={`${path}/${nextBro.key}`}>
         {nextBro.name}
         <RightIcon className="fas fa-chevron-right" aria-hidden="true" />
       </Link>
@@ -38,7 +38,6 @@ const Link = IntLink.extend`
   border-bottom: 3px solid #333;
   font-size: 0.9rem;
   font-weight: bold;
-  margin: 0 1rem;
   padding: 0.125rem 0;
 `;
 

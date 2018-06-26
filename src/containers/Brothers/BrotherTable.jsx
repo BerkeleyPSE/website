@@ -37,8 +37,8 @@ const BrotherTable = props => {
         if (isValid(value)) {
           return (
             <Row key={`${props.name}_${key}`}>
-              <Title>{title}</Title>
-              <Value>{parseValue(value)}</Value>
+              <Title className="m-0">{title}</Title>
+              <Value className="m-0">{parseValue(value)}</Value>
             </Row>
           );
         } else {
@@ -69,7 +69,6 @@ const Title = styled.p`
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.025rem;
-  margin: 0;
   padding: 0 0.625rem;
   text-align: left;
   text-transform: uppercase;
@@ -78,7 +77,6 @@ const Title = styled.p`
 const Value = styled.p`
   color: #818181;
   font-size: 1rem;
-  margin: 0;
   padding: 0 0.625rem;
   text-align: right;
 `;

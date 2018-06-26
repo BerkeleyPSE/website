@@ -27,7 +27,7 @@ class Careers extends Component {
     return (
       <div id="careers-container">
         <PageHeader>Careers</PageHeader>
-        <TableContainer>
+        <TableContainer className="m-0 mb-2 p-0">
           <SectionHeader altStyle>Full-Time</SectionHeader>
           <CareersTable
             id="fulltime-table"
@@ -50,7 +50,5 @@ export default connect(
 )(Careers);
 
 const TableContainer = styled.div`
-  margin: 0 0 2rem 0;
-  padding: 0;
   overflow-x: scroll;
 `;

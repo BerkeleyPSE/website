@@ -46,7 +46,7 @@ export default class AccordionItem extends React.Component {
           )}
         </HeaderContainer>
         <BodyContainer isOpen={isOpen}>
-          <Answer altStyle>
+          <Answer className="m-0" altStyle>
             {answer.map((answerItem, index) => {
               return this.generateAnswer(answerItem, index);
             })}
@@ -101,7 +101,6 @@ const BodyContainer = styled.div`
 
 const Answer = ParaText.extend`
   line-height: 1.5rem;
-  margin: 0;
   padding: 1.25rem 3.75rem;
 `;
 

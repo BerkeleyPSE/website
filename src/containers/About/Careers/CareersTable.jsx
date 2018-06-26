@@ -1,15 +1,20 @@
-import React from "react";
+import React from 'react';
 
 // node modules
-import styled from "styled-components";
-import PropTypes from "prop-types";
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const CareersTable = props => {
   const columnHeaders = (
-    <Row>
+    <Row className="m-0">
       {Object.values(props.columns).map((col, index) => {
         return (
-          <ColumnHeader key={`${props.id}_col_${index}`}>{col}</ColumnHeader>
+          <ColumnHeader
+            className="m-0 py-0q px-0"
+            key={`${props.id}_col_${index}`}
+          >
+            {col}
+          </ColumnHeader>
         );
       })}
     </Row>
@@ -17,11 +22,14 @@ const CareersTable = props => {
 
   const tableRows = props.data.map((person, index) => {
     return (
-      <Row key={`${props.id}_row_${index}`} index={index}>
+      <Row className="m-0" key={`${props.id}_row_${index}`} index={index}>
         {Object.keys(props.columns).map((col, index) => {
           return (
-            <Cell key={`${props.id}_${person.name}_${col}`}>
-              {person[col] || ""}
+            <Cell
+              className="m-0 py-0h px-0q"
+              key={`${props.id}_${person.name}_${col}`}
+            >
+              {person[col] || ''}
             </Cell>
           );
         })}
@@ -55,22 +63,17 @@ const ColumnHeader = styled.th`
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.025rem;
-  margin: 0;
-  padding: 0.25rem 0;
   text-transform: uppercase;
 `;
 
 const Row = styled.tr`
-  background-color: ${props => props.index % 2 === 0 && "#EEE"};
-  margin: 0;
+  background-color: ${props => props.index % 2 === 0 && '#EEE'};
   overflow: scroll;
 `;
 
 const Cell = styled.td`
   font-size: 0.9rem;
   letter-spacing: 0.0125rem;
-  margin: 0;
-  padding: 0.5rem 0.25rem;
   min-width: 150px;
 `;
 

@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      <SlideContainer>
+      <SlideContainer className="m-0">
         <StyledSlider
           accessibility={true}
           adaptiveHeight={false}
@@ -62,7 +62,6 @@ const HomeContainer = styled.div`
 `;
 
 const SlideContainer = styled.div`
-  margin: 0;
   padding: 0 0 45px 0;
 `;
 

@@ -25,7 +25,7 @@ const Footer = () => {
         margin={{ top: "5px", right: "7.5px", bottom: "5px", left: "7.5px" }}
       /> */}
       <MarginContainer>
-        <Text altStyle>
+        <Text className="m-0" altStyle>
           <SelfLink href="http://www.rahrang.xyz" target="blank">
             Rahul Rangnekar
           </SelfLink>
@@ -52,7 +52,6 @@ const MarginContainer = styled.div`
 const Text = ParaText.extend`
   font-size: 0.8rem;
   font-weight: 500;
-  margin: 0;
 `;
 
 const SelfLink = ExtLink.extend`

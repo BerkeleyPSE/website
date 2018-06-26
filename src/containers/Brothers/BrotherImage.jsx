@@ -50,9 +50,11 @@ export class BrotherImage extends React.Component {
             width="285px"
           />
           <Overlay hover={hover} isBrosPage>
-            <Name>{brother.name}</Name>
+            <Name className="my-1 mx-0">{brother.name}</Name>
             <DividerLine />
-            <Position>{brother.position || 'Active'}</Position>
+            <Position className="my-1 py-0 px-0h">
+              {brother.position || 'Active'}
+            </Position>
           </Overlay>
         </BroContainer>
       </BrotherImageContainer>
@@ -89,7 +91,6 @@ const Name = styled.p`
   font-size: 1.25rem;
   letter-spacing: 0.025rem;
   padding: 0.3125rem 0;
-  margin: 1rem 0;
 `;
 
 const DividerLine = styled.hr`
@@ -103,7 +104,5 @@ const Position = styled.p`
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.025rem;
-  margin: 1rem auto;
-  padding: 0 0.625rem;
   text-transform: uppercase;
 `;
