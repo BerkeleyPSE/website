@@ -44,7 +44,7 @@ export class BrotherImage extends React.Component {
       >
         <BroContainer>
           <Image
-            src={`${IMAGE_URL}/${brother.key}.jpg`}
+            src={`${IMAGE_URL}/${brother.key}`}
             alt={brother.name}
             height="425px"
             width="285px"
