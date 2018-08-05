@@ -8,12 +8,33 @@ Visit us at [berkeleypse.org](http://berkeleypse.org).
 
 ## Table of Contents
 
+- [Development](#development)
 - [Terminology](#terminology)
 - [Infrastructure](#infrastructure)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [File Structure](#file-structure)
 - [Contributors](#contributors)
+
+---
+
+## Development
+
+After cloning this website repository and the [api repository](https://github.com/berkeleypse/api) [(see here for instructions)](#cloning-repositories), run the following.
+
+In the api directory:
+
+```bash
+yarn install # install the node modules/packages necessary to develop the api
+yarn run dev # start the local development server at http://localhost:8000
+```
+
+In this website directory:
+
+```bash
+yarn install # install the node modules/packages necessary to develop the website
+yarn run start # start the local development server at http://localhost:3000
+```
 
 ---
 
@@ -303,6 +324,7 @@ Run the `staging` branch website at http://staging.berkeley.edu, ensuring everyt
 ## Contributors
 
 **Rahul Rangnekar**
+
 - B.A. Computer Science & B.A. Economics, UC Berkeley 2018
 - Vice President of Marketing, PSE Zeta Chi, 2016-2017
 - [GitHub](https://github.com/rahrang)
