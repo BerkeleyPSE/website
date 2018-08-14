@@ -27,6 +27,7 @@ const About = () => {
             Lin, and Hiu Ngan to compose Zeta Chi’s founding Alpha class. These
             six officially chartered the chapter in August 2013.
             <br /> <br />
+            {/* 
             Zeta Chi struggled to get off its feet in it’s first year. The
             founding class experienced growing pains with recruiting and
             training potential members. Very few members were initiated into the
@@ -34,7 +35,8 @@ const About = () => {
             prospective Delta class over the summer of 2014. There were talks
             about closing down the fraternity due to lack of interest and member
             retention.
-            <br /> <br />
+            <br /> <br /> 
+            */}
             Slowly but surely, Zeta Chi began to build itself on solid
             foundation. The Lin administration oversaw a variety of students
             recruited in the Epsilon, Zeta, and Eta classes, which injected
@@ -45,9 +47,9 @@ const About = () => {
             first rigorous and wholly educational PMT process, only to continue
             to be iterated and improved upon for the Iota and Kappa classes.
             <br /> <br />
-            Now in its fourth year and recruiting for the prospective Lambda
-            class, Zeta Chi boasts a diverse brotherhood of over 40 active
-            members in the Phan administration.
+            Now in its fifth year and recruiting for the prospective Nu
+            class, Zeta Chi boasts a diverse brotherhood of over 45 active
+            members in the Yu administration.
           </Text>
           <ImageContainer>
             <Caption>
@@ -85,9 +87,9 @@ const About = () => {
             of Marketing at Georgia State University, conceived of the idea that
             the sales profession should have a professional fraternity of its
             own. After over a year of planning with the support of three of his
-            colleagues, Pi Sigma Epsilon (PSE) was established on May 14, 1952.
+            colleagues, Pi Sigma Epsilon [PSE] was established on May 14, 1952.
             All four men were members of the Sales and Marketing Executives
-            (SME) association of Atlanta, Georgia, which continues to be a
+            [SME] association of Atlanta, Georgia, which continues to be a
             sponsor of Pi Sigma Epsilon to this day.
             <br /> <br />
             Originally an all-male organization, which was characteristic of the
@@ -99,7 +101,7 @@ const About = () => {
             PSE does not use term "pledge", as it portrays a negative stereotype
             that goes against the ideals of the Fraternity. Hazing is strictly
             forbidden and all of those taking the steps to become full members
-            are "prospective members" (PMs) until initiation.
+            are "prospective members" [PMs] until initiation.
             <br /> <br />
             Pi Sigma Epsilon is the only national, co-ed, professional business
             fraternity in sales, marketing, and management. PSE offers practical
