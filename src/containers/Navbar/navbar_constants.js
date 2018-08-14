@@ -2,7 +2,7 @@ export const HOME_PATH = '/';
 export const ABOUT_PATH = '/about';
 export const CAREERS_PATH = '/careers';
 export const RECRUITMENT_PATH = '/recruitment';
-export const WHYPSE_PATH = '/why-pse';
+// export const WHYPSE_PATH = '/why-pse';
 export const FAQS_PATH = '/faqs';
 export const APPLICATION_PATH = '/app';
 export const BROTHERS_PATH = '/brothers';
@@ -13,7 +13,7 @@ export const NAVBAR_MAP = {
   ABOUT_PATH,
   CAREERS_PATH,
   RECRUITMENT_PATH,
-  WHYPSE_PATH,
+  // WHYPSE_PATH,
   FAQS_PATH,
   APPLICATION_PATH,
   BROTHERS_PATH,
@@ -44,10 +44,10 @@ export const NAVBAR_INFO = [
         page: 'Schedule',
         pageLink: RECRUITMENT_PATH
       },
-      {
-        page: 'Why PSE?',
-        pageLink: WHYPSE_PATH
-      },
+      //{
+        //page: 'Why PSE?',
+        //pageLink: WHYPSE_PATH
+      //},
       {
         page: 'FAQs',
         pageLink: FAQS_PATH
