@@ -17,7 +17,7 @@ const Recruitment = () => {
       <div id="timeline-container">
         {/* Timeline URL: https://docs.google.com/spreadsheets/d/1Zr01Q2fci0Z1Hd1oCGPz8M_gtnIv6Prr_0AjKqNiqjE/ */}
         <iframe
-          title="Spring 2018 Recruitment Timeline"
+          title="Fall 2018 Recruitment Timeline"
           src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Zr01Q2fci0Z1Hd1oCGPz8M_gtnIv6Prr_0AjKqNiqjE&font=Default&lang=en&initial_zoom=2&height=100%"
           width="100%"
           height="650px"
