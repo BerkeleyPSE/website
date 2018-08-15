@@ -42,6 +42,8 @@ import {
   CONTACT_PATH
 } from './Navbar/navbar_constants';
 
+//insert [<Route path={WHYPSE_PATH} component={WhyPSE} />] in gap to reinstate WhyPSE page
+
 const Routes = () => (
   <div id="router-container">
     <Navbar />
@@ -52,7 +54,7 @@ const Routes = () => (
         <Route path={ABOUT_PATH} component={About} />
         <Route path={CAREERS_PATH} component={Careers} />
         <Route path={RECRUITMENT_PATH} component={Recruitment} />
-        // <Route path={WHYPSE_PATH} component={WhyPSE} />
+  
         <Route path={FAQS_PATH} component={FAQs} />
         <Route path={APPLICATION_PATH} component={ApplicationHandler} />
         <Route exact path={BROTHERS_PATH} component={Brotherhood} />
