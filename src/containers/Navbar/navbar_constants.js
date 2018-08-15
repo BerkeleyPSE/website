@@ -47,7 +47,8 @@ export const NAVBAR_INFO = [
       /*{
         page: 'Why PSE?',
         pageLink: WHYPSE_PATH
-      */},
+      },
+      }*/
       {
         page: 'FAQs',
         pageLink: FAQS_PATH
