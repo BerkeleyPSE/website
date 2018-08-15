@@ -118,7 +118,7 @@ const FAQ_INFO = [
       {
         type: "text",
         content:
-          'PSE is a professional fraternity, and thus we choose to use terminology that reflects our "
+          "PSE is a professional fraternity, and thus we choose to use terminology that reflects our "
           + "professional attitude, character, and purpose. Terms such as "recruitment," "prospective member," "
           + ""prospective member training," and "PM Trainer," are used in lieu of "rush," "pledge," "
           + ""pledge process," and "pledgemaster," in any verbal or written communication involving "
