@@ -112,7 +112,7 @@ const About = () => {
         </DescriptionContainer>
       </NationalContainer> 
       <ProjectsContainer>
-        <ProjectsHeader altStyle>ZC Consulting</NationalHeader>
+        <ProjectsHeader altStyle>ZC Consulting</ProjectsHeader>
         <DescriptionContainer>
           <ImageContainer>
             <Caption>
