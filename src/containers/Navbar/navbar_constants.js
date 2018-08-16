@@ -1,6 +1,7 @@
 export const HOME_PATH = '/';
 export const ABOUT_PATH = '/about';
 export const CAREERS_PATH = '/careers';
+export const PROJECTS_PATH = '/projects';
 export const RECRUITMENT_PATH = '/recruitment';
 // export const WHYPSE_PATH = '/why-pse';
 export const FAQS_PATH = '/faqs';
@@ -12,6 +13,7 @@ export const CONTACT_PATH = '/contact';
 export const NAVBAR_MAP = {
   ABOUT_PATH,
   CAREERS_PATH,
+  PROJECTS_PATH,
   RECRUITMENT_PATH,
   // WHYPSE_PATH,
   FAQS_PATH,
@@ -33,6 +35,10 @@ export const NAVBAR_INFO = [
       {
         page: 'Careers',
         pageLink: CAREERS_PATH
+      },
+      {
+        page: 'Projects',
+        pageLink: PROJECTS_PATH
       }
     ]
   },
