@@ -110,7 +110,38 @@ const About = () => {
             programs, and social events.
           </Text>
         </DescriptionContainer>
-      </NationalContainer>
+      </NationalContainer> 
+      <ProjectsContainer>
+        <ProjectsHeader altStyle>ZC Consulting</NationalHeader>
+        <DescriptionContainer>
+          <ImageContainer>
+            <Caption>
+              <strong>ZC Consulting LOGO</strong>
+            </Caption>
+            <ProjectsImage
+              src="http://res.cloudinary.com/berkeleypse-tech/image/upload/v1534406617/about/ZC_Consulting.png"
+              alt={'ZC Consulting logo'}
+              height="246px"
+              width="176px"
+            />
+          </ImageContainer>
+          <Text>
+            Established in 2013 as a branch of Pi Sigma Epsilon (a national business fraternity), 
+            ZC Consulting is a strategy consulting organization run entirely by students of UC 
+            Berkeley. It is also proudly recognized and sponsored by the Walter A. Haas School of Business.
+            <br /> <br />
+            Its mission is to serve the goals and vision of individual businesses and develop creative 
+            solutions that satisfy the needs of its clients and their stakeholders.
+            <br /> <br />
+            As a nonprofit organization, ZC Consulting aims to give back to Berkeley's diverse 
+            communities. All proceeds from projects go towards supporting animal shelters, the 
+            homeless community, and the academic and professional development of our fellow Cal students.
+            <br /> <br />
+            For more information, visit ZC Consulting's website here<Text onPress={here} style={{textDecorationLine: "underline"}}
+            >http://zc-consulting.org/</Text>.
+          </Text>
+        </DescriptionContainer>
+      </ProjectsContainer>
     </div>
   );
 };
@@ -193,6 +224,17 @@ const NationalImage = ImageTemplate.extend`
   }
 `;
 
+const ProjectsImage = ImageTemplate.extend`
+  @media (min-width: 325px) {
+    width: 325px;
+    height: 412px;
+  }
+
+  @media (min-width: 425px) {
+    width: 400px;
+    height: 507px;
+  }
+`;
 const NationalContainer = styled.div`
   padding: 40px;
 `;
