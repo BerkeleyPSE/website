@@ -93,6 +93,14 @@ class Brother extends React.Component {
     const broKey = this.props.match.params.name;
     const [prevBro, nextBro] = this.getSurroundingBros(broKey);
 
+    const position = (() => {
+      if (activeBro.position) {
+        if (activeBro.position === 'N/A') return 'Active';
+        return activeBro.position;
+      }
+      return 'Active';
+    })();
+
     document.title = `${activeBro.name ||
       'Brothers'} - Pi Sigma Epsilon | Zeta Chi Chapter`;
 
@@ -111,9 +119,7 @@ class Brother extends React.Component {
           />
           <HeaderContainer>
             <Name>{activeBro.name}</Name>
-            <Position className="p-0 m-0">
-              {activeBro.position || 'Active'}
-            </Position>
+            <Position className="p-0 m-0">{position}</Position>
           </HeaderContainer>
           <BrotherTable
             name={activeBro.name}

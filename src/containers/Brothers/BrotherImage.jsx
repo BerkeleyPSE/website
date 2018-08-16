@@ -33,6 +33,13 @@ export class BrotherImage extends React.Component {
   render() {
     const { brother, path } = this.props;
     const { hover } = this.state;
+    const position = (() => {
+      if (brother.position) {
+        if (brother.position === 'N/A') return 'Active';
+        return brother.position;
+      }
+      return 'Active';
+    })();
 
     if (isNotValid(brother)) return null;
 
@@ -52,9 +59,7 @@ export class BrotherImage extends React.Component {
           <Overlay hover={hover} isBrosPage>
             <Name className="my-1 mx-0">{brother.name}</Name>
             <DividerLine />
-            <Position className="my-1 py-0 px-0h">
-              {brother.position || 'Active'}
-            </Position>
+            <Position className="my-1 py-0 px-0h">{position}</Position>
           </Overlay>
         </BroContainer>
       </BrotherImageContainer>
