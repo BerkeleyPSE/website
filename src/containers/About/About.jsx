@@ -137,8 +137,10 @@ const About = () => {
             communities. All proceeds from projects go towards supporting animal shelters, the 
             homeless community, and the academic and professional development of our fellow Cal students.
             <br /> <br />
-            For more information, visit ZC Consulting's website here
-            {/*<Text onPress={here} style={{textDecorationLine: "underline"}}>http://zc-consulting.org/</Text>.*/}
+            For more information, visit ZC Consulting's website 
+              <SelfLink href="http://zc-consulting.org/" target="blank">
+                here
+              </SelfLink>.
           </Text>
         </DescriptionContainer>
       </ProjectsContainer>
