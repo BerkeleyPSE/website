@@ -1,15 +1,15 @@
 import {
-  WHYPSE_PATH,
+  //WHYPSE_PATH,
   FAQS_PATH,
   APPLICATION_PATH
 } from "../Navbar/navbar_constants";
 
 const HOVER_CARD_ITEMS = [
-  {
-    header: "Why PSE?",
-    description: "What sets us apart.",
-    link: WHYPSE_PATH
-  },
+  //{
+    //header: "Why PSE?",
+    //description: "What sets us apart.",
+    //link: WHYPSE_PATH
+  //},
   {
     header: "FAQs",
     description: "What you should know.",
