@@ -16,7 +16,7 @@ import Careers from './About/Careers/Careers';
 import Recruitment from './Recruitment/Recruitment';
 // import WhyPSE from './Recruitment/WhyPSE';
 import FAQs from './Recruitment/FAQs/FAQs';
-import ApplicationHandler from './Recruitment/Application/ApplicationHandler.jsx';
+import ApplicationHandler from './Recruitment/Application/ApplicationHandler';
 import Brotherhood from './Brothers/Brotherhood';
 import Brother from './Brothers/Brother';
 import Executives from './Brothers/Executives';
@@ -26,7 +26,7 @@ import Error404 from './Error404';
 // other components
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
-import AppBanner from './components/AppBanner.jsx';
+import AppBanner from './components/AppBanner';
 
 // page paths
 import {
@@ -54,7 +54,7 @@ const Routes = () => (
         <Route path={ABOUT_PATH} component={About} />
         <Route path={CAREERS_PATH} component={Careers} />
         <Route path={RECRUITMENT_PATH} component={Recruitment} />
-  
+
         <Route path={FAQS_PATH} component={FAQs} />
         <Route path={APPLICATION_PATH} component={ApplicationHandler} />
         <Route exact path={BROTHERS_PATH} component={Brotherhood} />
