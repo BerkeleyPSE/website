@@ -16,6 +16,7 @@ import Careers from './About/Careers/Careers';
 import Recruitment from './Recruitment/Recruitment';
 // import WhyPSE from './Recruitment/WhyPSE';
 import FAQs from './Recruitment/FAQs/FAQs';
+import CoffeeChats from './Recruitment/CoffeeChats';
 import ApplicationHandler from './Recruitment/Application/ApplicationHandler';
 import Brotherhood from './Brothers/Brotherhood';
 import Brother from './Brothers/Brother';
@@ -36,6 +37,7 @@ import {
   RECRUITMENT_PATH,
   // WHYPSE_PATH,
   FAQS_PATH,
+  COFFEE_CHAT_PATH,
   APPLICATION_PATH,
   BROTHERS_PATH,
   EXECUTIVES_PATH,
@@ -54,8 +56,8 @@ const Routes = () => (
         <Route path={ABOUT_PATH} component={About} />
         <Route path={CAREERS_PATH} component={Careers} />
         <Route path={RECRUITMENT_PATH} component={Recruitment} />
-
         <Route path={FAQS_PATH} component={FAQs} />
+        <Route path={COFFEE_CHAT_PATH} component={CoffeeChats} />
         <Route path={APPLICATION_PATH} component={ApplicationHandler} />
         <Route exact path={BROTHERS_PATH} component={Brotherhood} />
         <Route path={`${BROTHERS_PATH}/:name`} component={Brother} />
