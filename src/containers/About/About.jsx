@@ -6,6 +6,7 @@ import styled from 'styled-components';
 // components
 import { RowContainer } from '../components/ContainerStyles';
 import { PageHeader, SectionHeader } from '../components/HeaderStyles';
+import { ExtLink } from '../components/LinkStyles';
 import { ParaText } from '../components/TextStyles';
 import { Image } from '../components/ImageStyles';
 
@@ -47,12 +48,12 @@ const About = () => {
             first rigorous and wholly educational PMT process, only to continue
             to be iterated and improved upon for the Iota and Kappa classes.
             <br /> <br />
-            Now in its fifth year and recruiting for the prospective Nu
-            class, Zeta Chi boasts a diverse brotherhood of over 45 active
-            members in the Yu administration.
+            Now in its fifth year and recruiting for the prospective Nu class,
+            Zeta Chi boasts a diverse brotherhood of over 45 active members in
+            the Yu administration.
           </Text>
           <ImageContainer>
-            <Caption>
+            <Caption pos="center">
               <strong>OUR FOUNDERS</strong>
               <br />
               Lydia Kim, Cynthia Huang, Peggy Lin
@@ -72,7 +73,7 @@ const About = () => {
         <NationalHeader altStyle>Pi Sigma Epsilon</NationalHeader>
         <DescriptionContainer>
           <ImageContainer>
-            <Caption>
+            <Caption pos="left">
               <strong>NATIONAL LOGO</strong>
             </Caption>
             <NationalImage
@@ -110,40 +111,42 @@ const About = () => {
             programs, and social events.
           </Text>
         </DescriptionContainer>
-      </NationalContainer> 
-      <ProjectsContainer>
-        <ProjectsHeader altStyle>ZC Consulting</ProjectsHeader>
+      </NationalContainer>
+      <NationalContainer>
+        <NationalHeader altStyle>ZC Consulting</NationalHeader>
         <DescriptionContainer>
           <ImageContainer>
-            <Caption>
-              <strong>ZC Consulting LOGO</strong>
-            </Caption>
             <ProjectsImage
               src="http://res.cloudinary.com/berkeleypse-tech/image/upload/v1534406617/about/ZC_Consulting.png"
-              alt={'ZC Consulting logo'}
-              height="246px"
-              width="176px"
+              alt="ZC Consulting logo"
+              height="369px"
+              width="263px"
             />
           </ImageContainer>
           <Text>
-            Established in 2013 as a branch of Pi Sigma Epsilon (a national business fraternity), 
-            ZC Consulting is a strategy consulting organization run entirely by students of UC 
-            Berkeley. It is also proudly recognized and sponsored by the Walter A. Haas School of Business.
+            Established in 2013 as a branch of Pi Sigma Epsilon (a national
+            business fraternity), ZC Consulting is a strategy consulting
+            organization run entirely by students of UC Berkeley. It is also
+            proudly recognized and sponsored by the Walter A. Haas School of
+            Business.
             <br /> <br />
-            Its mission is to serve the goals and vision of individual businesses and develop creative 
-            solutions that satisfy the needs of its clients and their stakeholders.
+            Its mission is to serve the goals and vision of individual
+            businesses and develop creative solutions that satisfy the needs of
+            its clients and their stakeholders.
             <br /> <br />
-            As a nonprofit organization, ZC Consulting aims to give back to Berkeley's diverse 
-            communities. All proceeds from projects go towards supporting animal shelters, the 
-            homeless community, and the academic and professional development of our fellow Cal students.
+            As a nonprofit organization, ZC Consulting aims to give back to
+            Berkeley's diverse communities. All proceeds from projects go
+            towards supporting animal shelters, the homeless community, and the
+            academic and professional development of our fellow Cal students.
             <br /> <br />
-            For more information, visit ZC Consulting's website 
-              <SelfLink href="http://zc-consulting.org/" target="blank">
-                here
-              </SelfLink>.
+            For more information,{' '}
+            <ExtLink href="http://zc-consulting.org/" target="blank">
+              visit ZC Consulting's website
+            </ExtLink>
+            .
           </Text>
         </DescriptionContainer>
-      </ProjectsContainer>
+      </NationalContainer>
     </div>
   );
 };
@@ -165,6 +168,7 @@ const DescriptionContainer = RowContainer.extend`
   margin: auto;
   text-align: left;
   justify-content: baseline;
+  padding-top: 10px;
   @media (max-width: 1200px) {
     flex-direction: column;
   }
@@ -190,7 +194,7 @@ const Caption = styled.p`
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.025rem;
-  text-align: center;
+  text-align: ${props => props.pos};
 `;
 
 const ImageTemplate = Image.extend`
@@ -233,10 +237,11 @@ const ProjectsImage = ImageTemplate.extend`
   }
 
   @media (min-width: 425px) {
-    width: 400px;
-    height: 507px;
+    width: 263px;
+    height: 369px;
   }
 `;
+
 const NationalContainer = styled.div`
   padding: 40px;
 `;
