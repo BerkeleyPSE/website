@@ -12,18 +12,17 @@ import { PageHeader } from '../components/HeaderStyles';
 import { EXECUTIVES_PATH } from '../Navbar/navbar_constants';
 
 // actions
-import { DataActions } from '../../actions/data-actions.js';
+import { getBrothersIfNeeded } from '../../actions/data';
 
 class Executives extends Component {
   componentDidMount() {
     document.title = 'Executive Board - Pi Sigma Epsilon | Zeta Chi Chapter';
-    const { brothers, executives } = this.props.data;
-    const { getBrothers } = this.props;
-    if (!brothers.length || !executives.length) getBrothers();
+    const { brothers, executives, getBrothersIfNeeded } = this.props;
+    if (!brothers.length || !executives.length) getBrothersIfNeeded();
   }
 
   render() {
-    const { executives } = this.props.data;
+    const { executives } = this.props;
     const allExecs = (executives.data || []).map(brother => {
       return (
         <BrotherImage
@@ -49,13 +48,18 @@ class Executives extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  data: state.data
+const mapStateToProps = state => ({
+  brothers: state.dataReducer.brothers,
+  executives: state.dataReducer.executives
+});
+
+const mapDispatchToProps = dispatch => ({
+  getBrothersIfNeeded: dispatch(getBrothersIfNeeded())
 });
 
 export default connect(
   mapStateToProps,
-  DataActions
+  mapDispatchToProps
 )(Executives);
 
 const LandingContainer = RowContainer.extend`

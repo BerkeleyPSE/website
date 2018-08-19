@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // components
-import { ColumnContainer } from '../../../components/ContainerStyles';
-import Label from './Label';
+import { ColumnContainer } from '../ContainerStyles';
+import { Label, ErrorLabel } from './Label';
 import { Desc, Req } from './Texts';
 
 const TextArea = ({ label, name, placeholder, desc, isRequired }) => (

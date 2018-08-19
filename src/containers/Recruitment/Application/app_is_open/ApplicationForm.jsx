@@ -4,11 +4,11 @@ import React from 'react';
 import { ColumnContainer } from '../../../components/ContainerStyles';
 import APP_FIELDS from './application_fields';
 import AdditionalInfo from './AdditionalInfo';
-import SubmitButton from '../input_components/SubmitButton';
-import { BASE_URL } from '../../../../actions/api';
-import Input from '../input_components/Input';
-import TextArea from '../input_components/TextArea';
-import Radio from '../input_components/Radio';
+import SubmitButton from '../../../components/inputs/SubmitButton';
+import { BASE_URL } from '../../../../constants/api';
+import Input from '../../../components/inputs/Input';
+import TextArea from '../../../components/inputs/TextArea';
+import Radio from '../../../components/inputs/Radio';
 
 const ApplicationForm = () => {
   const renderFields = () => (

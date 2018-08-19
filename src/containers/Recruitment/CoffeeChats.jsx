@@ -4,7 +4,7 @@ import React from 'react';
 import { ColumnContainer } from '../components/ContainerStyles';
 import { PageHeader } from '../components/HeaderStyles';
 import { ParaText } from '../components/TextStyles';
-import { BASE_URL } from '../../actions/api';
+import { BASE_URL } from '../../constants/api';
 
 const ALLOW_SIGNUPS = false;
 

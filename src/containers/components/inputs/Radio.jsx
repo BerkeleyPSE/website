@@ -2,11 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // components
-import {
-  ColumnContainer,
-  RowContainer
-} from '../../../components/ContainerStyles';
-import Label from './Label';
+import { ColumnContainer, RowContainer } from '../ContainerStyles';
+import { Label, ErrorLabel } from './Label';
 import { Desc, Req } from './Texts';
 
 const Radio = ({ label, name, desc, options, isRequired }) => (

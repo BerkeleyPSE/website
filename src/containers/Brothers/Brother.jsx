@@ -21,7 +21,10 @@ import MediaLink from '../components/MediaLink';
 import { BROTHERS_PATH, EXECUTIVES_PATH } from '../Navbar/navbar_constants';
 
 // actions
-import { DataActions } from '../../actions/data-actions';
+import {
+  getBrothersIfNeeded,
+  getBrotherByKeyIfNeeded
+} from '../../actions/data';
 
 // constants
 const IMAGE_URL =
@@ -35,17 +38,22 @@ class Brother extends React.Component {
 
   componentDidMount() {
     const { brothers, executives, activeBro } = this.props.data;
-    const { getBrothers, getBrotherByKey } = this.props;
-    if (isNotValid(brothers.data) || isNotValid(executives)) getBrothers();
-    if (isNotValid(activeBro)) getBrotherByKey(this.getKey(this.props));
+    const { getBrothersIfNeeded, getBrotherByKeyIfNeeded } = this.props;
+    // TODO: make this check in the action instead
+    if (isNotValid(brothers.data) || isNotValid(executives))
+      getBrothersIfNeeded();
+    // TODO: make this check in the action instead
+    if (isNotValid(activeBro)) getBrotherByKeyIfNeeded(this.getKey(this.props));
   }
 
   componentWillReceiveProps(nextProps) {
     const { brothers, executives } = nextProps.data;
-    const { getBrothers, getBrotherByKey } = nextProps;
+    const { getBrothersIfNeeded, getBrotherByKeyIfNeeded } = nextProps;
+    // TODO: make this check in the action instead
+    if (isNotValid(brothers.data) || isNotValid(executives))
+      getBrothersIfNeeded();
     if (this.getKey(this.props) !== this.getKey(nextProps))
-      getBrotherByKey(this.getKey(nextProps));
-    if (isNotValid(brothers.data) || isNotValid(executives)) getBrothers();
+      getBrotherByKeyIfNeeded(this.getKey(nextProps));
   }
 
   getKey = props => props.match.params.name;
@@ -152,12 +160,19 @@ class Brother extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  data: state.data
+  activeBro: state.dataReducer.activeBro,
+  brothers: state.dataReducer.brothers,
+  executives: state.dataReducer.executives
+});
+
+const mapDispatchToProps = dispatch => ({
+  getBrothersIfNeeded: dispatch(getBrothersIfNeeded()),
+  getBrotherByKeyIfNeeded: dispatch(getBrotherByKeyIfNeeded())
 });
 
 export default connect(
   mapStateToProps,
-  DataActions
+  mapDispatchToProps
 )(Brother);
 
 const Container = RowContainer.extend`

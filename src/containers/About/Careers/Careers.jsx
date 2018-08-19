@@ -10,7 +10,7 @@ import CareersTable from './CareersTable';
 import { FULLTIME_COLUMNS } from './fulltime_constants';
 
 // actions
-import { DataActions } from '../../../actions/data-actions.js';
+import { getFulltimesIfNeeded } from '../../../actions/data';
 
 class Careers extends Component {
   componentDidMount() {
@@ -40,13 +40,19 @@ class Careers extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  data: state.data
+const mapStateToProps = state => ({
+  fulltimes: state.dataReducer.fulltimes,
+  internship: state.dataReducer.internships
+});
+
+const mapDispatchToProps = dispatch => ({
+  getFulltimesIfNeeded: dispatch(getFulltimesIfNeeded())
+  // TODO: add fetchInternshipsIfNeeded
 });
 
 export default connect(
   mapStateToProps,
-  DataActions
+  mapDispatchToProps
 )(Careers);
 
 const TableContainer = styled.div`

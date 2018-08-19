@@ -2,10 +2,12 @@
 import { combineReducers } from 'redux';
 
 // local
-import DataReducer from './data-reducer';
+import dataReducer from './data';
+import formReducer from './form';
 
 const rootReducer = combineReducers({
-  data: DataReducer
+  data: dataReducer,
+  form: formReducer
 });
 
 export default rootReducer;

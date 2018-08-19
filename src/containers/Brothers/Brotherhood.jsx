@@ -11,17 +11,18 @@ import { PageHeader } from '../components/HeaderStyles';
 import { BROTHERS_PATH } from '../Navbar/navbar_constants';
 
 // actions
-import { DataActions } from '../../actions/data-actions.js';
+import { getBrothersIfNeeded } from '../../actions/data';
 
 class Brotherhood extends Component {
   componentDidMount() {
+    const { getBrothersIfNeeded } = this.props;
     document.title = 'Brotherhood - Pi Sigma Epsilon | Zeta Chi Chapter';
-    const { brothers, executives } = this.props.data;
-    if (!brothers.length || !executives.length) this.props.getBrothers();
+    const { brothers, executives } = this.props;
+    if (!brothers.length || !executives.length) getBrothersIfNeeded();
   }
 
   render() {
-    const { brothers } = this.props.data;
+    const { brothers } = this.props;
     const allBrothers = (brothers.data || []).map(brother => {
       return (
         <BrotherImage
@@ -47,13 +48,18 @@ class Brotherhood extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  data: state.data
+const mapStateToProps = state => ({
+  brothers: state.dataReducer.brothers,
+  executives: state.dataReducer.executives
+});
+
+const mapDispatchToProps = dispatch => ({
+  getBrothersIfNeeded: dispatch(getBrothersIfNeeded())
 });
 
 export default connect(
   mapStateToProps,
-  DataActions
+  mapDispatchToProps
 )(Brotherhood);
 
 const LandingContainer = ColumnContainer.extend`
