@@ -12,10 +12,8 @@ import {
 
 export const onSubmitRegform = (values, formName) => async dispatch => {
   const res = await axios.post(API_POST_REGFORM, values);
-  if (res.status === 201) {
-    debugger;
-    dispatch({ type: POST_SUCCESS, formName });
-  } else dispatch({ type: POST_FAILURE, formName });
+  if (res.status === 201) dispatch({ type: POST_SUCCESS, formName });
+  else dispatch({ type: POST_FAILURE, formName });
 };
 
 export const onSubmitApplication = (values, formName) => async dispatch => {
