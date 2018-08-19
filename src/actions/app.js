@@ -1,14 +1,7 @@
 // node modules
 import axios from 'axios';
 
-import {
-  POST_REGFORM_SUCCESS,
-  POST_REGFORM_FAILURE,
-  POST_COFFEE_CHAT_FORM_SUCCESS,
-  POST_COFFEE_CHAT_FORM_FAILURE,
-  POST_APPLICATION_SUCCESS,
-  POST_APPLICATION_FAILURE
-} from '../constants/actions';
+import { POST_SUCCESS, POST_FAILURE } from '../constants/actions';
 
 // local
 import {
@@ -17,8 +10,22 @@ import {
   API_POST_APPLICATION
 } from '../constants/api';
 
-export const onSubmitRegform = values => async dispatch => {
+export const onSubmitRegform = (values, formName) => async dispatch => {
   const res = await axios.post(API_POST_REGFORM, values);
-  if (res.status === 204) dispatch({ type: POST_REGFORM_SUCCESS });
-  else dispatch({ type: POST_REGFORM_FAILURE });
+  if (res.status === 201) {
+    debugger;
+    dispatch({ type: POST_SUCCESS, formName });
+  } else dispatch({ type: POST_FAILURE, formName });
+};
+
+export const onSubmitApplication = (values, formName) => async dispatch => {
+  const res = await axios.post(API_POST_APPLICATION, values);
+  if (res.status === 201) dispatch({ type: POST_SUCCESS, formName });
+  else dispatch({ type: POST_FAILURE, formName });
+};
+
+export const onSubmitCoffeeChatForm = (values, formName) => async dispatch => {
+  const res = await axios.post(API_POST_COFFEE_CHAT_FORM, values);
+  if (res.status === 201) dispatch({ type: POST_SUCCESS, formName });
+  else dispatch({ type: POST_FAILURE, formName });
 };

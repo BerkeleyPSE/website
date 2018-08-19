@@ -1,40 +1,48 @@
 import React from 'react';
+
+// node modules
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Field } from 'redux-form';
 
 // components
-import { ColumnContainer, RowContainer } from '../ContainerStyles';
+import { ColumnContainer } from '../ContainerStyles';
 import { Label, ErrorLabel } from './Label';
 import { Desc, Req } from './Texts';
 
-const Radio = ({ label, name, desc, options, isRequired }) => (
-  <ColumnContainer className="my-1q" ai="baseline">
-    <Label for={name}>
-      {label}
-      {isRequired && <Req>*</Req>}
-    </Label>
-    {desc && <Desc>{desc}</Desc>}
+const Radio = ({ name, label, desc, options, required }) => (
+  <ColumnContainer className="my-1h" ai="baseline">
+    <div>
+      <span>
+        <Label for={name}>{label}</Label>
+        {required && <Req>*</Req>}
+      </span>
+      {desc && <Desc>{desc}</Desc>}
+    </div>
     {options.map((o, i) => (
-      <Option
-        key={o.toLowerCase().replace(' ', '-')}
-        className="my-0q"
-        fw="none"
-      >
-        <input
-          className=""
-          type="radio"
-          id={`${name}_option-${i}`}
-          name={name}
-          value={o}
-        />
-        <label className="ml-0q" htmlFor={`${name}_option-${i}`}>
-          {o}
-        </label>
-      </Option>
+      <Field
+        key={`${name}-option-${o.toLowerCase().replace(' ', '-')}`}
+        name={name}
+        component={Option}
+        type="radio"
+        value={o}
+        option={o}
+      />
     ))}
   </ColumnContainer>
 );
 
-const Option = RowContainer.extend`
+const Option = ({ input, option, meta: { touched, error } }) => (
+  <OptContainer className="my-0q">
+    <label>
+      <input className="ml-0q" type="radio" {...input} value={option} />
+      <span className="ml-0q">{option}</span>
+      {touched && error && <ErrorLabel>{error}</ErrorLabel>}
+    </label>
+  </OptContainer>
+);
+
+const OptContainer = styled.div`
   font-size: 1rem;
 `;
 
@@ -42,8 +50,7 @@ Radio.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   desc: PropTypes.string,
-  options: PropTypes.arrayOf(PropTypes.string),
-  isRequired: PropTypes.bool
+  options: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Radio;

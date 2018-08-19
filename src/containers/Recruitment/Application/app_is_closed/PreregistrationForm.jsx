@@ -38,24 +38,9 @@ const PreregistrationForm = ({ onSubmitRegform }) => (
 );
 
 const mapDispatchToProps = dispatch => ({
-  onSubmitRegform: values => dispatch(onSubmitRegform(values))
+  onSubmitRegform: (values, formName) =>
+    dispatch(onSubmitRegform(values, formName))
 });
-
-// const PreregistrationForm = () => (
-//   <ColumnContainer className="my-1" ai="baseline">
-//     <form id="regform" action={`${BASE_URL}/regforms/add`} method="POST">
-//       <Input label="Name" name="name" placeholder="Oski Bear" isRequired />
-//       <Input
-//         label="Email"
-//         type="email"
-//         name="email"
-//         placeholder="oski@berkeley.edu"
-//         isRequired
-//       />
-//       <SubmitButton>Submit</SubmitButton>
-//     </form>
-//   </ColumnContainer>
-// );
 
 export default connect(
   null,

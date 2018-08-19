@@ -9,8 +9,10 @@ const Label = props => (
 );
 
 const LabelText = styled.label`
-  border-bottom: 1px solid #895fad;
-  font-size: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.00625rem;
 `;
 
 Label.propTypes = {

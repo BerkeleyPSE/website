@@ -7,20 +7,29 @@ import { ColumnContainer } from '../ContainerStyles';
 import { Label, ErrorLabel } from './Label';
 import { Desc, Req } from './Texts';
 
-const TextArea = ({ label, name, placeholder, desc, isRequired }) => (
-  <Container className="my-1q" ai="baseline">
-    <Label for={name}>
-      {label}
-      {isRequired && <Req>*</Req>}
-    </Label>
-    {desc && <Desc>{desc}</Desc>}
+const TextArea = ({
+  input,
+  name,
+  label,
+  desc,
+  placeholder,
+  required,
+  meta: { error, touched }
+}) => (
+  <Container className="my-1h" ai="baseline">
+    <span>
+      <Label for={name}>{label}</Label>
+      {required && <Req>*</Req>}
+    </span>
+    {touched && error && <ErrorLabel>{error}</ErrorLabel>}
     <TextAreaField
-      className="my-0h p-0q"
       id={name}
-      name={name}
+      className="my-0q p-0q"
       placeholder={placeholder}
-      required={isRequired}
+      {...input}
+      required={required}
     />
+    {desc && <Desc>{desc}</Desc>}
   </Container>
 );
 

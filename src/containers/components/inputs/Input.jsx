@@ -17,21 +17,21 @@ const Input = ({
   required,
   meta: { error, touched }
 }) => (
-  <ColumnContainer className="my-1q" ai="baseline">
-    <Label for={name}>
-      {label}
+  <ColumnContainer className="my-1h" ai="baseline">
+    <span>
+      <Label for={name}>{label}</Label>
       {required && <Req>*</Req>}
-    </Label>
-    {desc && <Desc>{desc}</Desc>}
+    </span>
+    {touched && error && <ErrorLabel>{error}</ErrorLabel>}
     <InputField
       id={name}
-      className="my-0h p-0q"
+      className="my-0q p-0q"
       placeholder={placeholder}
       type={type}
       {...input}
       required={required}
     />
-    {touched && error && <ErrorLabel>{error}</ErrorLabel>}
+    {desc && <Desc>{desc}</Desc>}
   </ColumnContainer>
 );
 

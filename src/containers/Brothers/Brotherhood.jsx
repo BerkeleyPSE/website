@@ -49,8 +49,8 @@ class Brotherhood extends Component {
 }
 
 const mapStateToProps = state => ({
-  brothers: state.dataReducer.brothers,
-  executives: state.dataReducer.executives
+  brothers: state.data.brothers,
+  executives: state.data.executives
 });
 
 const mapDispatchToProps = dispatch => ({

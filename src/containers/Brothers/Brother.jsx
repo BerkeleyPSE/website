@@ -160,9 +160,9 @@ class Brother extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  activeBro: state.dataReducer.activeBro,
-  brothers: state.dataReducer.brothers,
-  executives: state.dataReducer.executives
+  activeBro: state.data.activeBro,
+  brothers: state.data.brothers,
+  executives: state.data.executives
 });
 
 const mapDispatchToProps = dispatch => ({

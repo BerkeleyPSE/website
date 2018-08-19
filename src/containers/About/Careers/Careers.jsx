@@ -41,8 +41,8 @@ class Careers extends Component {
 }
 
 const mapStateToProps = state => ({
-  fulltimes: state.dataReducer.fulltimes,
-  internship: state.dataReducer.internships
+  fulltimes: state.data.fulltimes,
+  internship: state.data.internships
 });
 
 const mapDispatchToProps = dispatch => ({
