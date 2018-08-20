@@ -4,6 +4,7 @@ export const CAREERS_PATH = '/careers';
 export const RECRUITMENT_PATH = '/recruitment';
 // export const WHYPSE_PATH = '/why-pse';
 export const FAQS_PATH = '/faqs';
+export const COFFEE_CHAT_PATH = '/coffee';
 export const APPLICATION_PATH = '/app';
 export const BROTHERS_PATH = '/brothers';
 export const EXECUTIVES_PATH = '/eboard';
@@ -52,6 +53,10 @@ export const NAVBAR_INFO = [
       {
         page: 'FAQs',
         pageLink: FAQS_PATH
+      },
+      {
+        page: 'Coffee Chats',
+        pageLink: COFFEE_CHAT_PATH
       },
       {
         page: 'Application',

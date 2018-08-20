@@ -83,7 +83,7 @@ const Value = styled.p`
 
 // PropTypes
 BrotherTable.propTypes = {
-  year: PropTypes.string,
+  year: PropTypes.number,
   hometown: PropTypes.string,
   class: PropTypes.string,
   major: PropTypes.arrayOf(PropTypes.string),

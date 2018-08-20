@@ -7,10 +7,11 @@ import styled from 'styled-components';
 // components
 import { PageHeader, SectionHeader } from '../../components/HeaderStyles';
 import CareersTable from './CareersTable';
-import { FULLTIME_COLUMNS } from './fulltime_constants';
+import Loader from '../../components/Loader';
+import FULLTIME_COLUMNS from '../../../constants/fulltimeColumns';
 
 // actions
-import { DataActions } from '../../../actions/data-actions.js';
+import { getFulltimes } from '../../../actions/data';
 
 class Careers extends Component {
   componentDidMount() {
@@ -18,35 +19,38 @@ class Careers extends Component {
     this.getFulltimes();
   }
 
-  getFulltimes = async () => {
-    await this.props.getFulltimes();
-  };
+  getFulltimes = async () => await this.props.getFulltimes();
 
   render() {
-    const { fulltimes } = this.props.data;
+    const { fulltimes } = this.props;
     return (
       <div id="careers-container">
         <PageHeader>Careers</PageHeader>
-        <TableContainer className="m-0 mb-2 p-0">
-          <SectionHeader altStyle>Full-Time</SectionHeader>
-          <CareersTable
-            id="fulltime-table"
-            columns={FULLTIME_COLUMNS}
-            data={fulltimes.data}
-          />
-        </TableContainer>
+        {fulltimes.loading ? (
+          <Loader />
+        ) : (
+          <TableContainer className="m-0 mb-2 p-0">
+            <SectionHeader altStyle>Full-Time</SectionHeader>
+            <CareersTable
+              id="fulltime-table"
+              columns={FULLTIME_COLUMNS}
+              data={fulltimes.data}
+            />
+          </TableContainer>
+        )}
       </div>
     );
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  data: state.data
+const mapStateToProps = state => ({
+  fulltimes: state.data.fulltimes,
+  internship: state.data.internships
 });
 
 export default connect(
   mapStateToProps,
-  DataActions
+  { getFulltimes }
 )(Careers);
 
 const TableContainer = styled.div`

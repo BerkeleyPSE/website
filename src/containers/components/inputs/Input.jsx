@@ -3,25 +3,35 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // components
-import { ColumnContainer } from '../../../components/ContainerStyles';
-import Label from './Label';
+import { ColumnContainer } from '../ContainerStyles';
+import { Label, ErrorLabel } from './Label';
 import { Desc, Req } from './Texts';
 
-const Input = ({ label, type, name, placeholder, desc, isRequired }) => (
-  <ColumnContainer className="my-1q" ai="baseline">
-    <Label for={name}>
-      {label}
-      {isRequired && <Req>*</Req>}
-    </Label>
-    {desc && <Desc>{desc}</Desc>}
+const Input = ({
+  input,
+  name,
+  label,
+  desc,
+  placeholder,
+  type,
+  required,
+  meta: { error, touched }
+}) => (
+  <ColumnContainer className="my-1h" ai="baseline">
+    <span>
+      <Label for={name}>{label}</Label>
+      {required && <Req>*</Req>}
+    </span>
+    {touched && error && <ErrorLabel>{error}</ErrorLabel>}
     <InputField
-      className="my-0h p-0q"
       id={name}
-      type={type || 'text'}
-      name={name}
+      className="my-0q p-0q"
       placeholder={placeholder}
-      required={isRequired}
+      type={type}
+      {...input}
+      required={required}
     />
+    {desc && <Desc>{desc}</Desc>}
   </ColumnContainer>
 );
 

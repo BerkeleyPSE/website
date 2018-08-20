@@ -6,17 +6,18 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
-import reduxThunk from 'redux-thunk';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
 // components
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 import App from './containers/App';
 import ScrollToTop from './containers/ScrollToTop';
 import rootReducer from './reducers/index.js';
 import './styles/index.css';
 import './styles/box-sizing.css';
 
-const store = createStore(rootReducer, {}, applyMiddleware(reduxThunk));
+const store = createStore(rootReducer, {}, applyMiddleware(thunk, logger));
 let history = createHistory();
 
 ReactDOM.render(
