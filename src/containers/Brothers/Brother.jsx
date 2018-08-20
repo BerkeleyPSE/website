@@ -59,6 +59,11 @@ class Brother extends React.Component {
     } = this.props;
     if (isNotValid(brosList)) getBrothers();
     if (isNotValid(brother)) getBrotherByKey(brotherKey);
+    if (brotherKey) {
+      const [prevKey, nextKey] = this.getNeighborKeys(this.props);
+      if (prevKey) getBrotherByKey(prevKey);
+      if (nextKey) getBrotherByKey(nextKey);
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -71,9 +76,34 @@ class Brother extends React.Component {
       getBrotherByKey
     } = nextProps;
     if (isNotValid(brosList)) getBrothers();
-    if (brotherKey !== nextBrotherKey || isNotValid(brother))
+    if (brotherKey !== nextBrotherKey || isNotValid(brother)) {
       getBrotherByKey(nextBrotherKey);
+      const [prevKey, nextKey] = this.getNeighborKeys(nextProps);
+      if (prevKey) getBrotherByKey(prevKey);
+      if (nextKey) getBrotherByKey(nextKey);
+    }
   }
+
+  getNeighborKeys = props => {
+    const { brosList, brotherKey } = props;
+    if (!brosList || !brotherKey) return [null, null];
+    const keyList = _map(brosList, 'key');
+    const index = _indexOf(keyList, brotherKey);
+    if (index === -1) return [null, null];
+    let prev, next;
+    const numBros = brosList.length - 1;
+    if (index === 0) {
+      prev = keyList[numBros];
+      next = keyList[index + 1];
+    } else if (index === numBros) {
+      prev = keyList[index - 1];
+      next = keyList[0];
+    } else {
+      prev = keyList[index - 1];
+      next = keyList[index + 1];
+    }
+    return [prev, next];
+  };
 
   render() {
     const { brother, prevBro, nextBro, path } = this.props;
