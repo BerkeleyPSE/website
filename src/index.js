@@ -17,7 +17,12 @@ import rootReducer from './reducers/index.js';
 import './styles/index.css';
 import './styles/box-sizing.css';
 
-const store = createStore(rootReducer, {}, applyMiddleware(thunk, logger));
+const middlewares = (() => {
+  if (process.env.NODE_ENV === 'development') return [thunk, logger];
+  return [thunk];
+})();
+
+const store = createStore(rootReducer, {}, applyMiddleware(...middlewares));
 let history = createHistory();
 
 ReactDOM.render(
