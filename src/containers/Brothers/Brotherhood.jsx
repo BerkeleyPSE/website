@@ -11,19 +11,19 @@ import { PageHeader } from '../components/HeaderStyles';
 import { BROTHERS_PATH } from '../Navbar/navbar_constants';
 
 // actions
-import { getBrothersIfNeeded } from '../../actions/data';
+import { getBrothers } from '../../actions/data';
 
 class Brotherhood extends Component {
   componentDidMount() {
-    const { getBrothersIfNeeded } = this.props;
+    const { getBrothers } = this.props;
     document.title = 'Brotherhood - Pi Sigma Epsilon | Zeta Chi Chapter';
     const { brothers, executives } = this.props;
-    if (!brothers.length || !executives.length) getBrothersIfNeeded();
+    if (!brothers.length || !executives.length) getBrothers();
   }
 
   render() {
     const { brothers } = this.props;
-    const allBrothers = (brothers.data || []).map(brother => {
+    const allBrothers = brothers.map(brother => {
       return (
         <BrotherImage
           brother={brother}
@@ -35,13 +35,15 @@ class Brotherhood extends Component {
 
     return (
       <div id="brotherhood-container">
-        <LandingContainer>
+        <ColumnContainer className="mb-2">
           <Image
             src="http://res.cloudinary.com/berkeleypse-tech/image/upload/f_auto,fl_force_strip,q_auto:best/brothers/brotherhood.jpg"
             alt="Pi Sigma Epsilon brotherhood"
           />
-          <Header altStyle>Our Brotherhood</Header>
-        </LandingContainer>
+          <Header className="py-2" altStyle>
+            Our Brotherhood
+          </Header>
+        </ColumnContainer>
         <AllBrothersContainer>{allBrothers}</AllBrothersContainer>
       </div>
     );
@@ -49,22 +51,14 @@ class Brotherhood extends Component {
 }
 
 const mapStateToProps = state => ({
-  brothers: state.data.brothers,
-  executives: state.data.executives
-});
-
-const mapDispatchToProps = dispatch => ({
-  getBrothersIfNeeded: dispatch(getBrothersIfNeeded())
+  brothers: state.data.brothers.brothersList,
+  executives: state.data.brothers.executivesList
 });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { getBrothers }
 )(Brotherhood);
-
-const LandingContainer = ColumnContainer.extend`
-  margin-bottom: 30px;
-`;
 
 const Image = styled.img`
   position: relative;
@@ -74,7 +68,6 @@ const Header = PageHeader.extend`
   font-size: 3rem;
   position: absolute;
   width: 100%;
-  padding: 2rem 0;
 `;
 
 const AllBrothersContainer = styled.div`

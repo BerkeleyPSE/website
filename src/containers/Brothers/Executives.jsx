@@ -6,24 +6,24 @@ import styled from 'styled-components';
 
 // components
 import { BrotherImage } from './BrotherImage.jsx';
-import { RowContainer } from '../components/ContainerStyles';
+import { ColumnContainer } from '../components/ContainerStyles';
 import { PageHeader } from '../components/HeaderStyles';
 // import { Image } from '../components/ImageStyles';
 import { EXECUTIVES_PATH } from '../Navbar/navbar_constants';
 
 // actions
-import { getBrothersIfNeeded } from '../../actions/data';
+import { getBrothers } from '../../actions/data';
 
 class Executives extends Component {
   componentDidMount() {
     document.title = 'Executive Board - Pi Sigma Epsilon | Zeta Chi Chapter';
-    const { brothers, executives, getBrothersIfNeeded } = this.props;
-    if (!brothers.length || !executives.length) getBrothersIfNeeded();
+    const { brothers, executives, getBrothers } = this.props;
+    if (!brothers.length || !executives.length) getBrothers();
   }
 
   render() {
     const { executives } = this.props;
-    const allExecs = (executives.data || []).map(brother => {
+    const allExecs = executives.map(brother => {
       return (
         <BrotherImage
           brother={brother}
@@ -34,14 +34,14 @@ class Executives extends Component {
     });
 
     return (
-      <div id="brotherhood-container">
-        <LandingContainer>
+      <div id="executives-container">
+        <ColumnContainer className="mb-2">
           {/* <Image
             src="../images/executive_board.JPG"
             alt="Pi Sigma Epsilon executive board"
           /> */}
           <PageHeader>Executive Board</PageHeader>
-        </LandingContainer>
+        </ColumnContainer>
         <CenterTextContainer>{allExecs}</CenterTextContainer>
       </div>
     );
@@ -49,22 +49,14 @@ class Executives extends Component {
 }
 
 const mapStateToProps = state => ({
-  brothers: state.data.brothers,
-  executives: state.data.executives
-});
-
-const mapDispatchToProps = dispatch => ({
-  getBrothersIfNeeded: dispatch(getBrothersIfNeeded())
+  brothers: state.data.brothers.brothersList,
+  executives: state.data.brothers.executivesList
 });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { getBrothers }
 )(Executives);
-
-const LandingContainer = RowContainer.extend`
-  margin-bottom: 2rem;
-`;
 
 const CenterTextContainer = styled.div`
   text-align: center;

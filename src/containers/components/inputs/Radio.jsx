@@ -21,7 +21,7 @@ const Radio = ({ name, label, desc, options, required }) => (
     </div>
     {options.map((o, i) => (
       <Field
-        key={`${name}-option-${o.toLowerCase().replace(' ', '-')}`}
+        key={`${name}-option-${o.toLowerCase().replace(/\s/g, '-')}`}
         name={name}
         component={Option}
         type="radio"

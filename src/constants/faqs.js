@@ -58,7 +58,6 @@ const FAQ_INFO = [
       {
         type: 'text',
         content: 'We have a GPA minimum of 3.0.'
-        // "Applicants with a sub-3.0 GPA are still welcome to apply, but are expected to have an outstanding resume or potential."
       }
     ]
   },
