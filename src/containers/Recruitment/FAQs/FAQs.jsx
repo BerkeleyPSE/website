@@ -1,20 +1,20 @@
 import React from 'react';
 
 // components
-import FAQ_INFO from './faq_constants.js';
+import FAQS from '../../../constants/faqs';
 import AccordionItem from '../../components/AccordionItem.jsx';
 import { PageHeader } from '../../components/HeaderStyles';
 
 const FAQs = () => {
   document.title = 'FAQs - Pi Sigma Epsilon | Zeta Chi Chapter';
 
-  const faqs = FAQ_INFO.map((item, index) => {
-    if (item.question && item.answer) {
+  const faqs = FAQS.map(f => {
+    if (f.question && f.answer) {
       return (
         <AccordionItem
-          key={`accordion_item_${index}`}
-          question={item.question}
-          answer={item.answer}
+          key={`accordion_faq_${f.question.toLowerCase().replace(/\s/g, '-')}`}
+          question={f.question}
+          answer={f.answer}
         />
       );
     } else {

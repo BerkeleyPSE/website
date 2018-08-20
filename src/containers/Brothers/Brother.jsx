@@ -1,12 +1,12 @@
 import React from 'react';
 
 // node modules
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import includes from 'lodash/includes';
-import PropTypes from 'prop-types';
-import map from 'lodash/map';
-import indexOf from 'lodash/indexOf';
+import _includes from 'lodash/includes';
+import _map from 'lodash/map';
+import _indexOf from 'lodash/indexOf';
 
 import { isNotValid, iE } from '../../helpers';
 
@@ -19,9 +19,10 @@ import { Image } from '../components/ImageStyles';
 import { ParaText } from '../components/TextStyles';
 import MediaLink from '../components/MediaLink';
 import { BROTHERS_PATH, EXECUTIVES_PATH } from '../Navbar/navbar_constants';
+import Loader from '../components/Loader';
 
 // actions
-import { DataActions } from '../../actions/data-actions';
+import { getBrothers, getBrotherByKey } from '../../actions/data';
 
 // constants
 const IMAGE_URL =
@@ -29,116 +30,102 @@ const IMAGE_URL =
 
 class Brother extends React.Component {
   static propTypes = {
+    brother: PropTypes.shape({
+      name: PropTypes.string,
+      key: PropTypes.string,
+      year: PropTypes.number,
+      pseClass: PropTypes.string,
+      majors: PropTypes.arrayOf(PropTypes.string),
+      minors: PropTypes.arrayOf(PropTypes.string),
+      previousPositions: PropTypes.arrayOf(PropTypes.string),
+      careerInterests: PropTypes.arrayOf(PropTypes.string),
+      hometown: PropTypes.string,
+      bio: PropTypes.string,
+      loading: PropTypes.bool,
+      resolved: PropTypes.bool,
+      error: PropTypes.bool
+    }),
     history: PropTypes.object.isRequired,
     match: PropTypes.object.isRequired
   };
 
   componentDidMount() {
-    const { brothers, executives, activeBro } = this.props.data;
-    const { getBrothers, getBrotherByKey } = this.props;
-    if (isNotValid(brothers.data) || isNotValid(executives)) getBrothers();
-    if (isNotValid(activeBro)) getBrotherByKey(this.getKey(this.props));
+    const {
+      brotherKey,
+      brosList,
+      brother,
+      getBrothers,
+      getBrotherByKey
+    } = this.props;
+    if (isNotValid(brosList)) getBrothers();
+    if (isNotValid(brother)) getBrotherByKey(brotherKey);
   }
 
   componentWillReceiveProps(nextProps) {
-    const { brothers, executives } = nextProps.data;
-    const { getBrothers, getBrotherByKey } = nextProps;
-    if (this.getKey(this.props) !== this.getKey(nextProps))
-      getBrotherByKey(this.getKey(nextProps));
-    if (isNotValid(brothers.data) || isNotValid(executives)) getBrothers();
+    const { brotherKey } = this.props;
+    const {
+      brotherKey: nextBrotherKey,
+      brosList,
+      brother,
+      getBrothers,
+      getBrotherByKey
+    } = nextProps;
+    if (isNotValid(brosList)) getBrothers();
+    if (brotherKey !== nextBrotherKey || isNotValid(brother))
+      getBrotherByKey(nextBrotherKey);
   }
 
-  getKey = props => props.match.params.name;
-
-  getPath = props => {
-    const { match } = props;
-    return includes(match.path, EXECUTIVES_PATH)
-      ? EXECUTIVES_PATH
-      : BROTHERS_PATH;
-  };
-
-  getBrosList = props => {
-    const { match } = props;
-    const { brothers, executives } = props.data;
-    return includes(match.path, EXECUTIVES_PATH) ? executives : brothers.data;
-  };
-
-  getSurroundingBros = broKey => {
-    const broList = this.getBrosList(this.props);
-    const keyList = map(broList, 'key');
-    const index = indexOf(keyList, broKey);
-    if (index === -1) return [{}, {}];
-
-    let prevBro, nextBro;
-    const numBros = broList.length - 1;
-
-    if (index === 0) {
-      prevBro = broList[numBros];
-      nextBro = broList[index + 1];
-    } else if (index === numBros) {
-      prevBro = broList[index - 1];
-      nextBro = broList[0];
-    } else {
-      prevBro = broList[index - 1];
-      nextBro = broList[index + 1];
-    }
-
-    return [prevBro, nextBro];
-  };
-
   render() {
-    const { activeBro } = this.props.data;
-    if (isNotValid(activeBro)) return null;
-
-    const broKey = this.props.match.params.name;
-    const [prevBro, nextBro] = this.getSurroundingBros(broKey);
+    const { brother, prevBro, nextBro, path } = this.props;
+    if (isNotValid(brother) || brother.error) return null;
+    if (brother.loading) return <Loader />;
 
     const position = (() => {
-      if (activeBro.position) {
-        if (activeBro.position === 'N/A') return 'Active';
-        return activeBro.position;
+      if (brother.position) {
+        if (brother.position === 'N/A') return 'Active';
+        return brother.position;
       }
       return 'Active';
     })();
 
-    document.title = `${activeBro.name ||
+    document.title = `${brother.name ||
       'Brothers'} - Pi Sigma Epsilon | Zeta Chi Chapter`;
 
     return (
       <Container className="px-1 py-0h" fw="none">
         <BroImage
-          src={`${IMAGE_URL}/${activeBro.key}`}
-          alt={activeBro.name}
+          src={`${IMAGE_URL}/${brother.key}`}
+          alt={brother.name}
           border
         />
         <InfoContainer className="px-0q" jc="normal">
           <PageHandler
-            path={this.getPath(this.props)}
+            path={path}
             prevBro={prevBro || {}}
             nextBro={nextBro || {}}
           />
           <HeaderContainer>
-            <Name>{activeBro.name}</Name>
+            <Name>{brother.name}</Name>
             <Position className="p-0 m-0">{position}</Position>
           </HeaderContainer>
           <BrotherTable
-            name={activeBro.name}
-            year={activeBro.year}
-            hometown={activeBro.hometown}
-            class={activeBro.pseClass}
-            major={activeBro.majors}
-            minor={activeBro.minors}
-            careerInterests={activeBro.careerInterests}
-            previousPositions={activeBro.previousPositions}
+            name={brother.name}
+            year={brother.year}
+            hometown={brother.hometown}
+            class={brother.pseClass}
+            major={brother.majors}
+            minor={brother.minors}
+            careerInterests={brother.careerInterests}
+            previousPositions={brother.previousPositions}
           />
-          <Bio>{activeBro.bio}</Bio>
+          <Bio>{brother.bio}</Bio>
           <RowContainer>
-            {Object.entries(activeBro.mediaUrls).map(site => {
+            {Object.entries(brother.mediaUrls).map(site => {
               const [iconKey, href] = site;
               if (iE(href)) return null;
               return (
                 <MediaLink
-                  key={`${activeBro.name}_${iconKey}`}
+                  key={`${brother.name}_${iconKey}`}
                   iconKey={iconKey}
                   href={href}
                 />
@@ -151,25 +138,62 @@ class Brother extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  data: state.data
-});
+const mapStateToProps = (state, props) => {
+  const [brotherKey, path, brosList] = (() => {
+    const { match } = props;
+    const { path, params } = match;
+    if (_includes(path, EXECUTIVES_PATH))
+      return [params.name, EXECUTIVES_PATH, state.data.brothers.executivesList];
+    return [params.name, BROTHERS_PATH, state.data.brothers.brothersList];
+  })();
+
+  const [prevBro, nextBro] = (() => {
+    if (!brosList || !brotherKey) return [{}, {}];
+    const keyList = _map(brosList, 'key');
+    const index = _indexOf(keyList, brotherKey);
+    if (index === -1) return [{}, {}];
+    let prev, next;
+    const numBros = brosList.length - 1;
+    if (index === 0) {
+      prev = brosList[numBros];
+      next = brosList[index + 1];
+    } else if (index === numBros) {
+      prev = brosList[index - 1];
+      next = brosList[0];
+    } else {
+      prev = brosList[index - 1];
+      next = brosList[index + 1];
+    }
+    return [prev, next];
+  })();
+
+  return {
+    brother: state.data.brothers.data[brotherKey],
+    brotherKey,
+    brosList,
+    path,
+    prevBro,
+    nextBro
+  };
+};
 
 export default connect(
   mapStateToProps,
-  DataActions
+  {
+    getBrothers,
+    getBrotherByKey
+  }
 )(Brother);
 
-const Container = RowContainer.extend`
-  align-items: flex-start;
-  @media (max-width: 1050px) {
-    flex-direction: column;
-    align-items: center;
+const Container = ColumnContainer.extend`
+  align-items: center;
+  @media (min-width: 1050px) {
+    flex-direction: row;
+    align-items: flex-start;
   }
 `;
 
 const BroImage = Image.extend`
-  max-width: 400px;
   @media (min-width: 323px) {
     height: 485px;
     width: 323px;

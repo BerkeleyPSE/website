@@ -6,22 +6,23 @@ import styled from 'styled-components';
 // components
 import { ParaText } from '../../../components/TextStyles';
 import { ExtLink } from '../../../components/LinkStyles';
+import { Label } from '../../../components/inputs/Label';
 
 const AdditionalInfo = () => (
   <Text className="pb-1">
-    Please email the following items to the Directors of Recruiting at{' '}
+    Please email the following items to the Directors of Recruitment at{' '}
     <ExtLink href="mailto:berkeleypse.recruiting@gmail.com">
       berkeleypse.recruiting@gmail.com
-    </ExtLink>.
-    <br />
+    </ExtLink>
+    .<br />
     Note that your application will be considered INCOMPLETE until you do so.
     <ol>
       <ListItem>
-        <ImpItem>Resume</ImpItem> [pdf format]
+        <Label>Resume</Label> [pdf format]
       </ListItem>
       <ListItem>
-        <ImpItem>Cover Letter</ImpItem> [pdf format]. Include the following
-        information [500 words or less]:
+        <Label>Cover Letter</Label> [pdf format]. Address the following
+        questions. [500 words or less]
       </ListItem>
       <ol type="a">
         <ListItem>Why do you want to join PSE?</ListItem>
@@ -32,19 +33,22 @@ const AdditionalInfo = () => (
         </ListItem>
       </ol>
       <ListItem>
-        <ImpItem>Unofficial Transcript</ImpItem> with your name [Screenshot via
-        CalCentral Academics]
+        <Label>Unofficial Transcript</Label> with your name [pdf via{' '}
+        <ExtLink href="https://calcentral.berkeley.edu/academics/academic_summary">
+          CalCentral Academics
+        </ExtLink>
+        ]
       </ListItem>
       <ListItem>
-        <ImpItem>Additional Transcript</ImpItem> [applicable only to Transfer
+        <Label>Additional Transcript</Label> [applicable only to Transfer
         students]
       </ListItem>
       <ListItem>
-        <ImpItem>Class Schedule</ImpItem> [Screenshot via CalCentral Schedule
+        <Label>Class Schedule</Label> [Screenshot via CalCentral Schedule
         Planner]
       </ListItem>
       <ListItem>
-        <ImpItem>Recent Headshot</ImpItem> [png or jpg format]
+        <Label>Recent Headshot</Label> [png or jpg format]
       </ListItem>
     </ol>
   </Text>
@@ -57,13 +61,6 @@ const Text = ParaText.withComponent('div').extend`
   text-align: left;
 `;
 
-// const Text = ParaText.extend`
-// `;
-
 const ListItem = styled.li`
   margin: 0.75rem 0;
-`;
-
-const ImpItem = styled.span`
-  color: #895fad;
 `;

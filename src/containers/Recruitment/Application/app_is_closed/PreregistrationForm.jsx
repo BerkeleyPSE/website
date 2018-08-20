@@ -1,30 +1,48 @@
 import React from 'react';
 
+// node modules
+import { connect } from 'react-redux';
+import { Field } from 'redux-form';
+
 // components
 import { ColumnContainer } from '../../../components/ContainerStyles';
-import Input from '../input_components/Input';
-import SubmitButton from '../input_components/SubmitButton';
-import { BASE_URL } from '../../../../actions/api';
+import Form from '../../../components/Form';
+import Input from '../../../components/inputs/Input';
+import SubmitButton from '../../../components/inputs/SubmitButton';
 
-const PreregistrationForm = () => (
-  <ColumnContainer className="my-1" ai="baseline">
-    <form
-      id="regform"
-      action={`${BASE_URL}/regforms/add`}
-      method="POST"
-      // target="_blank"
-    >
-      <Input label="Name" name="name" placeholder="Oski Bear" isRequired />
-      <Input
+// actions
+import { onSubmitRegform } from '../../../../actions/app';
+
+const PreregistrationForm = ({ onSubmitRegform }) => (
+  <ColumnContainer>
+    <Form formName="regform" onSubmit={onSubmitRegform}>
+      <Field
+        name="name"
+        component={Input}
+        label="Name"
+        type="text"
+        placeholder="Oski Bear"
+        required
+      />
+      <Field
+        name="email"
+        component={Input}
         label="Email"
         type="email"
-        name="email"
         placeholder="oski@berkeley.edu"
-        isRequired
+        required
       />
       <SubmitButton>Submit</SubmitButton>
-    </form>
+    </Form>
   </ColumnContainer>
 );
 
-export default PreregistrationForm;
+const mapDispatchToProps = dispatch => ({
+  onSubmitRegform: (values, formName) =>
+    dispatch(onSubmitRegform(values, formName))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(PreregistrationForm);

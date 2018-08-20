@@ -4,43 +4,43 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const MediaLink = props => {
+const MediaLink = ({ iconKey, href }) => {
   return (
     <Anchor
       className="my-0 mx-0h"
-      href={`${ICON_MAP[props.iconKey].href}${props.href}`}
+      href={`${ICON_MAP[iconKey].url}${href}`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i className={ICON_MAP[props.iconKey].class} aria-hidden="true" />
+      <i className={ICON_MAP[iconKey].class} aria-hidden="true" />
     </Anchor>
   );
 };
 
+export default MediaLink;
+
 const ICON_MAP = {
   linkedin: {
-    href: 'https://linkedin.com/in/',
+    url: 'https://linkedin.com/in/',
     class: 'fab fa-linkedin-in'
   },
   github: {
-    href: 'https://github.com/',
+    url: 'https://github.com/',
     class: 'fab fa-github'
   },
   medium: {
-    href: 'https://medium.com/@',
+    url: 'https://medium.com/@',
     class: 'fab fa-medium-m'
   },
   website: {
-    href: '',
+    url: '',
     class: 'fas fa-link'
   },
   twitter: {
-    href: 'https://twitter.com/',
+    url: 'https://twitter.com/',
     class: 'fab fa-twitter'
   }
 };
-
-export default MediaLink;
 
 const Anchor = styled.a`
   background-color: rgba(0, 0, 0, 0);
@@ -64,7 +64,6 @@ const Anchor = styled.a`
 `;
 
 MediaLink.propTypes = {
-  value: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  iconClass: PropTypes.string.isRequired
+  href: PropTypes.string.isRequired,
+  iconKey: PropTypes.string.isRequired
 };

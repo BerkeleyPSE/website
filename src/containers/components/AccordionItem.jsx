@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 // components
 import { PageHeader } from '../components/HeaderStyles';
 import { ParaText } from '../components/TextStyles';
-import { ExtLink } from '../components/LinkStyles';
+import { IntLink, ExtLink } from '../components/LinkStyles';
 
 export default class AccordionItem extends React.Component {
   state = {
@@ -18,7 +18,13 @@ export default class AccordionItem extends React.Component {
     switch (answerItem.type) {
       case 'text':
         return <span key={`faq_answer_${index}`}>{answerItem.content}</span>;
-      case 'link':
+      case 'int-link':
+        return (
+          <IntLink key={`faq_answer_${index}`} to={answerItem.to}>
+            {answerItem.content}
+          </IntLink>
+        );
+      case 'ext-link':
         return (
           <ExtLink key={`faq_answer_${index}`} href={answerItem.href}>
             {answerItem.content}
@@ -95,7 +101,6 @@ const Chevron = styled.i`
 const BodyContainer = styled.div`
   background-color: #333;
   border-top: 5px solid #fff;
-
   display: ${props => !props.isOpen && 'none'};
 `;
 
