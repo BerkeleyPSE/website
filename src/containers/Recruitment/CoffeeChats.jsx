@@ -15,7 +15,7 @@ import SubmitButton from '../components/inputs/SubmitButton';
 // actions
 import { onSubmitCoffeeChatForm } from '../../actions/app';
 
-const ALLOW_SIGNUPS = true;
+const ALLOW_SIGNUPS = false;
 
 const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
   document.title = 'Coffee Chats - Pi Sigma Epsilon | Zeta Chi Chapter';
