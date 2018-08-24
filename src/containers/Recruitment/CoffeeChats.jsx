@@ -82,9 +82,9 @@ const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
         <Text>{/*We will open sign-ups when we begin tabling. See you then!*/} 
           Interested in coffee chatting a brother? Fill out this            
           {' '}
-          <ExtLink href="https://docs.google.com/forms/d/e/1FAIpQLSfK4qa_tWRsO9SYK_06shuHuwxRL8N3PRDgxtfITMiGtXxhog/viewform" target="blank">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfK4qa_tWRsO9SYK_06shuHuwxRL8N3PRDgxtfITMiGtXxhog/viewform" target="blank">
             interest form
-          </ExtLink>
+          </Link>
         !</Text>
       )}
     </CoffeeChatContainer>
