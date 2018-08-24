@@ -86,7 +86,7 @@ const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
           <ExtLink href="https://docs.google.com/forms/d/e/1FAIpQLSfK4qa_tWRsO9SYK_06shuHuwxRL8N3PRDgxtfITMiGtXxhog/viewform" target="blank">
             this
           </ExtLink>
-        interest form!</Text>
+         interest form!</Text>
       )}
     </CoffeeChatContainer>
   );
