@@ -7,6 +7,7 @@ import { Field } from 'redux-form';
 // components
 import Form from '../components/Form';
 import { ColumnContainer } from '../components/ContainerStyles';
+import { ExtLink } from '../components/LinkStyles';
 import { PageHeader } from '../components/HeaderStyles';
 import { ParaText } from '../components/TextStyles';
 import Input from '../components/inputs/Input';
@@ -82,9 +83,9 @@ const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
         <Text>{/*We will open sign-ups when we begin tabling. See you then!*/} 
           Interested in coffee chatting a brother? Fill out this            
           {' '}
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfK4qa_tWRsO9SYK_06shuHuwxRL8N3PRDgxtfITMiGtXxhog/viewform" target="blank">
+          <ExtLink href="https://docs.google.com/forms/d/e/1FAIpQLSfK4qa_tWRsO9SYK_06shuHuwxRL8N3PRDgxtfITMiGtXxhog/viewform" target="blank">
             interest form
-          </Link>
+          </ExtLink>
         !</Text>
       )}
     </CoffeeChatContainer>
@@ -106,14 +107,6 @@ const CoffeeChatContainer = ColumnContainer.extend`
     padding: 0 2rem;
   }
 `;
-const ExtLink = styled.a.attrs({
-  target: '_blank'
-})`
-  color: #2980b9;
-  &:hover {
-    color: #ffd700;
-  }
-`
 const Text = ParaText.extend`
   font-size: 1rem;
   text-align: center;
