@@ -79,9 +79,9 @@ const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
           </Form>
         </React.Fragment>
       ) : (
-        <Text>Interested in coffee chatting a brother? Fill out this
-              {/*We will open sign-ups when we begin tabling. See you then!*/}             
-              {' '}
+        <Text>{/*We will open sign-ups when we begin tabling. See you then!*/} 
+          Interested in coffee chatting a brother? Fill out this            
+          {' '}
           <ExtLink href="https://docs.google.com/forms/d/e/1FAIpQLSfK4qa_tWRsO9SYK_06shuHuwxRL8N3PRDgxtfITMiGtXxhog/viewform" target="blank">
             interest form
           </ExtLink>
