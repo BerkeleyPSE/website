@@ -106,7 +106,14 @@ const CoffeeChatContainer = ColumnContainer.extend`
     padding: 0 2rem;
   }
 `;
-
+const ExtLink = styled.a.attrs({
+  target: '_blank'
+})`
+  color: #2980b9;
+  &:hover {
+    color: #ffd700;
+  }
+`
 const Text = ParaText.extend`
   font-size: 1rem;
   text-align: center;
