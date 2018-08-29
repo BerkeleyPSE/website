@@ -82,7 +82,6 @@ const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
       ) : (
         <Text>{/*We will open sign-ups when we begin tabling. See you then!*/} 
           Meet a brother during a coffee chat!
-          <b> <b>
           Sign up through        
           {' '}
           <ExtLink href="https://docs.google.com/forms/d/e/1FAIpQLSfMtOVzeKB_ZXpRWr8JTqq9iI3ig85POXwMeEhsau162E4N5A/viewform?usp=sf_link" target="blank">
