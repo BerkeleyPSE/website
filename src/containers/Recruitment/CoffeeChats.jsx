@@ -81,7 +81,7 @@ const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
         </React.Fragment>
       ) : (
         <Text>{/*We will open sign-ups when we begin tabling. See you then!*/} 
-          Want to learn more about PSE? Meet a brother during a coffee chat!
+          Meet a brother during a coffee chat!
           <b> <b>
           Sign up through        
           {' '}
