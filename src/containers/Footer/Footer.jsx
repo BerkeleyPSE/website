@@ -29,7 +29,7 @@ const Footer = () => {
           <SelfLink href="http://www.rahrang.xyz" target="blank">
             Rahul Rangnekar
           </SelfLink>
-          , Tim Cheng, Olivia Lee
+          , Tim Cheng
         </Text>
       </MarginContainer>
     </FooterContainer>
