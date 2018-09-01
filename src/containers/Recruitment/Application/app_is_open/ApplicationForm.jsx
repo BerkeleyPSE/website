@@ -116,7 +116,19 @@ const ApplicationForm = ({ onSubmitApplication }) => (
 
       <Radio
         name="interview1"
-        label="Select your preferred time slot for an interview."
+        label="Select your first preferred time slot for an interview."
+        options={[
+          'Saturday (9/8) -- 9AM-12PM',
+          'Saturday (9/8) -- 12PM-3PM',
+          'Saturday (9/8) -- 3PM-6PM',
+          'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
+        ]}
+        required
+      />
+      
+      <Radio
+        name="interview2"
+        label="Select your second preferred time slot for an interview."
         options={[
           'Saturday (9/8) -- 9AM-12PM',
           'Saturday (9/8) -- 12PM-3PM',
