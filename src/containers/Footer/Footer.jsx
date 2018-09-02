@@ -5,10 +5,8 @@ import styled from 'styled-components';
 // import SocialMediaBar from 'react-social-media-bar';
 
 // components
-// import FOOTER_LINKS from './footer_constants';
 import { RowContainer } from '../components/ContainerStyles';
 import { ParaText } from '../components/TextStyles';
-import { ExtLink } from '../components/LinkStyles';
 
 const Footer = () => {
   return (
@@ -26,10 +24,7 @@ const Footer = () => {
       /> */}
       <MarginContainer>
         <Text className="m-0" altStyle>
-          <SelfLink href="http://www.rahrang.xyz" target="blank">
-            Rahul Rangnekar
-          </SelfLink>
-          , Tim Cheng
+          Tim Cheng, Olivia Lee
         </Text>
       </MarginContainer>
     </FooterContainer>
@@ -52,8 +47,4 @@ const MarginContainer = styled.div`
 const Text = ParaText.extend`
   font-size: 0.8rem;
   font-weight: 500;
-`;
-
-const SelfLink = ExtLink.extend`
-  color: #fff;
 `;

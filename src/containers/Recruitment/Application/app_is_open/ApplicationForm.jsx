@@ -92,27 +92,35 @@ const ApplicationForm = ({ onSubmitApplication }) => (
       />
 
       <Field
-        name="freeWeekend"
+        name="accomplishment"
         component={TextArea}
-        label="What would you do with a free weekend in Berkeley?"
-        desc="Suggested word count: 150"
+        label="What is your greatest accomplishment?"
+        desc="Suggested word count: 300"
+        required
+      />
+
+      <Field
+        name="posContribution"
+        component={TextArea}
+        label="Give an example of a time you made a positive contribution to a team and what was the outcome?"
+        desc="Suggested word count: 300"
         required
       />
 
       <Radio
         name="inviteOnly"
-        label="Are you available on September 1st, 2018 from 7pm-9pm for an Invite-Only Event?"
+        label="Are you available on September 7th, 2018 from 7pm-8:30pm for an Invite-Only Event?"
         options={['Yes', 'No']}
         required
       />
 
       <Radio
         name="interview1"
-        label="Select your preferred time slot for an interview."
+        label="Select your first preferred time slot for an interview."
         options={[
-          'Saturday (1/27) -- 9AM-12PM',
-          'Saturday (1/27) -- 12PM-3PM',
-          'Saturday (1/27) -- 3PM-6PM',
+          'Saturday (9/8) -- 9AM-12PM',
+          'Saturday (9/8) -- 12PM-3PM',
+          'Saturday (9/8) -- 3PM-6PM',
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
         ]}
         required
@@ -120,11 +128,11 @@ const ApplicationForm = ({ onSubmitApplication }) => (
 
       <Radio
         name="interview2"
-        label="Select your preferred time slot for an interview."
+        label="Select your second preferred time slot for an interview."
         options={[
-          'Saturday (1/27) -- 9AM-12PM',
-          'Saturday (1/27) -- 12PM-3PM',
-          'Saturday (1/27) -- 3PM-6PM',
+          'Saturday (9/8) -- 9AM-12PM',
+          'Saturday (9/8) -- 12PM-3PM',
+          'Saturday (9/8) -- 3PM-6PM',
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
         ]}
         required
@@ -132,7 +140,7 @@ const ApplicationForm = ({ onSubmitApplication }) => (
 
       <Radio
         name="pmtAvailability"
-        label="Are you available on Monday nights from 7-10pm for Prospective Member Training?"
+        label="Are you available every Monday night from 7-10pm for Prospective Member Training?"
         options={['Yes', 'No']}
         required
       />
