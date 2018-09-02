@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 // node modules
 import { connect } from 'react-redux';
@@ -7,7 +9,6 @@ import { Field } from 'redux-form';
 // components
 import Form from '../components/Form';
 import { ColumnContainer } from '../components/ContainerStyles';
-import { ExtLink } from '../components/LinkStyles';
 import { PageHeader } from '../components/HeaderStyles';
 import { ParaText } from '../components/TextStyles';
 import Input from '../components/inputs/Input';
@@ -80,14 +81,15 @@ const CoffeeChats = ({ onSubmitCoffeeChatForm }) => {
           </Form>
         </React.Fragment>
       ) : (
-        <Text>{/*We will open sign-ups when we begin tabling. See you then!*/} 
-          Meet a brother during a coffee chat! Sign up through        
-          {' '}
-          <ExtLink href="https://docs.google.com/forms/d/e/1FAIpQLSfMtOVzeKB_ZXpRWr8JTqq9iI3ig85POXwMeEhsau162E4N5A/viewform?usp=sf_link" target="blank">
-            this
-          </ExtLink>
-          {' '}
-         request form!</Text>
+        <React.Fragment>
+          <Text>
+            As our application is now live, we are no longer taking coffee chat
+            requests.
+          </Text>
+          <AppLink to="/app" bgColor="#895fad">
+            Apply Now!
+          </AppLink>
+        </React.Fragment>
       )}
     </CoffeeChatContainer>
   );
@@ -111,4 +113,23 @@ const CoffeeChatContainer = ColumnContainer.extend`
 const Text = ParaText.extend`
   font-size: 1rem;
   text-align: center;
+`;
+
+const AppLink = styled(Link)`
+  background-color: #895fad;
+  border: 2px solid #895fad;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 0.625rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.25s;
+  z-index: 10;
+
+  &:hover {
+    opacity: 0.75;
+  }
 `;

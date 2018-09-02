@@ -98,7 +98,7 @@ const ApplicationForm = ({ onSubmitApplication }) => (
         desc="Suggested word count: 300"
         required
       />
-      
+
       <Field
         name="posContribution"
         component={TextArea}
@@ -109,7 +109,7 @@ const ApplicationForm = ({ onSubmitApplication }) => (
 
       <Radio
         name="inviteOnly"
-        label="Are you available on September 8th, 2018 from 7pm-8:30pm for an Invite-Only Event?"
+        label="Are you available on September 7th, 2018 from 7pm-8:30pm for an Invite-Only Event?"
         options={['Yes', 'No']}
         required
       />
@@ -125,7 +125,7 @@ const ApplicationForm = ({ onSubmitApplication }) => (
         ]}
         required
       />
-      
+
       <Radio
         name="interview2"
         label="Select your second preferred time slot for an interview."
