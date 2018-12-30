@@ -40,7 +40,7 @@ const AdditionalInfo = () => (
         ]
       </ListItem>
       <ListItem>
-        <Label>Additional Transcript</Label> [applicable only to Transfer
+        <Label>Additional Transcript</Label> [applicable only to Fall Freshmen and Transfer
         students]
       </ListItem>
       <ListItem>

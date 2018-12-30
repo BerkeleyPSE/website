@@ -8,12 +8,11 @@ import { ParaText } from '../../../components/TextStyles';
 
 const Preregistration = () => (
   <ColumnContainer id="preregistration-form">
-    <PageHeader>Fall 2018 Pre-Registration</PageHeader>
+    <PageHeader>Spring 2019 Pre-Registration</PageHeader>
     <Text>
-      Our Fall 2018 Application will open after our Meet the Chapter event.
+      Our Fall 2018 Application is now closed.
       <br />
-      If you would like notifications for our recruitment events in the
-      meantime, please enter your name and email below.
+      If you would like notifications for our recruitment events for the next semester, please enter your name and email below.
     </Text>
     <PreregistrationForm />
   </ColumnContainer>
