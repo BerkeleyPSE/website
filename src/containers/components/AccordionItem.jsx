@@ -40,7 +40,7 @@ export default class AccordionItem extends React.Component {
     let { question, answer } = this.props;
     return (
       <AccordionContainer>
-        <HeaderContainer
+        <HeaderContainer 
           isOpen={isOpen}
           onClick={() => this.setState({ isOpen: !isOpen })}
         >
@@ -52,7 +52,7 @@ export default class AccordionItem extends React.Component {
           )}
         </HeaderContainer>
         <BodyContainer isOpen={isOpen}>
-          <Answer className="m-0" altStyle>
+          <Answer className="m-0">
             {answer.map((answerItem, index) => {
               return this.generateAnswer(answerItem, index);
             })}
@@ -65,10 +65,14 @@ export default class AccordionItem extends React.Component {
 
 const AccordionContainer = styled.div`
   margin: 0.3125rem auto;
-  width: 100%;
+
+  width: 90%;
 
   @media (min-width: 768px) {
-    width: 80%;
+    width: 70%;
+  }
+  @media (min-width: 1280px) {
+    width: 60%;
   }
 `;
 
@@ -78,10 +82,11 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0.5rem 0;
+  transition: all 0.5s ease;
 
-  background-color: ${props => (props.isOpen ? '#895fad' : '#fff')};
-  border: ${props => (props.isOpen ? '2px solid #895fad' : '2px solid #333')};
-  color: ${props => (props.isOpen ? '#fff' : '#333')};
+  background-color: #fff;
+  border-bottom: ${props => (props.isOpen ? '1px solid #895fad' : '0.5px dotted #333')};
+  color: ${props => (props.isOpen ? '#895FAD' : '#333')};
 `;
 
 const Header = PageHeader.extend`
@@ -90,23 +95,23 @@ const Header = PageHeader.extend`
   letter-spacing: 0.035rem;
   margin: 0 auto 0 1.25rem;
   padding: 0;
+  text-align:left;
 `;
 
 const Chevron = styled.i`
+  color: inherit;
   font-size: 1rem;
   margin: 0 1.25rem 0 auto;
   padding: 0 0.625rem;
 `;
 
 const BodyContainer = styled.div`
-  background-color: #333;
-  border-top: 5px solid #fff;
   display: ${props => !props.isOpen && 'none'};
 `;
 
 const Answer = ParaText.extend`
   line-height: 1.5rem;
-  padding: 1.25rem 3.75rem;
+  padding: 1rem 1.5rem;
 `;
 
 // PropTypes

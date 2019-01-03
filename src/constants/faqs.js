@@ -38,18 +38,25 @@ const FAQ_INFO = [
         content:
           'Recruitment events are designed for you to meet our brothers and familiarize yourself with Pi ' +
           'Sigma Epsilon. If you can’t make a recruitment event and would like to chat personally with ' +
-          'one of our brothers instead, you’re welcome to indicate your availability for a coffee chat ' +
-          'and one of our brothers will reach out to you. '
+          'one of our brothers instead, please contact '
       },
+      {
+        type: 'ext-link',
+        content: 'berkeleypse.recruiting@gmail.com',
+        href: 'mailto:berkeleypse.recruiting@gmail.com'
+      },
+      {
+        type: 'text',
+        content: '. You’re welcome to indicate your availability for a coffee chat ' +
+          'and one of our brothers will reach out to you!'
+      },
+      {/*
       {
         type: 'int-link',
         content: 'Sign up here',
         to: '/coffee'
       },
-      {
-        type: 'text',
-        content: '!'
-      }
+    */}
     ]
   },
   {
@@ -57,7 +64,7 @@ const FAQ_INFO = [
     answer: [
       {
         type: 'text',
-        content: 'We have a GPA minimum of 3.0.'
+        content: 'We have a GPA minimum of 3.0, but we consider applicants holistically.'
       }
     ]
   },

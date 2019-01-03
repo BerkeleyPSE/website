@@ -12,8 +12,8 @@ const SiteHeader = styled.h1`
 
 const PageHeader = styled.h2`
   color: ${props => (props.altStyle ? '#FFF' : '#895FAD')};
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 400;
   letter-spacing: 0.025rem;
   margin: 0;
   padding: 1rem 0;

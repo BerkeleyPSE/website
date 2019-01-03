@@ -26,7 +26,7 @@ const About = () => {
           </ColumnContainer>
       </TopImageContainer>
       <ZetaChiContainer>
-        <ZCHeader>The Zeta Chi Chapter</ZCHeader>
+        <ZCHeader>Zeta Chi Chapter</ZCHeader>
         <DescriptionContainer>
           <Text altStyle>
             The Zeta Chi chapter of Pi Sigma Epsilon was founded in March 2013.
@@ -38,20 +38,20 @@ const About = () => {
             Lin, and Hiu Ngan to compose Zeta Chi’s founding Alpha class. These
             six officially chartered the chapter in August 2013.
             <br /> <br />
-            Our chapter endeavors to epitomize the goals of the fraternity in each 
-            and every member through various events focused around developing
-            professionalism, confidence, leadership, and networking abilities. we
-            currently consist of over 45 members, representing a variety of majors
-            and career paths. Alongside placing the utmost value on its diversity 
+            Our chapter endeavors to epitomize the goals of the 
+            fraternity in each and every member through various events focused 
+            around developing professionalism, confidence, leadership, and networking 
+            abilities. Alongside placing the utmost value on its diversity 
             of people, interests, and majors, the Zeta Chi Chapter provides its 
-            brothers with the opportunities to develop and hone into their marketing 
-            and business skills. Thus, in 2016, we established ZC Consulting, a 
+            brothers with opportunities to hone into their marketing and business 
+            skills. Thus, in 2016, we established 
+            <ExtLink href="http://zc-consulting.org"> ZC Consulting</ExtLink>, a 
             marketing and strategy consulting group, to further support our brothers' 
             experiential learning and professional opportunities. 
             <br/> <br/>
-            Now in its sixth year and recruiting for the prospective Xi
-            class, Zeta Chi boasts a diverse brotherhood of over 45 active
-            members in the Kalluri administration.
+            Now in its sixth year, the Zeta Chi Chapter consist of over 45 members, 
+            representing a variety of majors and career paths. In Spring 2019, we will be 
+            recruiting for the prospective Xi class in the Kalluri administration.
             <br/> <br/>
             <i>We are proudly recognized and sponsored
             by the Walter A. Haas School of Business.</i>
@@ -148,8 +148,5 @@ const NationalHeader = SectionHeader.extend`
 
 const Header = PageHeader.extend`
   width: 100%;
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight:400;
   position: absolute;
 `;
