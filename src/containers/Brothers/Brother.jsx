@@ -33,7 +33,7 @@ class Brother extends React.Component {
     brother: PropTypes.shape({
       name: PropTypes.string,
       key: PropTypes.string,
-      year: PropTypes.number,
+      year: PropTypes.string,
       pseClass: PropTypes.string,
       majors: PropTypes.arrayOf(PropTypes.string),
       minors: PropTypes.arrayOf(PropTypes.string),
@@ -224,6 +224,8 @@ const Container = ColumnContainer.extend`
 `;
 
 const BroImage = Image.extend`
+  border:none;
+  padding-top:10px;
   @media (min-width: 323px) {
     height: 485px;
     width: 323px;

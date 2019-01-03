@@ -67,7 +67,7 @@ const Row = RowContainer.extend`
 const Title = styled.p`
   color: #895fad;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 525;
   letter-spacing: 0.025rem;
   padding: 0 0.625rem;
   text-align: left;
