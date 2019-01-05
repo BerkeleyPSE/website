@@ -62,6 +62,7 @@ export default connect(
 
 const CenterTextContainer = styled.div`
   text-align: center;
+  margin-bottom: 30px;
 `;
 
 const Image = styled.img`
