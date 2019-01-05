@@ -149,4 +149,5 @@ const NationalHeader = SectionHeader.extend`
 const Header = PageHeader.extend`
   width: 100%;
   position: absolute;
+  font-size: 3rem;
 `;

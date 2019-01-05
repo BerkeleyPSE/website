@@ -36,11 +36,13 @@ class Executives extends Component {
     return (
       <div id="executives-container">
         <ColumnContainer className="mb-2">
-          {/* <Image
-            src="../images/executive_board.JPG"
+          <Image
+            src="https://res.cloudinary.com/berkeleypse-tech/image/upload/v1546680369/skyline.jpg"
             alt="Pi Sigma Epsilon executive board"
-          /> */}
-          <PageHeader>Executive Board</PageHeader>
+          />
+          <Header className="py-2" altStyle>
+            Our Executives
+          </Header>
         </ColumnContainer>
         <CenterTextContainer>{allExecs}</CenterTextContainer>
       </div>
@@ -62,7 +64,15 @@ const CenterTextContainer = styled.div`
   text-align: center;
 `;
 
-// const Header = PageHeader.extend`
-//   position: absolute;
-//   width: 100%;
-// `;
+const Image = styled.img`
+  position: relative;
+  height:60vh;
+  width:100vw;
+  object-fit:cover;
+`;
+
+const Header = PageHeader.extend`
+  font-size: 3rem;
+  position: absolute;
+  width: 100%;
+`;
