@@ -7,12 +7,13 @@ import styled from 'styled-components';
 // components
 import { RowContainer } from '../components/ContainerStyles';
 import { ParaText } from '../components/TextStyles';
+import { ExtLink } from '../components/LinkStyles'
 
 const Footer = () => {
   return (
     <FooterContainer bgColor="#333" jc="space-between">
       <MarginContainer>
-        <Text altStyle>&#169;2018. Pi Sigma Epsilon, Zeta Chi Chapter.</Text>
+        <Text altStyle>&#169;2019. Pi Sigma Epsilon, Zeta Chi Chapter.</Text>
       </MarginContainer>
       {/* need to upgrade social media bar to Font Awesome v5 before continuing */}
       {/* <SocialMediaBar
@@ -24,7 +25,7 @@ const Footer = () => {
       /> */}
       <MarginContainer>
         <Text className="m-0" altStyle>
-          Tim Cheng, Olivia Lee
+          <Attribute ExtLink href ="https://www.linkedin.com/in/oliviasulee/">Olivia Lee</Attribute>
         </Text>
       </MarginContainer>
     </FooterContainer>
@@ -47,4 +48,8 @@ const MarginContainer = styled.div`
 const Text = ParaText.extend`
   font-size: 0.8rem;
   font-weight: 500;
+`;
+
+const Attribute = ExtLink.extend`
+  color: #fff;
 `;
