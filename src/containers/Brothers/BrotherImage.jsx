@@ -57,7 +57,7 @@ export class BrotherImage extends React.Component {
             width="171px"
           />
           <Overlay hover={hover} isBrosPage>
-            <Name className="my-1 mx-0">{brother.name}</Name>
+            	<Name className="my1-0 mx-0">{brother.name}</Name>
           </Overlay>
         </BroContainer>
       </BrotherImageContainer>
@@ -80,10 +80,10 @@ const Overlay = styled.div`
   transition: 0.5s ease;
   background-color: ${props => (props.hover || !props.isBrosPage ? 'rgba(0, 0, 0, 0.9)' : 'rgba(0, 0, 0, 0.7)')};
   position: absolute;
-  bottom: 0;
+  display:block;
   height: 15%;
   width: 100%;
-  display:block;
+  bottom:0;
 `;
 
 const Name = styled.p`
@@ -91,4 +91,5 @@ const Name = styled.p`
   font-family: Avenir Next, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.025rem;
+  margin-top: 0.6rem;
 `;
