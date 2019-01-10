@@ -84,10 +84,10 @@ const ApplicationForm = ({ onSubmitApplication }) => (
       />
 
       <Field
-        name="commitments"
+        name="introduction"
         component={TextArea}
-        label="List your current commitments, both on- and off-campus."
-        desc="Include the number of hours per week you plan to spend on each activity."
+        label="Tell us about yourself."
+        desc="Suggested word count: 100"
         required
       />
 
