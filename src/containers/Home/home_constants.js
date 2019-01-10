@@ -10,13 +10,13 @@ const IMG_URL = `http://res.cloudinary.com/berkeleypse-tech/image/upload/f_auto,
 
 export default [
   {
-    imgSrc: `${IMG_URL}/pi_sigma_epsilon`,
+    imgSrc: `${IMG_URL}/golden_gate`,
     message: "UC Berkeley's Marketing & Business Fraternity",
     text: 'Apply Now',
     link: APPLICATION_PATH
   },
   {
-    imgSrc: `${IMG_URL}/brotherhood`,
+    imgSrc: `${IMG_URL}/banquet_fall18`,
     message: 'Who We Are',
     text: 'Meet the Chapter',
     link: BROTHERS_PATH
@@ -40,7 +40,7 @@ export default [
     link: CAREERS_PATH
   },
   {
-    imgSrc: `${IMG_URL}/pi_sigma_epsilon_2`,
+    imgSrc: `${IMG_URL}/pse_zc`,
     message: "UC Berkeley's Marketing & Business Fraternity",
     text: 'Apply Now',
     link: APPLICATION_PATH
