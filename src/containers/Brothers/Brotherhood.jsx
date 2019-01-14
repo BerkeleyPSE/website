@@ -37,7 +37,7 @@ class Brotherhood extends Component {
       <div id="brotherhood-container">
         <ColumnContainer className="mb-2">
           <Image
-            src="https://res.cloudinary.com/berkeleypse-tech/image/upload/v1546509616/brothers/brotherhood2.png"
+            src="https://res.cloudinary.com/berkeleypse-tech/image/upload/v1547445666/brothers/brotherhood2.png"
             alt="Pi Sigma Epsilon brotherhood"
           />
           <Header className="py-2" altStyle>
@@ -74,7 +74,7 @@ const Header = PageHeader.extend`
 `;
 
 const AllBrothersContainer = styled.div`
-  width:80%;
+  width:95%;
   justify-content:center;
   margin:auto;
   text-align: center;
