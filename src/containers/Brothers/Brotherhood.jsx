@@ -74,7 +74,7 @@ const Header = PageHeader.extend`
 `;
 
 const AllBrothersContainer = styled.div`
-  width:80%;
+  width:95%;
   justify-content:center;
   margin:auto;
   text-align: center;
