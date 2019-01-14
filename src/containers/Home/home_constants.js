@@ -34,7 +34,7 @@ export default [
     link: ABOUT_PATH
   },
   {
-    imgSrc: `${IMG_URL}/alumni`,
+    imgSrc: `${IMG_URL}/grad18`,
     message: "Where We're Going",
     text: 'Our Careers',
     link: CAREERS_PATH

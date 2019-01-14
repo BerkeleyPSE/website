@@ -92,18 +92,10 @@ const ApplicationForm = ({ onSubmitApplication }) => (
       />
 
       <Field
-        name="accomplishment"
+        name="moment"
         component={TextArea}
-        label="What is your greatest accomplishment?"
-        desc="Suggested word count: 300"
-        required
-      />
-
-      <Field
-        name="posContribution"
-        component={TextArea}
-        label="Give an example of a time you made a positive contribution to a team and what was the outcome?"
-        desc="Suggested word count: 300"
+        label="What historical moment or event do you wish you could have witnessed?"
+        desc="Suggested word count: 100"
         required
       />
 
@@ -166,6 +158,7 @@ const ApplicationForm = ({ onSubmitApplication }) => (
       />
 
       <AdditionalInfo />
+
       <SubmitButton />
     </Form>
   </ColumnContainer>
