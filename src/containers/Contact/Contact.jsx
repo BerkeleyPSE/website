@@ -8,7 +8,6 @@ import { RowContainer } from '../components/ContainerStyles';
 import { ExtLink } from '../components/LinkStyles';
 import { PageHeader } from '../components/HeaderStyles';
 import { ParaText } from '../components/TextStyles';
-import { Image } from '../components/ImageStyles';
 import CONTACT_LIST from './contact_constants.js';
 
 const Contact = () => {
@@ -43,6 +42,13 @@ const Contact = () => {
 };
 
 export default Contact;
+
+const Image = styled.img`
+  position: relative;
+  height:60vh;
+  width:100vw;
+  object-fit:cover;
+`;
 
 const Header = PageHeader.extend`
   font-size: 3rem;
