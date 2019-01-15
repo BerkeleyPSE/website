@@ -15,13 +15,13 @@ const Contact = () => {
 
   const contactInfo = CONTACT_LIST.map((item, index) => {
     return (
-      <ParaText className="my-1 mx-0" key={`contact_${index}`}>
+      <InfoText className="my-1 mx-0" key={`contact_${index}`}>
         For {item.for}, please email{' '}
         <ExtLink href={`mailto:${item.email}`} key={index}>
           {item.email}
         </ExtLink>
         .
-      </ParaText>
+      </InfoText>
     );
   });
 
@@ -55,6 +55,10 @@ const Header = PageHeader.extend`
   text-align: center;
   position: absolute;
   width: 100%;
+`;
+
+const InfoText = ParaText.extend`
+  margin: 1rem;
 `;
 
 const InfoContainer = styled.div`
