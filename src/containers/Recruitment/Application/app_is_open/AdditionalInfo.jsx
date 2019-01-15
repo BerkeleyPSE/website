@@ -19,17 +19,19 @@ const AdditionalInfo = () => (
     <ol>
       <ListItem>
         <Label>Resume</Label> [pdf format]
-      </ListItem>
+      </ListItem>    
       <ListItem>
         <Label>Cover Letter</Label> [pdf format]. Address the following
         questions. [500 words or less]
       </ListItem>
       <ol type="a">
-        <ListItem>Why do you want to join PSE?</ListItem>
-        <ListItem>What will you contribute to PSE?</ListItem>
+        <ListItem>How did you hear about PSE?</ListItem>
+        <ListItem>Why do you want to join and what do you hope to gain from PSE?</ListItem>
+        <ListItem>What can you bring or contribute to PSE?</ListItem>
+        <ListItem>Highlight some of your strengths/experiences.</ListItem>
         <ListItem>
-          What do you expect to gain from PSE? How will you incorporate this
-          into your future?
+          How do you hope to use what you learn from PSE 
+          towards your future aspirations?
         </ListItem>
       </ol>
       <ListItem>

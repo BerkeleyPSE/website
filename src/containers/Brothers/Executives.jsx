@@ -62,7 +62,16 @@ export default connect(
 
 const CenterTextContainer = styled.div`
   text-align: center;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
+  margin:auto;
+  margin-bottom:30px;
+
+  @media (max-width: 1350px) {
+    width:70%;
+  }
+  @media (max-width: 1075px) {
+    width:100%;
+  }
 `;
 
 const Image = styled.img`

@@ -8,7 +8,6 @@ import { RowContainer } from '../components/ContainerStyles';
 import { ExtLink } from '../components/LinkStyles';
 import { PageHeader } from '../components/HeaderStyles';
 import { ParaText } from '../components/TextStyles';
-import { Image } from '../components/ImageStyles';
 import CONTACT_LIST from './contact_constants.js';
 
 const Contact = () => {
@@ -16,13 +15,13 @@ const Contact = () => {
 
   const contactInfo = CONTACT_LIST.map((item, index) => {
     return (
-      <ParaText className="my-1 mx-0" key={`contact_${index}`}>
+      <InfoText className="my-1 mx-0" key={`contact_${index}`}>
         For {item.for}, please email{' '}
         <ExtLink href={`mailto:${item.email}`} key={index}>
           {item.email}
         </ExtLink>
         .
-      </ParaText>
+      </InfoText>
     );
   });
 
@@ -44,6 +43,13 @@ const Contact = () => {
 
 export default Contact;
 
+const Image = styled.img`
+  position: relative;
+  height:60vh;
+  width:100vw;
+  object-fit:cover;
+`;
+
 const Header = PageHeader.extend`
   font-size: 3rem;
   text-align: center;
@@ -51,10 +57,12 @@ const Header = PageHeader.extend`
   width: 100%;
 `;
 
+const InfoText = ParaText.extend`
+  margin: 1rem;
+`;
+
 const InfoContainer = styled.div`
-  padding: 1.25rem 2.5rem;
+  margin: 1rem 0 1rem 0;
+  padding: 0.75rem 2.5rem;
   text-align: center;
-  @media (min-width: 768px) {
-    text-align: left;
-  }
 `;

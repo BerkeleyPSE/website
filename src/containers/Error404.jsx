@@ -37,11 +37,10 @@ export default class Error404 extends React.Component {
       <ColumnContainer className="py-1q px-0">
         <ParaText>Sorry, that page does not exist. Enjoy our site!</ParaText>
         <Image
-          src="http://res.cloudinary.com/berkeleypse-tech/image/upload/f_auto,fl_force_strip,q_auto:best/error404"
-          alt="Page not found!"
-          border
+          src="https://res.cloudinary.com/berkeleypse-tech/image/upload/v1547520282/error404.png"
+          alt="Page not found."
           height="500px"
-          width="333px"
+          width="500px"
         />
       </ColumnContainer>
     );

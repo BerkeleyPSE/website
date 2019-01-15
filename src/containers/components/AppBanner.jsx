@@ -12,7 +12,7 @@ import { ParaText } from '../components/TextStyles';
 
 export default class AppBanner extends React.Component {
   state = {
-    show: false
+    show: true
   };
 
   closeBanner = () => {
@@ -24,8 +24,8 @@ export default class AppBanner extends React.Component {
       this.state.show && (
         <BannerContainer>
           <MessageContainer>
-            <ParaText altStyle>Our Fall 2018 Application is Live!</ParaText>
-            <IntLink to="/app">Apply</IntLink>
+            <ParaText altStyle>Our Spring 2019 Recruitment is here!</ParaText>
+            <IntLink onClick={this.closeBanner} to="/app">Pre-Register</IntLink>
             {/* <ExtLink href={FB_EVENT_LINK}>RSVP</ExtLink> */}
           </MessageContainer>
           <CloseContainer onClick={this.closeBanner}>
@@ -38,11 +38,12 @@ export default class AppBanner extends React.Component {
 }
 
 const BannerContainer = RowContainer.extend`
-  background-color: #909090;
+  background-color: rgb(153, 151, 151, 0.7);
   margin: auto;
   text-align: center;
   width: 100%;
   z-index: 2;
+  position:absolute;
 `;
 
 const ExtLink = ExtButtonLink.extend`
@@ -60,8 +61,9 @@ const IntLink = IntButtonLink.extend`
 `;
 
 const MessageContainer = ColumnContainer.extend`
+  background-color:transparent;
   flex-grow: 1;
-  padding: 0 1.25rem 0.25rem;
+  padding: 0.25rem 1.25rem 0.25rem;
   @media (min-width: 600px) {
     flex-direction: row;
   }
