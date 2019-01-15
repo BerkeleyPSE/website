@@ -12,12 +12,12 @@ const HOVER_CARD_ITEMS = [
   //},
   {
     header: "FAQs",
-    description: "What you should know.",
+    description: "Additional information",
     link: FAQS_PATH
   },
   {
     header: "Application",
-    description: "How to join us.",
+    description: "How to join PSE",
     link: APPLICATION_PATH
   }
 ];
