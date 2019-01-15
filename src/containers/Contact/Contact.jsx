@@ -36,19 +36,6 @@ const Contact = () => {
           Contact Us
         </Header>
       </RowContainer>
-{/*
-      <RefContainer>
-        <h1>Point of Contact For:</h1>
-        <h2>General Questions or Inquiries</h2>
-        <ExtLink href="mailto:'berkeleypse.president@gmail.com">berkeleypse.president@gmail.com</ExtLink>
-        <h2>Corporate Projects or Sponsorship Questions</h2>
-        <ExtLink href="mailto:'berkeleypse.pr@gmail.com">berkeleypse.pr@gmail.com</ExtLink>
-        <h2>Recruitment Questions or Concerns</h2>
-        <ExtLink href="mailto:'berkeleypse.recruiting@gmail.com">berkeleypse.recruiting@gmail.com</ExtLink>
-        <h2>Social Media or Technical Issues</h2>
-        <ExtLink href="mailto:'berkeleypse.marketing@gmail.com">berkeleypse.marketing@gmail.com</ExtLink>
-      </RefContainer>
-*/}
       <InfoContainer>{contactInfo}</InfoContainer>
     </div>
   );
@@ -70,15 +57,8 @@ const Header = PageHeader.extend`
   width: 100%;
 `;
 
-const RefContainer = styled.div`
-  text-align:center;
-`;
-
 const InfoContainer = styled.div`
-  // margin: 1rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   padding: 0.75rem 2.5rem;
   text-align: center;
-  @media (min-width: 768px) {
-    text-align: left;
-  }
 `;
