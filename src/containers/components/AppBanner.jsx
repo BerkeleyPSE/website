@@ -43,7 +43,6 @@ const BannerContainer = RowContainer.extend`
   text-align: center;
   width: 100%;
   z-index: 2;
-  // opacity:0.7;
   position:absolute;
 `;
 
