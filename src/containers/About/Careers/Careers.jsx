@@ -29,11 +29,11 @@ const Careers = () => {
       </RowContainer>
       <DataContainer>
         <NavYearBar>
-          <ul><strong>2019</strong></ul>
-          <ul>2018</ul>
-          <ul>2017</ul>
-          <ul>2016</ul>
-          <ul>2015</ul>
+          <Year><strong>2019</strong></Year>
+          <Year>2018</Year>
+          <Year>2017</Year>
+          <Year>2016</Year>
+          <Year>2015</Year>
         </NavYearBar>
 
         <CareerHeader altStyle>Full-Time</CareerHeader>
@@ -195,6 +195,18 @@ const NavYearBar = RowContainer.extend`
   position:relative;
   left:65%;
   padding-top:20px;
+`;
+
+const Year = styled.div`
+  display: block;
+  list-style-type: disc;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  justify-content:space-between;
+  
+  &:hover {
+    color: #895fad;
+  }
 `;
 
 const CareerHeader = SectionHeader.extend`
