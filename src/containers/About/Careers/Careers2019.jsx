@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // components
 import { PageHeader, SectionHeader } from '../../components/HeaderStyles';
 import { RowContainer, ColumnContainer } from '../../components/ContainerStyles';
-import { IntButtonLink, ExtButtonLink } from '../../components/LinkStyles';
+import { IntButtonLink } from '../../components/LinkStyles';
 
 const Careers = () => {
   document.title = 'Careers - Pi Sigma Epsilon | Zeta Chi Chapter';
@@ -23,13 +23,12 @@ const Careers = () => {
         </Header>
       </RowContainer>
       <DataContainer>
-        <NavYearBar>
-          <Year>YEAR:</Year> 
-          <IntLink className="careerPage" to="/careers2019" altStyle>2019</IntLink>
+        <NavYearBar> |
+          <PageLink to="/careers2019" altStyle>2019</PageLink>
           <IntLink to="/careers2018" altStyle>2018</IntLink>
           <IntLink to="/careers2017" altStyle>2017</IntLink>
           <IntLink to="/careers2016" altStyle>2016</IntLink>
-          <IntLink to="/careers2015" altStyle>2015</IntLink>
+          <IntLink to="/careers2015" altStyle>2015</IntLink> | 
         </NavYearBar>
 
         <CareerHeader altStyle>2019 Full-Time</CareerHeader>
@@ -66,6 +65,20 @@ const Careers = () => {
             <Co>KPMG</Co>
             <Gr>Business Valuations</Gr>
             <Lo>San Francisco, CA</Lo>
+          </Row>
+          <Industry>TECHNOLOGY</Industry>
+          <Row>
+            <Na>Alex Dao</Na>
+            <Co>Boeing</Co>
+            <Gr>Software Engineering</Gr>
+            <Lo>Huntington Beach, CA</Lo>
+          </Row>
+          <Industry>ENTREPRENEURSHIP</Industry>
+          <Row>
+            <Na>Justin Tan</Na>
+            <Co>Excelerate Gaming</Co>
+            <Gr>Founder & CEO</Gr>
+            <Lo>Berkeley, CA</Lo>
           </Row>
         </TableContainer>
 
@@ -146,7 +159,7 @@ const Careers = () => {
             <Gr>Consumer Lending Intern</Gr>
             <Lo>Sioux Falls, SD</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Emma Tsuneishi</Na>
             <Co>Cisco</Co>
@@ -201,15 +214,6 @@ const NavYearBar = RowContainer.extend`
   padding-top:20px;
 `;
 
-const Year = styled.div`
-  font-size: 0.75rem;
-  font-weight:600;
-  letter-spacing:0.125em;
-  margin: 0.625rem;
-  padding: 0.125rem;
-  color:#818181;
-`;
-
 const IntLink = IntButtonLink.extend`
   font-size: 0.9rem;
   margin: 0.625rem;
@@ -221,11 +225,13 @@ const IntLink = IntButtonLink.extend`
   transition: all 0.25s ease;
   
   &:hover {
-    color: #895fad;
+    color: #4b2178;
      border:none;
-     border-bottom:solid;
-     border-bottom-width: 0.1rem;
   }
+`;
+
+const PageLink = IntLink.extend`
+  color:#333;
 `;
 
 const CareerHeader = SectionHeader.extend`

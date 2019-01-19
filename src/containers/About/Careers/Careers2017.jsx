@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // components
 import { PageHeader, SectionHeader } from '../../components/HeaderStyles';
 import { RowContainer, ColumnContainer } from '../../components/ContainerStyles';
-import { IntButtonLink, ExtButtonLink } from '../../components/LinkStyles';
+import { IntButtonLink } from '../../components/LinkStyles';
 
 const Careers = () => {
   document.title = 'Careers - Pi Sigma Epsilon | Zeta Chi Chapter';
@@ -23,13 +23,12 @@ const Careers = () => {
         </Header>
       </RowContainer>
       <DataContainer>
-        <NavYearBar>
-          <Year>YEAR:</Year> 
+        <NavYearBar> |
           <IntLink to="/careers2019" altStyle>2019</IntLink>
           <IntLink to="/careers2018" altStyle>2018</IntLink>
-          <IntLink className="careerPage" to="/careers2017" altStyle>2017</IntLink>
+          <PageLink to="/careers2017" altStyle>2017</PageLink>
           <IntLink to="/careers2016" altStyle>2016</IntLink>
-          <IntLink to="/careers2015" altStyle>2015</IntLink>
+          <IntLink to="/careers2015" altStyle>2015</IntLink> |
         </NavYearBar>
 
         <CareerHeader altStyle>2017 Full-Time</CareerHeader>
@@ -90,7 +89,7 @@ const Careers = () => {
             <Gr>Technology Consulting</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Nathan Aminpour</Na>
             <Co>Driver</Co>
@@ -207,7 +206,7 @@ const Careers = () => {
             <Gr>Audit</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Aaron Corona</Na>
             <Co>Core Logic</Co>
@@ -256,7 +255,7 @@ const Careers = () => {
             <Gr>Information Technology</Gr>
             <Lo>Santa Clara, CA</Lo>
           </Row>
-          <Industry>Venture Capital</Industry>
+          <Industry>VENTURE CAPITAL</Industry>
           <Row className="mb-1q">
             <Na>Catie Fan</Na>
             <Co>Oriza Ventures</Co>
@@ -305,15 +304,6 @@ const NavYearBar = RowContainer.extend`
   padding-top:20px;
 `;
 
-const Year = styled.div`
-  font-size: 0.75rem;
-  font-weight:600;
-  letter-spacing:0.125em;
-  margin: 0.625rem;
-  padding: 0.125rem;
-  color:#818181;
-`;
-
 const IntLink = IntButtonLink.extend`
   font-size: 0.9rem;
   margin: 0.625rem;
@@ -325,11 +315,13 @@ const IntLink = IntButtonLink.extend`
   transition: all 0.25s ease;
   
   &:hover {
-    color: #895fad;
-     border:none;
-     border-bottom:solid;
-     border-bottom-width: 0.1rem;
+    color: #4b2178;
+    border:none;
   }
+`;
+
+const PageLink = IntLink.extend`
+color:#333;
 `;
 
 const CareerHeader = SectionHeader.extend`

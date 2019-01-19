@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // components
 import { PageHeader, SectionHeader } from '../../components/HeaderStyles';
 import { RowContainer, ColumnContainer } from '../../components/ContainerStyles';
-import { IntButtonLink, ExtButtonLink } from '../../components/LinkStyles';
+import { IntButtonLink } from '../../components/LinkStyles';
 
 const Careers = () => {
   document.title = 'Careers - Pi Sigma Epsilon | Zeta Chi Chapter';
@@ -23,13 +23,12 @@ const Careers = () => {
         </Header>
       </RowContainer>
       <DataContainer>
-        <NavYearBar>
-          <Year>YEAR:</Year> 
+        <NavYearBar> |
           <IntLink to="/careers2019" altStyle>2019</IntLink>
-          <IntLink className="careerPage" to="/careers2018" altStyle>2018</IntLink>
+          <PageLink to="/careers2018" altStyle>2018</PageLink>
           <IntLink to="/careers2017" altStyle>2017</IntLink>
           <IntLink to="/careers2016" altStyle>2016</IntLink>
-          <IntLink to="/careers2015" altStyle>2015</IntLink>
+          <IntLink to="/careers2015" altStyle>2015</IntLink> | 
         </NavYearBar>
 
         <CareerHeader altStyle>2018 Full-Time</CareerHeader>
@@ -91,7 +90,7 @@ const Careers = () => {
             <Gr>Audit</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Akshay Madane</Na>
             <Co>Credit Karma</Co>
@@ -122,7 +121,7 @@ const Careers = () => {
             <Gr>Data Science</Gr>
             <Lo>San Jose, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>PRIVATE EQUITY</Industry>
           <Row>
             <Na>Syed Adil Putra</Na>
             <Co>Ekuinas</Co>
@@ -188,7 +187,7 @@ const Careers = () => {
             <Gr>Programmatic Marketing</Gr>
             <Lo>New York, NY</Lo>
           </Row>
-          <Industry>Finance</Industry>
+          <Industry>FINANCE</Industry>
           <Row>
             <Na>Connor Smith</Na>
             <Co>Fidelity</Co>
@@ -243,7 +242,7 @@ const Careers = () => {
             <Gr>Land Acquisition</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>         
+          <Industry>TECHNOLOGY</Industry>         
           <Row>
             <Na>Abhi Nathan</Na>
             <Co>San Diego Gas & Electric</Co>
@@ -298,7 +297,7 @@ const Careers = () => {
             <Gr>Information Technology</Gr>
             <Lo>Pasadena, CA</Lo>
           </Row>
-          <Industry>Private Equity</Industry>
+          <Industry>PRIVATE EQUITY</Industry>
           <Row className="mb-1q">
             <Na>Catie Fan</Na>
             <Co>Altamont Capital Partners</Co>
@@ -347,15 +346,6 @@ const NavYearBar = RowContainer.extend`
   padding-top:20px;
 `;
 
-const Year = styled.div`
-  font-size: 0.75rem;
-  font-weight:600;
-  letter-spacing:0.125em;
-  margin: 0.625rem;
-  padding: 0.125rem;
-  color:#818181;
-`;
-
 const IntLink = IntButtonLink.extend`
   font-size: 0.9rem;
   margin: 0.625rem;
@@ -367,11 +357,13 @@ const IntLink = IntButtonLink.extend`
   transition: all 0.25s ease;
   
   &:hover {
-    color: #895fad;
+    color: #4b2178;
      border:none;
-     border-bottom:solid;
-     border-bottom-width: 0.1rem;
   }
+`;
+
+const PageLink = IntLink.extend`
+  color:#333;
 `;
 
 const CareerHeader = SectionHeader.extend`

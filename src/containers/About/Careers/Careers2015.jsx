@@ -23,13 +23,12 @@ const Careers = () => {
         </Header>
       </RowContainer>
       <DataContainer>
-        <NavYearBar>
-          <Year>YEAR:</Year> 
+        <NavYearBar> |
           <IntLink to="/careers2019" altStyle>2019</IntLink>
           <IntLink to="/careers2018" altStyle>2018</IntLink>
           <IntLink to="/careers2017" altStyle>2017</IntLink>
           <IntLink to="/careers2016" altStyle>2016</IntLink>
-          <IntLink className="careerPage" to="/careers2015" altStyle>2015</IntLink>
+          <PageLink to="/careers2015" altStyle>2015</PageLink> |
         </NavYearBar>
 
         <CareerHeader altStyle>2015 Full-Time</CareerHeader>
@@ -80,7 +79,7 @@ const Careers = () => {
             <Gr>Information Security</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Human Resources</Industry>
+          <Industry>HUMAN RESOURCES</Industry>
           <Row>
             <Na>Kelly Chao</Na>
             <Co>Target</Co>
@@ -129,15 +128,6 @@ const NavYearBar = RowContainer.extend`
   padding-top:20px;
 `;
 
-const Year = styled.div`
-  font-size: 0.75rem;
-  font-weight:600;
-  letter-spacing:0.125em;
-  margin: 0.625rem;
-  padding: 0.125rem;
-  color:#818181;
-`;
-
 const IntLink = IntButtonLink.extend`
   font-size: 0.9rem;
   margin: 0.625rem;
@@ -149,11 +139,13 @@ const IntLink = IntButtonLink.extend`
   transition: all 0.25s ease;
   
   &:hover {
-    color: #895fad;
+    color: #4b2178;
      border:none;
-     border-bottom:solid;
-     border-bottom-width: 0.1rem;
   }
+`;
+
+const PageLink = IntLink.extend`
+  color:#333;
 `;
 
 const CareerHeader = SectionHeader.extend`
