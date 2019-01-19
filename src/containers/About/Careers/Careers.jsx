@@ -20,6 +20,10 @@ const Careers = () => {
     document.getElementById(year.toString()).style.color = "red";
   }
 
+  document.getElementById("2019").onclick = function() {
+    window.location.href = "https://www.berkeleypse.org";
+  };
+
   return (
     <div id="careers-container">
       <RowContainer>
