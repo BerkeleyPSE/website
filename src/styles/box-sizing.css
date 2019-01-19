@@ -421,3 +421,9 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.careerPage {
+  color:#333;
+  border-bottom:solid;
+  border-bottom-width: 0.1rem;
+}

@@ -1,6 +1,6 @@
 export const HOME_PATH = '/';
 export const ABOUT_PATH = '/about';
-export const CAREERS_PATH = '/careers';
+export const CAREERS_PATH = '/careers2019';
 export const RECRUITMENT_PATH = '/recruitment';
 // export const WHYPSE_PATH = '/why-pse';
 export const FAQS_PATH = '/faqs';
@@ -9,6 +9,12 @@ export const APPLICATION_PATH = '/app';
 export const BROTHERS_PATH = '/brothers';
 export const EXECUTIVES_PATH = '/eboard';
 export const CONTACT_PATH = '/contact';
+export const CAREER19_PATH ='/careers2019';
+export const CAREER18_PATH ='/careers2018';
+export const CAREER17_PATH ='/careers2017';
+export const CAREER16_PATH ='/careers2016';
+export const CAREER15_PATH ='/careers2015';
+
 
 export const NAVBAR_MAP = {
   ABOUT_PATH,
@@ -19,7 +25,12 @@ export const NAVBAR_MAP = {
   APPLICATION_PATH,
   BROTHERS_PATH,
   EXECUTIVES_PATH,
-  CONTACT_PATH
+  CONTACT_PATH,
+  CAREER19_PATH,
+  CAREER18_PATH,
+  CAREER17_PATH,
+  CAREER16_PATH,
+  CAREER15_PATH
 };
 
 export const NAVBAR_INFO = [
