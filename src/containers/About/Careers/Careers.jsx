@@ -16,6 +16,10 @@ import { getFulltimes } from '../../../actions/data';
 const Careers = () => {
   document.title = 'Careers - Pi Sigma Epsilon | Zeta Chi Chapter';
 
+  function toggleYear(year) {
+    document.getElementById(year.toString()).style.color = "red";
+  }
+
   return (
     <div id="careers-container">
       <RowContainer>
@@ -29,9 +33,9 @@ const Careers = () => {
       </RowContainer>
       <DataContainer>
         <NavYearBar>
-          <Year><strong>2019</strong></Year>
-          <Year>2018</Year>
-          <Year>2017</Year>
+          <Year id="2019" onclick="toggleYear(2019)">2019</Year>
+          <Year id="2018">2018</Year>
+          <Year id="2017">2017</Year>
           <Year>2016</Year>
           <Year>2015</Year>
         </NavYearBar>
