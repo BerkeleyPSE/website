@@ -77,7 +77,7 @@ const Careers = () => {
             <Gr>Finalta</Gr>
             <Lo>Chicago, IL</Lo>
           </Row>
-        <Industry>Technology</Industry>
+        <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Kent Chen</Na>
             <Co>SoCal Gas</Co>

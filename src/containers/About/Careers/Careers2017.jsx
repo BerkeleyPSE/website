@@ -89,7 +89,7 @@ const Careers = () => {
             <Gr>Technology Consulting</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Nathan Aminpour</Na>
             <Co>Driver</Co>
@@ -206,7 +206,7 @@ const Careers = () => {
             <Gr>Audit</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Aaron Corona</Na>
             <Co>Core Logic</Co>
@@ -255,7 +255,7 @@ const Careers = () => {
             <Gr>Information Technology</Gr>
             <Lo>Santa Clara, CA</Lo>
           </Row>
-          <Industry>Venture Capital</Industry>
+          <Industry>VENTURE CAPITAL</Industry>
           <Row className="mb-1q">
             <Na>Catie Fan</Na>
             <Co>Oriza Ventures</Co>

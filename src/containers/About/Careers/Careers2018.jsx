@@ -90,7 +90,7 @@ const Careers = () => {
             <Gr>Audit</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Akshay Madane</Na>
             <Co>Credit Karma</Co>
@@ -121,7 +121,7 @@ const Careers = () => {
             <Gr>Data Science</Gr>
             <Lo>San Jose, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>PRIVATE EQUITY</Industry>
           <Row>
             <Na>Syed Adil Putra</Na>
             <Co>Ekuinas</Co>
@@ -187,7 +187,7 @@ const Careers = () => {
             <Gr>Programmatic Marketing</Gr>
             <Lo>New York, NY</Lo>
           </Row>
-          <Industry>Finance</Industry>
+          <Industry>FINANCE</Industry>
           <Row>
             <Na>Connor Smith</Na>
             <Co>Fidelity</Co>
@@ -242,7 +242,7 @@ const Careers = () => {
             <Gr>Land Acquisition</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Technology</Industry>         
+          <Industry>TECHNOLOGY</Industry>         
           <Row>
             <Na>Abhi Nathan</Na>
             <Co>San Diego Gas & Electric</Co>
@@ -297,7 +297,7 @@ const Careers = () => {
             <Gr>Information Technology</Gr>
             <Lo>Pasadena, CA</Lo>
           </Row>
-          <Industry>Private Equity</Industry>
+          <Industry>PRIVATE EQUITY</Industry>
           <Row className="mb-1q">
             <Na>Catie Fan</Na>
             <Co>Altamont Capital Partners</Co>

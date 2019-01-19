@@ -66,6 +66,20 @@ const Careers = () => {
             <Gr>Business Valuations</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
+          <Industry>TECHNOLOGY</Industry>
+          <Row>
+            <Na>Alex Dao</Na>
+            <Co>Boeing</Co>
+            <Gr>Software Engineering</Gr>
+            <Lo>Huntington Beach, CA</Lo>
+          </Row>
+          <Industry>ENTREPRENEURSHIP</Industry>
+          <Row>
+            <Na>Justin Tan</Na>
+            <Co>Excelerate Gaming</Co>
+            <Gr>Founder & CEO</Gr>
+            <Lo>Berkeley, CA</Lo>
+          </Row>
         </TableContainer>
 
         <CareerHeader className="pt-1" altStyle>2019 Internships</CareerHeader>
@@ -145,7 +159,7 @@ const Careers = () => {
             <Gr>Consumer Lending Intern</Gr>
             <Lo>Sioux Falls, SD</Lo>
           </Row>
-          <Industry>Technology</Industry>
+          <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Emma Tsuneishi</Na>
             <Co>Cisco</Co>

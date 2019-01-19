@@ -79,7 +79,7 @@ const Careers = () => {
             <Gr>Information Security</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Industry>Human Resources</Industry>
+          <Industry>HUMAN RESOURCES</Industry>
           <Row>
             <Na>Kelly Chao</Na>
             <Co>Target</Co>
