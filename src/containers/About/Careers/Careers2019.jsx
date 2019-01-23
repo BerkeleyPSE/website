@@ -50,7 +50,7 @@ const Careers = () => {
           <Row>
             <Na>Linda Li</Na>
             <Co>Accenture</Co>
-            <Gr>Management Consulting</Gr>
+            <Gr>Strategy Consulting</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
           <Industry>FINANCE</Industry>
@@ -91,6 +91,12 @@ const Careers = () => {
             <Lo>LOCATION</Lo>
           </Label>
           <Industry>MARKETING</Industry>
+          <Row>
+            <Na>Edward Chen</Na>
+            <Co>FCRP</Co>
+            <Gr>Digital Media</Gr>
+            <Lo>Fresno, CA</Lo>
+          </Row>
           <Row>
             <Na>Rose Min</Na>
             <Co>P&G</Co>
@@ -161,10 +167,16 @@ const Careers = () => {
           </Row>
           <Industry>TECHNOLOGY</Industry>
           <Row>
-            <Na>Emma Tsuneishi</Na>
+            <Na>Dhakshi Balakumar</Na>
             <Co>Cisco</Co>
             <Gr>Product Management</Gr>
             <Lo>San Jose, CA</Lo>
+          </Row>
+          <Row>
+            <Na>Emma Tsuneishi</Na>
+            <Co>UPS</Co>
+            <Gr>Technology</Gr>
+            <Lo>Alpha</Lo>
           </Row>
           <Row className="mb-1q">
             <Na>Joshua Nuesca</Na>
