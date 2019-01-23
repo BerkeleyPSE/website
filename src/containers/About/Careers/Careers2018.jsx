@@ -115,12 +115,6 @@ const Careers = () => {
             <Gr>Software Development</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
-          <Row>
-            <Na>Young Hoon Kim</Na>
-            <Co>Cisco</Co>
-            <Gr>Data Science</Gr>
-            <Lo>San Jose, CA</Lo>
-          </Row>
           <Industry>PRIVATE EQUITY</Industry>
           <Row>
             <Na>Syed Adil Putra</Na>

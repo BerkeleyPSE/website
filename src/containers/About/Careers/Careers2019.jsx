@@ -95,13 +95,13 @@ const Careers = () => {
             <Na>Rose Min</Na>
             <Co>P&G</Co>
             <Gr>Sales</Gr>
-            <Lo>-</Lo>
+            <Lo>San Francisco, CA</Lo>
           </Row>
           <Row>
             <Na>Vivan Hong</Na>
             <Co>IBM</Co>
             <Gr>Solutions Sales Summit Program</Gr>
-            <Lo>-</Lo>
+            <Lo>Dallas, TX</Lo>
           </Row>
           <Industry>CONSULTING</Industry>
           <Row>
@@ -138,8 +138,8 @@ const Careers = () => {
           <Row>
             <Na>Cathy An</Na>
             <Co>Abbott</Co>
-            <Gr>-</Gr>
-            <Lo>-</Lo>
+            <Gr>Finance</Gr>
+            <Lo>Chicago, IL</Lo>
           </Row>
           <Row>
             <Na>Gabriel Duarte</Na>
