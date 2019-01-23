@@ -168,15 +168,15 @@ const Careers = () => {
           <Industry>TECHNOLOGY</Industry>
           <Row>
             <Na>Dhakshi Balakumar</Na>
-            <Co>Cisco</Co>
-            <Gr>Product Management</Gr>
-            <Lo>San Jose, CA</Lo>
-          </Row>
-          <Row>
-            <Na>Emma Tsuneishi</Na>
             <Co>UPS</Co>
             <Gr>Technology</Gr>
             <Lo>Alpha</Lo>
+          </Row>
+          <Row>
+            <Na>Emma Tsuneishi</Na>
+            <Co>Cisco</Co>
+            <Gr>Product Management</Gr>
+            <Lo>San Jose, CA</Lo>
           </Row>
           <Row className="mb-1q">
             <Na>Joshua Nuesca</Na>
