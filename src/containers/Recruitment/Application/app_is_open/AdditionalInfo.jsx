@@ -21,8 +21,8 @@ const AdditionalInfo = () => (
         <Label>Resume</Label> [pdf format]
       </ListItem>    
       <ListItem>
-        <Label>Cover Letter</Label> [pdf format]. Address the following
-        questions. [500 words or less]
+        <Label>Cover Letter</Label> [pdf format]. Please include the following
+        questions.
       </ListItem>
       <ol type="a">
         <ListItem>How did you hear about PSE?</ListItem>
@@ -35,7 +35,7 @@ const AdditionalInfo = () => (
         </ListItem>
       </ol>
       <ListItem>
-        <Label>Unofficial Transcript</Label> with your name [pdf via{' '}
+        <Label>Unofficial Transcript</Label> with your name [screenshot via{' '}
         <ExtLink href="https://calcentral.berkeley.edu/academics/academic_summary">
           CalCentral Academics
         </ExtLink>
