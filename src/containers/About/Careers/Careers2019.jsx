@@ -170,7 +170,7 @@ const Careers = () => {
             <Na>Dhakshi Balakumar</Na>
             <Co>UPS</Co>
             <Gr>Technology</Gr>
-            <Lo>Alpha</Lo>
+            <Lo>Alpharetta, GA</Lo>
           </Row>
           <Row>
             <Na>Emma Tsuneishi</Na>

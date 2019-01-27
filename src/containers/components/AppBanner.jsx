@@ -25,7 +25,7 @@ export default class AppBanner extends React.Component {
         <BannerContainer>
           <MessageContainer>
             <ParaText altStyle>Our Spring 2019 Recruitment is here!</ParaText>
-            <IntLink onClick={this.closeBanner} to="/app">Pre-Register</IntLink>
+            <IntLink onClick={this.closeBanner} to="/app">Apply</IntLink>
             {/* <ExtLink href={FB_EVENT_LINK}>RSVP</ExtLink> */}
           </MessageContainer>
           <CloseContainer onClick={this.closeBanner}>

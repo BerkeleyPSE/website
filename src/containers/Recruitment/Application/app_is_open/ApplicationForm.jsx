@@ -82,26 +82,34 @@ const ApplicationForm = ({ onSubmitApplication }) => (
         label="Minor(s)"
         placeholder="Forestry &amp; Natural Resources"
       />
-
+      
       <Field
-        name="introduction"
+        name="commitments"
         component={TextArea}
-        label="Tell us about yourself."
-        desc="Suggested word count: 100"
+        label="List current commitments (on and off campus)."
+        desc="Include the number of hours a week spent on each commitment."
         required
       />
 
       <Field
-        name="moment"
+        name="interest"
         component={TextArea}
-        label="What historical moment or event do you wish you could have witnessed?"
-        desc="Suggested word count: 100"
+        label="Why are you interested in business?"
+        desc="Max. 200 words"
+        required
+      />
+
+      <Field
+        name="admire"
+        component={TextArea}
+        label="Tell us about a business you admire, and why?"
+        desc="Max. 200 words"
         required
       />
 
       <Radio
         name="inviteOnly"
-        label="Are you available on September 7th, 2018 from 7pm-8:30pm for an Invite-Only Event?"
+        label="Are you available on Friday, February 1st, 2019, from 7pm-8:30pm for an Invite-Only Event?"
         options={['Yes', 'No']}
         required
       />
