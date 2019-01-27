@@ -135,7 +135,7 @@ const Careers = () => {
           <Industry>MARKETING</Industry>
           <Row>
             <Na>Charissa Saputra</Na>
-            <Co>Oralce</Co>
+            <Co>Oracle</Co>
             <Gr>Analyst Relations</Gr>
             <Lo>Redwood City, CA</Lo>
           </Row>
@@ -167,7 +167,7 @@ const Careers = () => {
             <Na>Reina Zhang</Na>
             <Co>Informa Telecoms & Media</Co>
             <Gr>Marketing</Gr>
-            <Lo>San Francisco</Lo>
+            <Lo>San Francisco, CA</Lo>
           </Row>
           <Row>
             <Na>Reshma Belur</Na>
@@ -228,7 +228,7 @@ const Careers = () => {
             <Na>Rick Choi</Na>
             <Co>PwC</Co>
             <Gr>Risk Advisory</Gr>
-            <Lo>Seoul, Korea</Lo>
+            <Lo>Seoul, South Korea</Lo>
           </Row>
           <Row>
             <Na>Sean Yu</Na>

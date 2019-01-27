@@ -223,7 +223,7 @@ const Careers = () => {
             <Na>Howard Huang</Na>
             <Co>BNP Paribas</Co>
             <Gr>Product Management</Gr>
-            <Lo>San Francisco, Ca</Lo>
+            <Lo>San Francisco, CA</Lo>
           </Row>
           <Row>
             <Na>Kailin Li</Na>
