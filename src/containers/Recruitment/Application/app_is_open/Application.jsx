@@ -10,7 +10,7 @@ const Application = () => (
   <ColumnContainer id="recruitment-application">
     <PageHeader>Spring 2019 Application</PageHeader>
     <Text>
-      Please answer all questions. The deadline is January 31st, 2019 at 11:59pm.
+      Please answer all questions. The deadline is January 31st, 2019 at 11:59AM.
       Good luck!
     </Text>
     <ApplicationForm />
