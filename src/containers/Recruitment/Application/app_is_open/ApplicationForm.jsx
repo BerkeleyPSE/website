@@ -118,9 +118,9 @@ const ApplicationForm = ({ onSubmitApplication }) => (
         name="interview1"
         label="Select your first preferred time slot for an interview."
         options={[
-          'Saturday (9/8) -- 9AM-12PM',
-          'Saturday (9/8) -- 12PM-3PM',
-          'Saturday (9/8) -- 3PM-6PM',
+          'Saturday (2/2) -- 8AM-11AM',
+          'Saturday (2/2) -- 11AM-3PM',
+          'Saturday (2/2) -- 3PM-6PM',
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
         ]}
         required
@@ -130,9 +130,9 @@ const ApplicationForm = ({ onSubmitApplication }) => (
         name="interview2"
         label="Select your second preferred time slot for an interview."
         options={[
-          'Saturday (9/8) -- 9AM-12PM',
-          'Saturday (9/8) -- 12PM-3PM',
-          'Saturday (9/8) -- 3PM-6PM',
+          'Saturday (2/2) -- 8AM-11AM',
+          'Saturday (2/2) -- 11AM-3PM',
+          'Saturday (2/2) -- 3PM-6PM',
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
         ]}
         required
