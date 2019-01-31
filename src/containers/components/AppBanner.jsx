@@ -12,7 +12,7 @@ import { ParaText } from '../components/TextStyles';
 
 export default class AppBanner extends React.Component {
   state = {
-    show: true
+    show: false
   };
 
   closeBanner = () => {
