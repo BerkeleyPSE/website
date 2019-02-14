@@ -178,11 +178,17 @@ const Careers = () => {
             <Gr>Product Management</Gr>
             <Lo>San Jose, CA</Lo>
           </Row>
-          <Row className="mb-1q">
+          <Row>
             <Na>Joshua Nuesca</Na>
             <Co>Barclays</Co>
             <Gr>Emerging Technology</Gr>
             <Lo>New York, NY</Lo>
+          </Row>
+          <Row className="mb-1q">
+            <Na>Tim Cheng</Na>
+            <Co>Principal Financial</Co>
+            <Gr>Software Engineering</Gr>
+            <Lo>Des Moines, Iowa</Lo>
           </Row>
         </TableContainer>
       </DataContainer>
