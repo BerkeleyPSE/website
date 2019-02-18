@@ -119,7 +119,7 @@ const Careers = () => {
           <Row>
             <Na>Clevian Hsia</Na>
             <Co>PwC</Co>
-            <Gr>Forensic Technology Solutions</Gr>
+            <Gr>Forensic Consulting</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
           <Row>
