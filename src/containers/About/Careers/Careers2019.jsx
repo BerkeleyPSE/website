@@ -154,12 +154,6 @@ const Careers = () => {
             <Lo>San Francisco, CA</Lo>
           </Row>
           <Row>
-            <Na>Harika Kalluri</Na>
-            <Co>AllianceBernstein</Co>
-            <Gr>Equity Research</Gr>
-            <Lo>San Francisco, CA</Lo>
-          </Row>
-          <Row>
             <Na>Liona Li</Na>
             <Co>Wells Fargo</Co>
             <Gr>Consumer Lending Intern</Gr>
