@@ -111,6 +111,12 @@ const Careers = () => {
           </Row>
           <Industry>CONSULTING</Industry>
           <Row>
+            <Na>Britney Yip</Na>
+            <Co>FTI Consulting</Co>
+            <Gr>Forensic and Litigation Consulting Intern</Gr>
+            <Lo>San Francisco, CA</Lo>
+          </Row>
+          <Row>
             <Na>Catie Fan</Na>
             <Co>Bain & Company</Co>
             <Gr>Management Consulting</Gr>
@@ -127,6 +133,12 @@ const Careers = () => {
             <Co>Deloitte</Co>
             <Gr>Human Capital Consulting</Gr>
             <Lo>New York, NY</Lo>
+          </Row>
+          <Row>
+            <Na>Santosh Tatipamula</Na>
+            <Co>Porsche</Co>
+            <Gr>Consulting Intern</Gr>
+            <Lo>Belmont, CA</Lo>
           </Row>
           <Row>
             <Na>Varsha Sundar</Na>
@@ -167,16 +179,22 @@ const Careers = () => {
             <Lo>Alpharetta, GA</Lo>
           </Row>
           <Row>
-            <Na>Emma Tsuneishi</Na>
-            <Co>Cisco</Co>
-            <Gr>Product Management</Gr>
-            <Lo>San Jose, CA</Lo>
+            <Na>Jessie Lee</Na>
+            <Co>Prudential Financial</Co>
+            <Gr>Product Management Intern</Gr>
+            <Lo>Sunnyvale, CA</Lo>
           </Row>
           <Row>
             <Na>Joshua Nuesca</Na>
             <Co>Barclays</Co>
             <Gr>Emerging Technology</Gr>
             <Lo>New York, NY</Lo>
+          </Row>
+          <Row>
+            <Na>Michael Hillsman</Na>
+            <Co>Dropbox</Co>
+            <Gr>Software Engineering Intern</Gr>
+            <Lo>San Francisco, CA</Lo>
           </Row>
           <Row className="mb-1q">
             <Na>Tim Cheng</Na>
