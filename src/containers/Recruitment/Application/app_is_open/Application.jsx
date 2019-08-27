@@ -8,9 +8,9 @@ import { ParaText } from '../../../components/TextStyles';
 
 const Application = () => (
   <ColumnContainer id="recruitment-application">
-    <PageHeader>Spring 2019 Application</PageHeader>
+    <PageHeader>Fall 2019 Application</PageHeader>
     <Text>
-      Please answer all questions. The deadline is January 31st, 2019 at 11:59AM.
+      Please answer all questions. The deadline is September 5th, 2019 at 12:00PM (NOON).
       Good luck!
     </Text>
     <ApplicationForm />

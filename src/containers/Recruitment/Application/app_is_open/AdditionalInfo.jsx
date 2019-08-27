@@ -22,17 +22,12 @@ const AdditionalInfo = () => (
       </ListItem>    
       <ListItem>
         <Label>Cover Letter</Label> [pdf format]. Please include the following
-        questions.
+        information.
       </ListItem>
       <ol type="a">
-        <ListItem>How did you hear about PSE?</ListItem>
+        <ListItem>Why are you interested in business?</ListItem>
         <ListItem>Why do you want to join and what do you hope to gain from PSE?</ListItem>
-        <ListItem>What can you bring or contribute to PSE?</ListItem>
-        <ListItem>Highlight some of your strengths/experiences.</ListItem>
-        <ListItem>
-          How do you hope to use what you learn from PSE 
-          towards your future aspirations?
-        </ListItem>
+        <ListItem>What can you bring or contribute to PSE? Highlight some of your strengths/experiences.</ListItem>
       </ol>
       <ListItem>
         <Label>Unofficial Transcript</Label> with your name [screenshot via{' '}
@@ -51,6 +46,9 @@ const AdditionalInfo = () => (
       </ListItem>
       <ListItem>
         <Label>Recent Headshot</Label> [png or jpg format]
+      </ListItem>
+      <ListItem>
+        <Label>Personality Screening results</Label> [pdf]
       </ListItem>
     </ol>
   </Text>

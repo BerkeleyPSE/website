@@ -29,20 +29,20 @@ const ApplicationForm = ({ onSubmitApplication }) => (
       />
 
       <Field
-        name="email"
-        component={Input}
-        label="Berkeley Email"
-        type="email"
-        placeholder="oski@berkeley.edu"
-        required
-      />
-
-      <Field
         name="phone"
         component={Input}
         label="Phone"
         type="tel"
         placeholder="(123) 456-7890"
+        required
+      />
+
+      <Field
+        name="email"
+        component={Input}
+        label="Berkeley Email"
+        type="email"
+        placeholder="oski@berkeley.edu"
         required
       />
 
@@ -60,15 +60,6 @@ const ApplicationForm = ({ onSubmitApplication }) => (
       />
 
       <Field
-        name="gpa"
-        component={Input}
-        label="Cumulative GPA"
-        desc="First-semester Freshmen: use your weighted high school GPA on a scale of 1.0 to 5.0. Junior Transfers: use your previous college's GPA."
-        placeholder="4.0"
-        required
-      />
-
-      <Field
         name="major"
         component={Input}
         label="Major(s)"
@@ -82,6 +73,15 @@ const ApplicationForm = ({ onSubmitApplication }) => (
         label="Minor(s)"
         placeholder="Forestry &amp; Natural Resources"
       />
+
+      {/*<Field
+        name="gpa"
+        component={Input}
+        label="Cumulative GPA"
+        desc="First-semester Freshmen: use your weighted high school GPA on a scale of 1.0 to 5.0. Junior Transfers: use your previous college's GPA."
+        placeholder="4.0"
+        required
+      />*/}
       
       <Field
         name="commitments"
@@ -91,30 +91,30 @@ const ApplicationForm = ({ onSubmitApplication }) => (
         required
       />
 
-      <Field
+      {/*<Field
         name="interest"
         component={TextArea}
         label="Why are you interested in business?"
         desc="Max. 200 words"
         required
-      />
+      />*/}
 
       <Field
         name="admire"
         component={TextArea}
-        label="Tell us about a business you admire, and why?"
+        label="What is a company you admire, identify a weakness, and how would you improve it?"
         desc="Max. 200 words"
         required
       />
 
       <Radio
         name="inviteOnly"
-        label="Are you available on Friday, February 1st, 2019, from 7pm-8:30pm for an Invite-Only Event?"
+        label="Are you available on Friday, September 6th, 2019, from 7pm-8:30pm for an Invite-Only Event?"
         options={['Yes', 'No']}
         required
       />
 
-      <Radio
+      {/*<Radio
         name="interview1"
         label="Select your first preferred time slot for an interview."
         options={[
@@ -124,15 +124,16 @@ const ApplicationForm = ({ onSubmitApplication }) => (
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
         ]}
         required
-      />
+      />*/}
 
       <Radio
         name="interview2"
-        label="Select your second preferred time slot for an interview."
+        label="Please select your preferred time slot for an interview."
+        desc="Interviews will be no longer than 30 minutes. If you are selected, emails will be sent out with room assignments and times."
         options={[
-          'Saturday (2/2) -- 8AM-11AM',
-          'Saturday (2/2) -- 11AM-3PM',
-          'Saturday (2/2) -- 3PM-6PM',
+          'Saturday (9/7) -- 9AM-12PM',
+          'Saturday (9/7) -- 12PM-3PM',
+          'Saturday (9/7) -- 3PM-6PM',
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
         ]}
         required
@@ -157,6 +158,13 @@ const ApplicationForm = ({ onSubmitApplication }) => (
           'Other'
         ]}
         required
+      />
+
+      <Field
+        name="gradesInfo"
+        component={TextArea}
+        label="Disclose any deficiencies in your transcript. Please be as specific as possible."
+        desc="Your response will not result in adverse treatment against your application. This is an opportunity to provide context to your transcript."
       />
 
       <Field
