@@ -25,7 +25,7 @@ const Preregistration = () => (
     <Text>
       Our Fall 2019 Application opens on Wednesday, August 28th.
       <br />
-      If you would like notifications for our Spring 2020 recruitment events, please enter your name and email below.
+      If you would like notifications for our Fall 2019  recruitment events, please enter your name and email below.
     </Text>
     <PreregistrationForm />
   </ColumnContainer>
