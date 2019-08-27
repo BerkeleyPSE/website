@@ -17,8 +17,8 @@ const Radio = ({ name, label, desc, options, required }) => (
         <Label for={name}>{label}</Label>
         {required && <Req>*</Req>}
       </span>
-      {desc && <Desc>{desc}</Desc>}
     </div>
+    {desc && <Desc>{desc}</Desc>}
     {options.map((o, i) => (
       <Field
         key={`${name}-option-${o.toLowerCase().replace(/\s/g, '-')}`}
