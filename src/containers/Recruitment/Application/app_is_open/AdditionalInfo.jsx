@@ -48,7 +48,7 @@ const AdditionalInfo = () => (
         <Label>Recent Headshot</Label> [png or jpg format]
       </ListItem>
       <ListItem>
-        <Label>Personality Screening results</Label> [pdf]
+        <Label>Personality Screening results</Label> [pdf]. Upload your results from the <ExtLink href="https://www.123test.com/disc-personality-test/index.php">DISC personality test</ExtLink>
       </ListItem>
     </ol>
   </Text>
