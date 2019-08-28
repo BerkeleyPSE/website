@@ -109,29 +109,28 @@ const ApplicationForm = ({ onSubmitApplication }) => (
 
       <Radio
         name="inviteOnly"
-        label="Are you available on Friday, September 6th, 2019, from 7pm-8:30pm for an Invite-Only Event?"
+        label="Are you available on Friday, September 6th, 2019, from 7pm-9pm for an Invite-Only Event?"
         options={['Yes', 'No']}
         required
       />
 
-      {/*<Radio
-        name="interview1"
-        label="Select your first preferred time slot for an interview."
+      <Radio
+        label="Please select your first preferred time slot for an interview."
+        desc="Interviews will be no longer than 45 minutes. If you are selected, emails will be sent out with room assignments and times."
         options={[
-          'Saturday (2/2) -- 8AM-11AM',
-          'Saturday (2/2) -- 11AM-3PM',
-          'Saturday (2/2) -- 3PM-6PM',
+          'Saturday (9/7) -- 8AM-12PM',
+          'Saturday (9/7) -- 12PM-3PM',
+          'Saturday (9/7) -- 3PM-6PM',
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
         ]}
         required
-      />*/}
+      />
 
       <Radio
         name="interview2"
-        label="Please select your preferred time slot for an interview."
-        desc="Interviews will be no longer than 30 minutes. If you are selected, emails will be sent out with room assignments and times."
+        label="Please select your second preferred time slot for an interview."
         options={[
-          'Saturday (9/7) -- 9AM-12PM',
+          'Saturday (9/7) -- 8AM-12PM',
           'Saturday (9/7) -- 12PM-3PM',
           'Saturday (9/7) -- 3PM-6PM',
           'I cannot make any of these times. I will email berkeleypse.recruiting@gmail.com to reschedule.'
