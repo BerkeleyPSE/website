@@ -5,7 +5,7 @@ import { ColumnContainer } from '../../components/ContainerStyles';
 import Application from './app_is_open/Application';
 import Preregistration from './app_is_closed/Preregistration';
 
-const APP_IS_OPEN = false;
+const APP_IS_OPEN = true;
 
 const ApplicationHandler = () => {
   document.title = 'Application - Pi Sigma Epsilon | Zeta Chi Chapter';
