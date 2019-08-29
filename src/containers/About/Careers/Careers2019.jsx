@@ -98,6 +98,18 @@ const Careers = () => {
             <Lo>Fresno, CA</Lo>
           </Row>
           <Row>
+            <Na>Emily Wu</Na>
+            <Co>T-Mobile</Co>
+            <Gr>Brand Reputation</Gr>
+            <Lo>Bellevue, WA</Lo>
+          </Row>
+          <Row>
+            <Na>Reina Zhang</Na>
+            <Co>Nasdaq</Co>
+            <Gr>Marketing and Communications</Gr>
+            <Lo>San Francisco, CA</Lo>
+          </Row>
+          <Row>
             <Na>Rose Min</Na>
             <Co>P&G</Co>
             <Gr>Sales</Gr>
@@ -166,6 +178,12 @@ const Careers = () => {
             <Lo>San Francisco, CA</Lo>
           </Row>
           <Row>
+            <Na>Harika Kalluri</Na>
+            <Co>Twitter</Co>
+            <Gr>Corporate Development</Gr>
+            <Lo>San Francisco, CA</Lo>
+          </Row>
+          <Row>
             <Na>Liona Li</Na>
             <Co>Wells Fargo</Co>
             <Gr>Consumer Lending Intern</Gr>
@@ -173,10 +191,34 @@ const Careers = () => {
           </Row>
           <Industry>TECHNOLOGY</Industry>
           <Row>
+            <Na>Abhi Nathan</Na>
+            <Co>CBS Interactive</Co>
+            <Gr>Business Intelligence</Gr>
+            <Lo>San Francisco, CA</Lo>
+          </Row>
+          <Row>
+            <Na>Ankhu Chadhar</Na>
+            <Co>Workato</Co>
+            <Gr>Business Development</Gr>
+            <Lo>Mountain View, CA</Lo>
+          </Row>
+          <Row>
             <Na>Dhakshi Balakumar</Na>
             <Co>UPS</Co>
             <Gr>Technology</Gr>
             <Lo>Alpharetta, GA</Lo>
+          </Row>
+          <Row>
+            <Na>Emma Tsuneishi</Na>
+            <Co>Facebook</Co>
+            <Gr>Data Analytics</Gr>
+            <Lo>Menlo Park, CA</Lo>
+          </Row>
+          <Row>
+            <Na>Franklin Ye</Na>
+            <Co>Roku</Co>
+            <Gr>Software Engineering Intern</Gr>
+            <Lo>Los Gatos, CA</Lo>
           </Row>
           <Row>
             <Na>Jessie Lee</Na>
