@@ -197,7 +197,7 @@ const Careers = () => {
             <Lo>San Francisco, CA</Lo>
           </Row>
           <Row>
-            <Na>Ankhu Chadhar</Na>
+            <Na>Ankur Chadha</Na>
             <Co>Workato</Co>
             <Gr>Business Development</Gr>
             <Lo>Mountain View, CA</Lo>
@@ -217,13 +217,13 @@ const Careers = () => {
           <Row>
             <Na>Franklin Ye</Na>
             <Co>Roku</Co>
-            <Gr>Software Engineering Intern</Gr>
+            <Gr>Software Engineering</Gr>
             <Lo>Los Gatos, CA</Lo>
           </Row>
           <Row>
             <Na>Jessie Lee</Na>
             <Co>Prudential Financial</Co>
-            <Gr>Product Management Intern</Gr>
+            <Gr>Product Management</Gr>
             <Lo>Sunnyvale, CA</Lo>
           </Row>
           <Row>
@@ -235,7 +235,7 @@ const Careers = () => {
           <Row>
             <Na>Michael Hillsman</Na>
             <Co>Dropbox</Co>
-            <Gr>Software Engineering Intern</Gr>
+            <Gr>Software Engineering</Gr>
             <Lo>San Francisco, CA</Lo>
           </Row>
           <Row className="mb-1q">
