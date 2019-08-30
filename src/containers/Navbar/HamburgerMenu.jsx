@@ -106,12 +106,12 @@ const Link = styled(NavLink).attrs({
   }
 `;
 
-const PageLink = Link.extend`
+const PageLink = styled(Link)`
   font-size: 1.1rem;
   letter-spacing: 0.025rem;
 `;
 
-const HeaderLink = Link.extend`
+const HeaderLink = styled(Link)`
   font-size: 1.25rem;
   letter-spacing: 0.05rem;
   text-align: center;

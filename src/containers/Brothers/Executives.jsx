@@ -63,25 +63,25 @@ export default connect(
 const CenterTextContainer = styled.div`
   text-align: center;
   // margin-bottom: 30px;
-  margin:auto;
-  margin-bottom:30px;
+  margin: auto;
+  margin-bottom: 30px;
 
   @media (max-width: 1350px) {
-    width:70%;
+    width: 70%;
   }
   @media (max-width: 1075px) {
-    width:100%;
+    width: 100%;
   }
 `;
 
 const Image = styled.img`
   position: relative;
-  height:60vh;
-  width:100vw;
-  object-fit:cover;
+  height: 60vh;
+  width: 100vw;
+  object-fit: cover;
 `;
 
-const Header = PageHeader.extend`
+const Header = styled(PageHeader)`
   font-size: 3rem;
   position: absolute;
   width: 100%;

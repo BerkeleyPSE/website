@@ -5,7 +5,7 @@ const Desc = styled.span`
   font-size: 0.75rem;
 `;
 
-const Req = Desc.extend`
+const Req = styled(Desc)`
   color: red;
   margin: 0 0.125rem;
 `;

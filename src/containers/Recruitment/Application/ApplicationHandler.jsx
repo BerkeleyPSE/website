@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 // components
 import { ColumnContainer } from '../../components/ContainerStyles';
@@ -18,7 +19,7 @@ const ApplicationHandler = () => {
 
 export default ApplicationHandler;
 
-const HandlerContainer = ColumnContainer.extend`
+const HandlerContainer = styled(ColumnContainer)`
   @media (max-width: 768px) {
     padding: 0 2rem;
   }

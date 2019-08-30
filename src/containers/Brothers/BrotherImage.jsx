@@ -57,7 +57,7 @@ export class BrotherImage extends React.Component {
             width="171px"
           />
           <Overlay hover={hover} isBrosPage>
-            	<Name className="my1-0 mx-0">{brother.name}</Name>
+            <Name className="my1-0 mx-0">{brother.name}</Name>
           </Overlay>
         </BroContainer>
       </BrotherImageContainer>
@@ -71,19 +71,22 @@ const BrotherImageContainer = styled(Link)`
   text-decoration: none;
 `;
 
-const BroContainer = ColumnContainer.extend`
+const BroContainer = styled(ColumnContainer)`
   position: relative;
   margin: 8px;
 `;
 
 const Overlay = styled.div`
   transition: 0.5s ease;
-  background-color: ${props => (props.hover || !props.isBrosPage ? 'rgba(0, 0, 0, 0.9)' : 'rgba(0, 0, 0, 0.7)')};
+  background-color: ${props =>
+    props.hover || !props.isBrosPage
+      ? 'rgba(0, 0, 0, 0.9)'
+      : 'rgba(0, 0, 0, 0.7)'};
   position: absolute;
-  display:block;
+  display: block;
   height: 15%;
   width: 100%;
-  bottom:0;
+  bottom: 0;
 `;
 
 const Name = styled.p`

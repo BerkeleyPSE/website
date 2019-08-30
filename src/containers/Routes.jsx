@@ -7,16 +7,17 @@ import React from 'react';
 
 // node modules
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 // page components
 import Home from './Home/Home';
 import About from './About/About';
-import Careers2019 from './About/Careers/Careers2019';
-import Careers2018 from './About/Careers/Careers2018';
-import Careers2017 from './About/Careers/Careers2017';
-import Careers2016 from './About/Careers/Careers2016';
-import Careers2015 from './About/Careers/Careers2015';
+import Careers from './About/Careers/Careers';
+// import Careers2019 from './About/Careers/Careers2019';
+// import Careers2018 from './About/Careers/Careers2018';
+// import Careers2017 from './About/Careers/Careers2017';
+// import Careers2016 from './About/Careers/Careers2016';
+// import Careers2015 from './About/Careers/Careers2015';
 import Recruitment from './Recruitment/Recruitment';
 // import WhyPSE from './Recruitment/WhyPSE';
 import FAQs from './Recruitment/FAQs/FAQs';
@@ -45,15 +46,13 @@ import {
   BROTHERS_PATH,
   EXECUTIVES_PATH,
   CONTACT_PATH,
-  CAREER19_PATH,
-  CAREER18_PATH,
-  CAREER17_PATH,
-  CAREER16_PATH,
-  CAREER15_PATH
+  CAREERS_PATH
+  // CAREER19_PATH,
+  // CAREER18_PATH,
+  // CAREER17_PATH,
+  // CAREER16_PATH,
+  // CAREER15_PATH
 } from './Navbar/navbar_constants';
-
-//insert [<Route path={WHYPSE_PATH} component={WhyPSE} />] and [<Route path={COFFEE_CHAT_PATH} component={CoffeeChats} />] 
-//in gap to reinstate WhyPSE and Coffee Chat page
 
 const Routes = () => (
   <div id="router-container">
@@ -63,13 +62,17 @@ const Routes = () => (
       <Switch>
         <Route exact path={HOME_PATH} component={Home} />
         <Route path={ABOUT_PATH} component={About} />
-        <Route path={CAREER19_PATH} component={Careers2019} />
-        <Route path={CAREER18_PATH} component={Careers2018} />
-        <Route path={CAREER17_PATH} component={Careers2017} />
-        <Route path={CAREER16_PATH} component={Careers2016} />
-        <Route path={CAREER15_PATH} component={Careers2015} />
+        <Redirect exact from={CAREERS_PATH} to={`${CAREERS_PATH}/2019`} />
+        <Route path={`${CAREERS_PATH}/:year`} component={Careers} />
+        {/* <Route path={CAREER19_PATH} component={Careers2019} /> */}
+        {/* <Route path={CAREER18_PATH} component={Careers2018} /> */}
+        {/* <Route path={CAREER17_PATH} component={Careers2017} /> */}
+        {/* <Route path={CAREER16_PATH} component={Careers2016} /> */}
+        {/* <Route path={CAREER15_PATH} component={Careers2015} /> */}
+        {/* <Route path={WHYPSE_PATH} component={WhyPSE} /> */}
         <Route path={RECRUITMENT_PATH} component={Recruitment} />
         <Route path={FAQS_PATH} component={FAQs} />
+        {/* <Route path={COFFEE_CHAT_PATH} component={CoffeeChats} /> */}
         <Route path={APPLICATION_PATH} component={ApplicationHandler} />
         <Route exact path={BROTHERS_PATH} component={Brotherhood} />
         <Route path={`${BROTHERS_PATH}/:name`} component={Brother} />

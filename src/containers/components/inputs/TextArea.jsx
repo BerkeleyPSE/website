@@ -33,7 +33,7 @@ const TextArea = ({
   </Container>
 );
 
-const Container = ColumnContainer.extend`
+const Container = styled(ColumnContainer)`
   /* width: 80%; */
   max-width: 800px;
 `;

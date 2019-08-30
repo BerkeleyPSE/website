@@ -215,7 +215,7 @@ export default connect(
   }
 )(Brother);
 
-const Container = ColumnContainer.extend`
+const Container = styled(ColumnContainer)`
   align-items: center;
   @media (min-width: 1050px) {
     flex-direction: row;
@@ -223,9 +223,9 @@ const Container = ColumnContainer.extend`
   }
 `;
 
-const BroImage = Image.extend`
-  border:none;
-  padding-top:10px;
+const BroImage = styled(Image)`
+  border: none;
+  padding-top: 10px;
   @media (min-width: 323px) {
     height: 485px;
     width: 323px;
@@ -237,7 +237,7 @@ const BroImage = Image.extend`
   }
 `;
 
-const InfoContainer = ColumnContainer.extend`
+const InfoContainer = styled(ColumnContainer)`
   width: 100%;
 `;
 
@@ -247,7 +247,7 @@ const HeaderContainer = styled.div`
   text-align: center;
 `;
 
-const Name = PageHeader.extend`
+const Name = styled(PageHeader)`
   font-size: 3rem;
   font-weight: 700;
   padding: 0.625rem 0 0.3125rem 0;
@@ -261,7 +261,7 @@ const Position = styled.h3`
   text-transform: uppercase;
 `;
 
-const Bio = ParaText.extend`
+const Bio = styled(ParaText)`
   color: #818181;
   line-height: 1.65rem;
   margin: 15px auto;

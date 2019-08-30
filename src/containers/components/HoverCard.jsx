@@ -20,7 +20,7 @@ const HoverCard = props => {
 
 export default HoverCard;
 
-const HoverCardContainer = ColumnContainer.withComponent(Link).extend`
+const HoverCardContainer = styled(ColumnContainer.withComponent(Link))`
   border: 3px solid #333;
   color: #333;
   padding: 0.625rem;

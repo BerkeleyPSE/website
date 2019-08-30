@@ -28,7 +28,7 @@ const ExtLink = styled.a.attrs({
   }
 `;
 
-const IntButtonLink = IntLink.extend`
+const IntButtonLink = styled(IntLink)`
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #fff;
   color: #fff;
@@ -47,7 +47,7 @@ const IntButtonLink = IntLink.extend`
   }
 `;
 
-const ExtButtonLink = ExtLink.extend`
+const ExtButtonLink = styled(ExtLink)`
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #895fad;
   color: #895fad;

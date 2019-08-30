@@ -19,15 +19,20 @@ const AdditionalInfo = () => (
     <ol>
       <ListItem>
         <Label>Resume</Label> [pdf format]
-      </ListItem>    
+      </ListItem>
       <ListItem>
         <Label>Cover Letter</Label> [pdf format]. Please include the following
         information.
       </ListItem>
       <ol type="a">
         <ListItem>Why are you interested in business?</ListItem>
-        <ListItem>Why do you want to join and what do you hope to gain from PSE?</ListItem>
-        <ListItem>What can you bring or contribute to PSE? Highlight some of your strengths/experiences.</ListItem>
+        <ListItem>
+          Why do you want to join and what do you hope to gain from PSE?
+        </ListItem>
+        <ListItem>
+          What can you bring or contribute to PSE? Highlight some of your
+          strengths/experiences.
+        </ListItem>
       </ol>
       <ListItem>
         <Label>Unofficial Transcript</Label> with your name [screenshot via{' '}
@@ -37,8 +42,8 @@ const AdditionalInfo = () => (
         ]
       </ListItem>
       <ListItem>
-        <Label>Additional Transcript</Label> [applicable only to Fall Freshmen and Transfer
-        students]
+        <Label>Additional Transcript</Label> [applicable only to Fall Freshmen
+        and Transfer students]
       </ListItem>
       <ListItem>
         <Label>Class Schedule</Label> [Screenshot via CalCentral Schedule
@@ -48,7 +53,11 @@ const AdditionalInfo = () => (
         <Label>Recent Headshot</Label> [png or jpg format]
       </ListItem>
       <ListItem>
-        <Label>Personality Screening results</Label> [pdf]. Upload your results from the <ExtLink href="https://www.123test.com/disc-personality-test/index.php">DISC personality test</ExtLink>
+        <Label>Personality Screening results</Label> [pdf]. Upload your results
+        from the{' '}
+        <ExtLink href="https://www.123test.com/disc-personality-test/index.php">
+          DISC personality test
+        </ExtLink>
       </ListItem>
     </ol>
   </Text>
@@ -56,7 +65,7 @@ const AdditionalInfo = () => (
 
 export default AdditionalInfo;
 
-const Text = ParaText.withComponent('div').extend`
+const Text = styled(ParaText.withComponent('div'))`
   font-size: 1rem;
   text-align: left;
 `;

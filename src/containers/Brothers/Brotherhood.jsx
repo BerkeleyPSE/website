@@ -62,21 +62,21 @@ export default connect(
 
 const Image = styled.img`
   position: relative;
-  height:60vh;
-  width:100vw;
-  object-fit:cover;
+  height: 60vh;
+  width: 100vw;
+  object-fit: cover;
 `;
 
-const Header = PageHeader.extend`
+const Header = styled(PageHeader)`
   font-size: 3rem;
   position: absolute;
   width: 100%;
 `;
 
 const AllBrothersContainer = styled.div`
-  width:95%;
-  justify-content:center;
-  margin:auto;
+  width: 95%;
+  justify-content: center;
+  margin: auto;
   text-align: center;
   margin-bottom: 30px;
 `;

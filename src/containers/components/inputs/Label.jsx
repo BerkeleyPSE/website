@@ -26,7 +26,7 @@ const ErrorLabel = props => (
   </ErrorText>
 );
 
-const ErrorText = LabelText.extend`
+const ErrorText = styled(LabelText)`
   border-bottom: none;
   color: red;
   margin: 0.3125rem 0.625rem;

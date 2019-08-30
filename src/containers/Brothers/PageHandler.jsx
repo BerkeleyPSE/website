@@ -30,11 +30,11 @@ const PageHandler = ({ path, prevBro, nextBro }) => (
 
 export default PageHandler;
 
-const Container = RowContainer.extend`
+const Container = styled(RowContainer)`
   width: 100%;
 `;
 
-const Link = IntLink.extend`
+const Link = styled(IntLink)`
   border-bottom: 3px solid #333;
   font-size: 0.9rem;
   font-weight: bold;

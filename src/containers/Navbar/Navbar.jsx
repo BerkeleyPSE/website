@@ -42,12 +42,12 @@ const Navbar = () => {
 
 export default Navbar;
 
-const NavbarContainer = RowContainer.extend`
+const NavbarContainer = styled(RowContainer)`
   height: 75px;
   justify-content: space-between;
 `;
 
-const LogoContainer = RowContainer.withComponent(Link).extend`
+const LogoContainer = styled(RowContainer.withComponent(Link))`
   cursor: pointer;
   padding: 10px;
   text-decoration: none;
@@ -61,12 +61,12 @@ const TextContainer = styled.div`
   padding-left: 20px;
 `;
 
-const Text = ParaText.extend`
+const Text = styled(ParaText)`
   font-size: 1rem;
   margin: 0;
 `;
 
-const DropdownUnitContainer = RowContainer.extend`
+const DropdownUnitContainer = styled(RowContainer)`
   position: absolute;
   right: 0;
   padding-right: 10px;

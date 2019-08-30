@@ -45,19 +45,19 @@ export default Contact;
 
 const Image = styled.img`
   position: relative;
-  height:60vh;
-  width:100vw;
-  object-fit:cover;
+  height: 60vh;
+  width: 100vw;
+  object-fit: cover;
 `;
 
-const Header = PageHeader.extend`
+const Header = styled(PageHeader)`
   font-size: 3rem;
   text-align: center;
   position: absolute;
   width: 100%;
 `;
 
-const InfoText = ParaText.extend`
+const InfoText = styled(ParaText)`
   margin: 1rem;
 `;
 

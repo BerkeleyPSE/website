@@ -65,7 +65,7 @@ const SlideContainer = styled.div`
   padding: 0 0 45px 0;
 `;
 
-const Slide = ColumnContainer.extend`
+const Slide = styled(ColumnContainer)`
   position: relative;
 `;
 
@@ -75,7 +75,7 @@ const StyledSlider = styled(Slider)`
   margin: 0;
 `;
 
-const OverlayContainer = ColumnContainer.extend`
+const OverlayContainer = styled(ColumnContainer)`
   position: absolute;
   z-index: 100;
 `;

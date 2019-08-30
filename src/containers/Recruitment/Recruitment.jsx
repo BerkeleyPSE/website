@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
 
 // components
-import HoverCard from "../components/HoverCard.jsx";
-import { RowContainer } from "../components/ContainerStyles";
-import HOVER_CARD_ITEMS from "./recruitment_constants";
+import HoverCard from '../components/HoverCard.jsx';
+import { RowContainer } from '../components/ContainerStyles';
+import HOVER_CARD_ITEMS from './recruitment_constants';
 
 const Recruitment = () => {
-  document.title = "Recruitment - Pi Sigma Epsilon | Zeta Chi Chapter";
+  document.title = 'Recruitment - Pi Sigma Epsilon | Zeta Chi Chapter';
 
   const hoverCards = HOVER_CARD_ITEMS.map((item, index) => {
     return <HoverCard key={index} {...item} />;
@@ -31,6 +32,6 @@ const Recruitment = () => {
 
 export default Recruitment;
 
-const HoverCardContainer = RowContainer.extend`
+const HoverCardContainer = styled(RowContainer)`
   padding: 2.5rem;
 `;

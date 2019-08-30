@@ -105,12 +105,12 @@ export default connect(
   mapDispatchToProps
 )(CoffeeChats);
 
-const CoffeeChatContainer = ColumnContainer.extend`
+const CoffeeChatContainer = styled(ColumnContainer)`
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
 `;
-const Text = ParaText.extend`
+const Text = styled(ParaText)`
   font-size: 1rem;
   text-align: center;
 `;

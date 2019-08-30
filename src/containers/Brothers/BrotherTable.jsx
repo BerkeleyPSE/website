@@ -57,7 +57,7 @@ const TableContainer = styled.div`
   padding: 10px 0;
 `;
 
-const Row = RowContainer.extend`
+const Row = styled(RowContainer)`
   flex-wrap: nowrap;
   border-bottom: 1px solid #333;
   justify-content: space-between;

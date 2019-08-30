@@ -5,7 +5,10 @@ import styled from 'styled-components';
 
 // components
 import { PageHeader, SectionHeader } from '../../components/HeaderStyles';
-import { RowContainer, ColumnContainer } from '../../components/ContainerStyles';
+import {
+  RowContainer,
+  ColumnContainer
+} from '../../components/ContainerStyles';
 import { IntButtonLink } from '../../components/LinkStyles';
 
 const Careers = () => {
@@ -23,19 +26,32 @@ const Careers = () => {
         </Header>
       </RowContainer>
       <DataContainer>
-        <NavYearBar> |
-          <IntLink to="/careers2019" altStyle>2019</IntLink>
-          <IntLink to="/careers2018" altStyle>2018</IntLink>
-          <IntLink to="/careers2017" altStyle>2017</IntLink>
-          <IntLink to="/careers2016" altStyle>2016</IntLink>
-          <PageLink to="/careers2015" altStyle>2015</PageLink> |
+        <NavYearBar>
+          {' '}
+          |
+          <IntLink to="/careers2019" altStyle>
+            2019
+          </IntLink>
+          <IntLink to="/careers2018" altStyle>
+            2018
+          </IntLink>
+          <IntLink to="/careers2017" altStyle>
+            2017
+          </IntLink>
+          <IntLink to="/careers2016" altStyle>
+            2016
+          </IntLink>
+          <PageLink to="/careers2015" altStyle>
+            2015
+          </PageLink>{' '}
+          |
         </NavYearBar>
 
         <CareerHeader altStyle>2015 Full-Time</CareerHeader>
         <TableContainer className="mb-0 pb-2">
           <Label>
             <Na>NAME</Na>
-            <Co>COMPANY</Co> 
+            <Co>COMPANY</Co>
             <Gr>GROUP</Gr>
             <Lo>LOCATION</Lo>
           </Label>
@@ -96,12 +112,12 @@ export default Careers;
 
 const Image = styled.img`
   position: relative;
-  height:60vh;
-  width:100vw;
-  object-fit:cover;
+  height: 60vh;
+  width: 100vw;
+  object-fit: cover;
 `;
 
-const Header = PageHeader.extend`
+const Header = styled(PageHeader)`
   font-size: 3rem;
   text-align: center;
   position: absolute;
@@ -109,86 +125,86 @@ const Header = PageHeader.extend`
 `;
 
 const TableContainer = styled.div`
-  width:80vw;
+  width: 80vw;
   padding: 0.75rem 0rem 1.5rem 0rem;
   text-align: left;
   font-size: 1.125rem;
 `;
 
-const DataContainer = ColumnContainer.extend`
-  width:80vw;
-  margin:auto;
-  align-items:flex-start;
+const DataContainer = styled(ColumnContainer)`
+  width: 80vw;
+  margin: auto;
+  align-items: flex-start;
 `;
 
-const NavYearBar = RowContainer.extend`
+const NavYearBar = styled(RowContainer)`
   font-size: 0.9rem;
-  width:100%;
-  justify-content:flex-end;
-  padding-top:20px;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 20px;
 `;
 
-const IntLink = IntButtonLink.extend`
+const IntLink = styled(IntButtonLink)`
   font-size: 0.9rem;
   margin: 0.625rem;
   padding: 0.125rem;
   text-transform: uppercase;
-  color:#818181;
-  border:none;
+  color: #818181;
+  border: none;
   cursor: pointer;
   transition: all 0.25s ease;
-  
+
   &:hover {
     color: #4b2178;
-     border:none;
+    border: none;
   }
 `;
 
-const PageLink = IntLink.extend`
-  color:#333;
+const PageLink = styled(IntLink)`
+  color: #333;
 `;
 
-const CareerHeader = SectionHeader.extend`
+const CareerHeader = styled(SectionHeader)`
   position:relative
   padding:0.5rem 0rem;
 `;
 
-const Row = RowContainer.extend`
-  justify-content:space-between;
-  text-align:left;
-  font-size:0.9rem;
-  padding:0.4rem 0.5rem;
-  border-style:solid none solid none;
+const Row = styled(RowContainer)`
+  justify-content: space-between;
+  text-align: left;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.5rem;
+  border-style: solid none solid none;
   border-width: 0.5px;
-  border-color:rgb(51,51,51,0.5);
+  border-color: rgb(51, 51, 51, 0.5);
 `;
 
-const Label = Row.extend`
-  margin-bottom:0.5rem;
-  font-weight:600;
-  opacity:0.5;
-  font-size:0.85rem;
-  border:none;
+const Label = styled(Row)`
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  opacity: 0.5;
+  font-size: 0.85rem;
+  border: none;
 `;
 
-const Industry = Row.extend`
-  font-size:0.9rem;
-  font-weight:600;
-  background-color: rgb(51,51,51,0.1)
+const Industry = styled(Row)`
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: rgb(51, 51, 51, 0.1);
 `;
 
 const Na = styled.div`
-  width:15%;
+  width: 15%;
 `;
 
 const Co = styled.div`
-  width:33%;
+  width: 33%;
 `;
 
 const Gr = styled.div`
-  width:27%;
+  width: 27%;
 `;
 
 const Lo = styled.div`
-  width:15%;
+  width: 15%;
 `;

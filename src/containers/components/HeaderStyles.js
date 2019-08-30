@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const SiteHeader = styled.h1`
   color: #fff;
@@ -20,11 +20,11 @@ const PageHeader = styled.h2`
   text-align: center;
 `;
 
-const SectionHeader = PageHeader.withComponent('h3').extend`
-    color: ${props => (props.altStyle ? '#333' : '#FFF')};
-    font-size: 1.75rem;
-    margin: 0 20px;
-    text-align: left;
+const SectionHeader = styled(PageHeader.withComponent('h3'))`
+  color: ${props => (props.altStyle ? '#333' : '#FFF')};
+  font-size: 1.75rem;
+  margin: 0 20px;
+  text-align: left;
 `;
 
 const SubSectionHeader = styled.h4``;

@@ -25,7 +25,9 @@ export default class AppBanner extends React.Component {
         <BannerContainer>
           <MessageContainer>
             <ParaText altStyle>Our Spring 2019 Recruitment is here!</ParaText>
-            <IntLink onClick={this.closeBanner} to="/app">Apply</IntLink>
+            <IntLink onClick={this.closeBanner} to="/app">
+              Apply
+            </IntLink>
             {/* <ExtLink href={FB_EVENT_LINK}>RSVP</ExtLink> */}
           </MessageContainer>
           <CloseContainer onClick={this.closeBanner}>
@@ -37,31 +39,31 @@ export default class AppBanner extends React.Component {
   }
 }
 
-const BannerContainer = RowContainer.extend`
+const BannerContainer = styled(RowContainer)`
   background-color: rgb(153, 151, 151, 0.7);
   margin: auto;
   text-align: center;
   width: 100%;
   z-index: 2;
-  position:absolute;
+  position: absolute;
 `;
 
-const ExtLink = ExtButtonLink.extend`
+const ExtLink = styled(ExtButtonLink)`
   font-size: 0.9rem;
   margin: 0 0.625rem;
   padding: 0.125rem 0.625rem;
   text-transform: uppercase;
 `;
 
-const IntLink = IntButtonLink.extend`
+const IntLink = styled(IntButtonLink)`
   font-size: 0.9rem;
   margin: 0.625rem;
   padding: 0.125rem 0.625rem;
   text-transform: uppercase;
 `;
 
-const MessageContainer = ColumnContainer.extend`
-  background-color:transparent;
+const MessageContainer = styled(ColumnContainer)`
+  background-color: transparent;
   flex-grow: 1;
   padding: 0.25rem 1.25rem 0.25rem;
   @media (min-width: 600px) {

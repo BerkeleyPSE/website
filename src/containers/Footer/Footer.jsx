@@ -7,7 +7,7 @@ import styled from 'styled-components';
 // components
 import { RowContainer } from '../components/ContainerStyles';
 import { ParaText } from '../components/TextStyles';
-import { ExtLink } from '../components/LinkStyles'
+import { ExtLink } from '../components/LinkStyles';
 
 const Footer = () => {
   return (
@@ -25,7 +25,9 @@ const Footer = () => {
       /> */}
       <MarginContainer>
         <Text className="m-0" altStyle>
-          <Attribute ExtLink href ="https://www.linkedin.com/in/oliviasulee/">Olivia Lee</Attribute>
+          <Attribute ExtLink href="https://www.linkedin.com/in/oliviasulee/">
+            Olivia Lee
+          </Attribute>
         </Text>
       </MarginContainer>
     </FooterContainer>
@@ -34,7 +36,7 @@ const Footer = () => {
 
 export default Footer;
 
-const FooterContainer = RowContainer.extend`
+const FooterContainer = styled(RowContainer)`
   padding: 5px 0;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -45,11 +47,11 @@ const MarginContainer = styled.div`
   margin: 5px 10px;
 `;
 
-const Text = ParaText.extend`
+const Text = styled(ParaText)`
   font-size: 0.8rem;
   font-weight: 500;
 `;
 
-const Attribute = ExtLink.extend`
+const Attribute = styled(ExtLink)`
   color: #fff;
 `;

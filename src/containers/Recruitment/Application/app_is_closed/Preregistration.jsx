@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 // components
 import PreregistrationForm from './PreregistrationForm';
@@ -25,7 +26,8 @@ const Preregistration = () => (
     <Text>
       Our Fall 2019 Application opens on Wednesday, August 28th.
       <br />
-      If you would like notifications for our Fall 2019  recruitment events, please enter your name and email below.
+      If you would like notifications for our Fall 2019 recruitment events,
+      please enter your name and email below.
     </Text>
     <PreregistrationForm />
   </ColumnContainer>
@@ -34,7 +36,7 @@ const Preregistration = () => (
 
 export default Preregistration;
 
-const Text = ParaText.extend`
+const Text = styled(ParaText)`
   font-size: 1rem;
   text-align: center;
 `;

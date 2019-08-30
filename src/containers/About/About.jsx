@@ -15,15 +15,15 @@ const About = () => {
   return (
     <div>
       <TopImageContainer ColumnContainer>
-          <ColumnContainer>
-            <AboutImage
-              src="https://res.cloudinary.com/berkeleypse-tech/image/upload/v1546408789/about/aboutImage.jpg"
-              alt="SF Bridge"
-            />
-            <Header className="py-2" altStyle>
-              <b>About Us</b>
-            </Header>
-          </ColumnContainer>
+        <ColumnContainer>
+          <AboutImage
+            src="https://res.cloudinary.com/berkeleypse-tech/image/upload/v1546408789/about/aboutImage.jpg"
+            alt="SF Bridge"
+          />
+          <Header className="py-2" altStyle>
+            <b>About Us</b>
+          </Header>
+        </ColumnContainer>
       </TopImageContainer>
       <ZetaChiContainer>
         <ZCHeader>Zeta Chi Chapter</ZCHeader>
@@ -38,23 +38,26 @@ const About = () => {
             Lin, and Hiu Ngan to compose Zeta Chi’s founding Alpha class. These
             six officially chartered the chapter in August 2013.
             <br /> <br />
-            Our chapter endeavors to epitomize the goals of the 
-            fraternity in each and every member through various events focused 
-            around developing professionalism, confidence, leadership, and networking 
-            abilities. Alongside placing the utmost value on its diversity 
-            of people, interests, and majors, the Zeta Chi Chapter provides its 
-            brothers with opportunities to hone into their marketing and business 
-            skills. Thus, in 2016, we established 
-            <ExtLink href="http://zc-consulting.org"> ZC Consulting</ExtLink>, a 
-            marketing and strategy consulting group, to further support our brothers' 
-            experiential learning and professional opportunities. 
-            <br/> <br/>
-            Now in its sixth year, the Zeta Chi Chapter consist of over 45 members, 
-            representing a variety of majors and career paths. In Spring 2019, we will be 
-            recruiting for the prospective Xi class in the Kalluri administration.
-            <br/> <br/>
-            <i>We are proudly recognized and sponsored
-            by the Walter A. Haas School of Business.</i>
+            Our chapter endeavors to epitomize the goals of the fraternity in
+            each and every member through various events focused around
+            developing professionalism, confidence, leadership, and networking
+            abilities. Alongside placing the utmost value on its diversity of
+            people, interests, and majors, the Zeta Chi Chapter provides its
+            brothers with opportunities to hone into their marketing and
+            business skills. Thus, in 2016, we established
+            <ExtLink href="http://zc-consulting.org"> ZC Consulting</ExtLink>, a
+            marketing and strategy consulting group, to further support our
+            brothers' experiential learning and professional opportunities.
+            <br /> <br />
+            Now in its sixth year, the Zeta Chi Chapter consist of over 45
+            members, representing a variety of majors and career paths. In
+            Spring 2019, we will be recruiting for the prospective Xi class in
+            the Kalluri administration.
+            <br /> <br />
+            <i>
+              We are proudly recognized and sponsored by the Walter A. Haas
+              School of Business.
+            </i>
           </Text>
         </DescriptionContainer>
       </ZetaChiContainer>
@@ -71,18 +74,20 @@ const About = () => {
             [SME] association of Atlanta, Georgia, which continues to be a
             sponsor of PSE to this day.
             <br /> <br />
-            Pi Sigma Epsilon has grown to be the premiere organization for motivated 
-            and dedicated students looking to maximize their college experience. 
-            PSE’s goal is to provide collegiate students with practical business 
-            experience through sales and marketing projects, marketing research, 
-            professional programs, and social events.
-            Pi Sigma Epsilon gives its members the opportunity to gain hands-on experience, 
-            participate in conferences both regionally and nationally, and network 
-            with top executives through PSE’s corporate partners. Currently there 
-            are over 60 active chapters at Universities across the United States.
+            Pi Sigma Epsilon has grown to be the premiere organization for
+            motivated and dedicated students looking to maximize their college
+            experience. PSE’s goal is to provide collegiate students with
+            practical business experience through sales and marketing projects,
+            marketing research, professional programs, and social events. Pi
+            Sigma Epsilon gives its members the opportunity to gain hands-on
+            experience, participate in conferences both regionally and
+            nationally, and network with top executives through PSE’s corporate
+            partners. Currently there are over 60 active chapters at
+            Universities across the United States.
             <br /> <br />
-            To learn more, visit Pi Sigma Epsilon’s <ExtLink href="https://www.pse.org/">national website</ExtLink> for more 
-            information about the organization as a whole.
+            To learn more, visit Pi Sigma Epsilon’s{' '}
+            <ExtLink href="https://www.pse.org/">national website</ExtLink> for
+            more information about the organization as a whole.
           </Text>
         </DescriptionContainer>
       </NationalContainer>
@@ -98,11 +103,11 @@ const ZetaChiContainer = styled.div`
   padding: 40px 18% 40px 18%;
 `;
 
-const ZCHeader = SectionHeader.extend`
+const ZCHeader = styled(SectionHeader)`
   border-bottom: 1.5px solid #fff;
 `;
 
-const DescriptionContainer = ColumnContainer.extend`
+const DescriptionContainer = styled(ColumnContainer)`
   width: 100%;
   margin: auto;
   text-align: left;
@@ -112,7 +117,7 @@ const DescriptionContainer = ColumnContainer.extend`
   }
 `;
 
-const Text = ParaText.extend`
+const Text = styled(ParaText)`
   flex: 1;
   font-size: 1.1rem;
   margin: 10px 0;
@@ -124,29 +129,29 @@ const Text = ParaText.extend`
 `;
 
 const TopImageContainer = styled.div`
-  padding:0;
+  padding: 0;
   text-align: center;
 `;
 
-const ImageTemplate = Image.extend`
+const ImageTemplate = styled(Image)`
   border: 0px;
 `;
 
-const AboutImage = ImageTemplate.extend`
+const AboutImage = styled(ImageTemplate)`
   width: 100%;
-  height:60vh;
-  object-fit:cover;
+  height: 60vh;
+  object-fit: cover;
 `;
 
 const NationalContainer = styled.div`
   padding: 40px 18% 40px 18%;
 `;
 
-const NationalHeader = SectionHeader.extend`
+const NationalHeader = styled(SectionHeader)`
   border-bottom: 1.5px solid #333;
 `;
 
-const Header = PageHeader.extend`
+const Header = styled(PageHeader)`
   width: 100%;
   position: absolute;
   font-size: 3rem;

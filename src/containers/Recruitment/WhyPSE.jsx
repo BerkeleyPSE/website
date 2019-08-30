@@ -115,7 +115,7 @@ const WhyPSE = () => {
 
 export default WhyPSE;
 
-const SHeader = SectionHeader.extend`
+const SHeader = styled(SectionHeader)`
   border-bottom: 3px solid #333;
   margin: auto;
   text-align: center;
@@ -130,11 +130,11 @@ const Section = styled.div`
   }
 `;
 
-const DarkSection = Section.extend`
+const DarkSection = styled(Section)`
   background-color: #333;
 `;
 
-const LightSection = Section.extend`
+const LightSection = styled(Section)`
   background-color: #fff;
 `;
 
@@ -151,7 +151,7 @@ const DescriptionContainer = styled.div`
   }
 `;
 
-const Text = ParaText.extend`
+const Text = styled(ParaText)`
   font-size: 1.125rem;
   font-weight: 500;
   padding: 0 0.3125rem;
@@ -161,11 +161,11 @@ const Text = ParaText.extend`
   }
 `;
 
-const DarkText = Text.extend`
+const DarkText = styled(Text)`
   color: #333;
 `;
 
-const LightText = Text.extend`
+const LightText = styled(Text)`
   color: #fff;
   margin: auto;
   text-align: left;

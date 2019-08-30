@@ -40,7 +40,7 @@ export default class AccordionItem extends React.Component {
     let { question, answer } = this.props;
     return (
       <AccordionContainer>
-        <HeaderContainer 
+        <HeaderContainer
           isOpen={isOpen}
           onClick={() => this.setState({ isOpen: !isOpen })}
         >
@@ -85,17 +85,18 @@ const HeaderContainer = styled.div`
   transition: all 0.5s ease;
 
   background-color: #fff;
-  border-bottom: ${props => (props.isOpen ? '1px solid #895fad' : '0.5px dotted #333')};
+  border-bottom: ${props =>
+    props.isOpen ? '1px solid #895fad' : '0.5px dotted #333'};
   color: ${props => (props.isOpen ? '#895FAD' : '#333')};
 `;
 
-const Header = PageHeader.extend`
+const Header = styled(PageHeader)`
   color: inherit;
   font-size: 1.25rem;
   letter-spacing: 0.035rem;
   margin: 0 auto 0 1.25rem;
   padding: 0;
-  text-align:left;
+  text-align: left;
 `;
 
 const Chevron = styled.i`
@@ -109,7 +110,7 @@ const BodyContainer = styled.div`
   display: ${props => !props.isOpen && 'none'};
 `;
 
-const Answer = ParaText.extend`
+const Answer = styled(ParaText)`
   line-height: 1.5rem;
   padding: 1rem 1.5rem;
 `;

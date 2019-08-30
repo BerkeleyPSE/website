@@ -73,7 +73,7 @@ export default class DropdownUnit extends React.Component {
   }
 }
 
-const DropdownUnitContainer = RowContainer.extend`
+const DropdownUnitContainer = styled(RowContainer)`
   cursor: pointer;
   height: auto;
   padding: 0 5px;
