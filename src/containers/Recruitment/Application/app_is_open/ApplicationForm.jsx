@@ -115,6 +115,7 @@ const ApplicationForm = ({ onSubmitApplication }) => (
       />
 
       <Radio
+        name="interview1"
         label="Please select your first preferred time slot for an interview."
         desc="Interviews will be no longer than 45 minutes. If you are selected, emails will be sent out with room assignments and times."
         options={[
