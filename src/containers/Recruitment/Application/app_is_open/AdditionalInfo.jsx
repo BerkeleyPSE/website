@@ -10,7 +10,11 @@ import { Label } from '../../../components/inputs/Label';
 
 const AdditionalInfo = () => (
   <Text className="pb-1">
-    Please email the following items to the Directors of Recruitment at{' '}
+    Please fill out the application link{' '}
+    <ExtLink href="https://forms.gle/bFUdTCwsmYjNvaut9" style={{"fontWeight": 700}}>HERE</ExtLink>
+    . In addition, email the following items to the Directors of Recruitment at{' '}
+
+    {/*Please email the following items to the Directors of Recruitment at{' '}*/}
     <ExtLink href="mailto:berkeleypse.recruiting@gmail.com">
       berkeleypse.recruiting@gmail.com
     </ExtLink>
