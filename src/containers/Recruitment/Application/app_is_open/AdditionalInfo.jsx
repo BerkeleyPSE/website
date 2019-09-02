@@ -10,12 +10,23 @@ import { Label } from '../../../components/inputs/Label';
 
 const AdditionalInfo = () => (
   <Text className="pb-1">
-    Please email the following items to the Directors of Recruitment at{' '}
+    Please fill out the application{' '}
+    <ExtLink href="https://forms.gle/bFUdTCwsmYjNvaut9" style={{"fontWeight": 700}}>LINKED HERE
+    </ExtLink>
+    . In addition, email the following items to the Directors of Recruitment at{' '}
+    
+    {/*Please email the following items to the Directors of Recruitment at{' '}*/}
     <ExtLink href="mailto:berkeleypse.recruiting@gmail.com">
       berkeleypse.recruiting@gmail.com
     </ExtLink>
-    .<br />
+    .
+    <br/>
     Note that your application will be considered INCOMPLETE until you do so.
+    <br/>
+    <br/>
+    Applications are due 9/5 at 12PM (NOON).
+    {console.log("process.env.STAGING_APP_OPEN", process.env.STAGING_APP_OPEN)}
+    {console.log("process.env.STAGING_APP_TESTING", process.env.STAGING_APP_TESTING)}
     <ol>
       <ListItem>
         <Label>Resume</Label> [pdf format]
