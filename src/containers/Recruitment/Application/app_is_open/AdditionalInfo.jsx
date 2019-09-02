@@ -24,7 +24,7 @@ const AdditionalInfo = () => (
     Note that your application will be considered INCOMPLETE until you do so.
     <br/>
     <br/>
-    Applications are due 9/5 at 12PM (NOON)
+    Applications are due 9/5 at 12PM (NOON).
     {console.log("process.env.STAGING_APP_OPEN", process.env.STAGING_APP_OPEN)}
     {console.log("process.env.STAGING_APP_TESTING", process.env.STAGING_APP_TESTING)}
     <ol>
