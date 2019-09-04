@@ -74,10 +74,7 @@ const FAQ_INFO = [
       {
         type: 'text',
         content:
-          'The time commitment for a prospective member (PM) will incrementally change as the process ' +
-          'continues. PMs are expected to attend a 3 hour weekly PM training on Monday nights in ' +
-          'addition to contributing 5-10 hours per week for the first few weeks, 10-20 the next few, ' +
-          'and 20-30 in the final weeks of training.'
+          'The time commitment for a prospective member (PM) will incrementally change as the process continues. PMs are expected to attend a 3 hour weekly PM training on Monday nights in addition to contributing several hours per week for the first few weeks, and progressively more in the final weeks of training.'
       }
     ]
   },
