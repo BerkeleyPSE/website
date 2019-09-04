@@ -25,8 +25,10 @@ const AdditionalInfo = () => (
     <br/>
     <br/>
     Applications are due 9/5 at 12PM (NOON).
-    {console.log("process.env.STAGING_APP_OPEN", process.env.STAGING_APP_OPEN)}
-    {console.log("process.env.STAGING_APP_TESTING", process.env.STAGING_APP_TESTING)}
+    {/*console.log("process.env:")*/}
+    {/*console.log(process.env)*/}
+    {/*console.log("process.env.STAGING_APP_OPEN", process.env.STAGING_APP_OPEN)*/}
+    {/*console.log("process.env.STAGING_APP_TESTING", process.env.STAGING_APP_TESTING)*/}
     <ol>
       <ListItem>
         <Label>Resume</Label> [pdf format]
