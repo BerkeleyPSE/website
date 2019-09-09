@@ -25,7 +25,8 @@ const Footer = () => {
       /> */}
       <MarginContainer>
         <Text className="m-0" altStyle>
-          <Attribute ExtLink href ="https://www.linkedin.com/in/oliviasulee/">Olivia Lee</Attribute>
+<!--           <Attribute ExtLink href ="https://www.linkedin.com/in/oliviasulee/">Olivia Lee</Attribute> -->
+          <Attribute>Franklin Ye</Attribute>
         </Text>
       </MarginContainer>
     </FooterContainer>
