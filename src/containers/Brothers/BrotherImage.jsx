@@ -45,13 +45,13 @@ export class BrotherImage extends React.Component {
 
     return (
       <BrotherImageContainer
-        to={`${path}/${brother.key}`}
+        to={`${/*path}/${brother.key*/"#"}`}
         onMouseEnter={() => this.setState({ hover: true })}
         onMouseLeave={() => this.setState({ hover: false })}
       >
         <BroContainer>
           <Image
-            src={`${IMAGE_URL}/${brother.key}`}
+            src={`${IMAGE_URL}/${brother.key}.png`}
             alt={brother.name}
             height="255px"
             width="171px"
