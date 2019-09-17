@@ -13,19 +13,19 @@ import { BROTHERS_PATH } from '../Navbar/navbar_constants';
 // actions
 import { getBrothers } from '../../actions/data';
 
-import { all } from './brothersTemp';
+// import { all } from './brothersTemp';
 
 class Brotherhood extends Component {
   componentDidMount() {
     const { getBrothers } = this.props;
     document.title = 'Brotherhood - Pi Sigma Epsilon | Zeta Chi Chapter';
-    // const { brothers, executives } = this.props;
-    // if (!brothers.length || !executives.length) getBrothers();
+    const { brothers, executives } = this.props;
+    if (!brothers.length || !executives.length) getBrothers();
   }
 
   render() {
-    // const { brothers } = this.props;
-    const brothers = all.data;
+    const { brothers } = this.props;
+    // const brothers = all.data;
     const allBrothers = brothers.map(brother => {
       return (
         <BrotherImage
