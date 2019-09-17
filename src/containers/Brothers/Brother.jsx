@@ -124,7 +124,7 @@ class Brother extends React.Component {
     return (
       <Container className="px-1 py-0h" fw="none">
         <BroImage
-          src={`${IMAGE_URL}/${brother.key}`}
+          src={`${IMAGE_URL}/${brother.key}.png`}
           alt={brother.name}
           border
         />
@@ -150,7 +150,7 @@ class Brother extends React.Component {
           />
           <Bio>{brother.bio}</Bio>
           <RowContainer>
-            {Object.entries(brother.mediaUrls).map(site => {
+            {Object.entries(brother.mediaUrls || {}).map(site => {
               const [iconKey, href] = site;
               if (iE(href)) return null;
               return (
