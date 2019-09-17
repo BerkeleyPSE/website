@@ -21,10 +21,22 @@ import {
   GET_FULLTIMES_FAILURE
 } from '../constants/actions';
 
+// temp fix:
+import { all, execs, brotherInfo } from './brothersTemp';
+
 export const getBrothers = () => async (dispatch, getState) => {
   const state = getState();
   if (!state.data.brothers.resolved && !state.data.brothers.loading) {
     dispatch({ type: GET_BROTHERS_ATTEMPT });
+
+    // temp fix
+    return dispatch({ 
+      type: GET_BROTHERS_SUCCESS,
+      brothers: { ...all },
+      executives: { ...execs }
+    });
+
+
     const brosPromise = axios.get(API_GET_BROTHERS);
     const execsPromise = axios.get(API_GET_EXECUTIVES);
     const [brosRes, execsRes] = await Promise.all([brosPromise, execsPromise]);
@@ -44,6 +56,16 @@ export const getBrotherByKey = key => async (dispatch, getState) => {
   const bro = state.data.brothers.data[key] || {};
   if (!bro.resolved && !bro.loading) {
     dispatch({ type: GET_BROTHER_BY_KEY_ATTEMPT, key });
+
+
+    // quick fix
+    return dispatch({
+      type: GET_BROTHER_BY_KEY_SUCCESS,
+      key,
+      brother: brotherInfo.data[key] || {}
+    });
+
+
     const res = await axios.get(`${API_GET_BROTHER_BY_KEY}/${key}`);
     if (res.status === 200)
       dispatch({

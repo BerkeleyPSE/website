@@ -14,22 +14,22 @@ import { EXECUTIVES_PATH } from '../Navbar/navbar_constants';
 // actions
 import { getBrothers } from '../../actions/data';
 
-import { execs } from './brothersTemp';
+// import { execs } from './brothersTemp';
 
 class Executives extends Component {
   componentDidMount() {
     document.title = 'Executive Board - Pi Sigma Epsilon | Zeta Chi Chapter';
-    // const { brothers, executives, getBrothers } = this.props;
-    const { brothers, getBrothers } = this.props;
+    const { brothers, executives, getBrothers } = this.props;
+    // const { brothers, getBrothers } = this.props;
     // console.log("he");
     // console.log(executives);
 
-    // if (!brothers.length || !executives.length) getBrothers();
+    if (!brothers.length || !executives.length) getBrothers();
   }
 
   render() {
-    // const { executives } = this.props;
-    const executives = execs.data;
+    const { executives } = this.props;
+    // const executives = execs.data;
     const allExecs = executives.map(brother => {
       console.log(`brother: ${brother.name}`);
       return (
